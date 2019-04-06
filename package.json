@@ -21,7 +21,13 @@
     "prepare": "rollup -c",
     "test": "ava"
   },
-  "dependencies": {},
+  "dependencies": {
+    "koa": "^2.7.0",
+    "koa-ejs": "^4.2.0",
+    "koa-helmet": "^4.1.0",
+    "koa-mount": "^4.0.0",
+    "oidc-provider": "^5.5.5"
+  },
   "devDependencies": {
     "ava": "^1.4.1",
     "c8": "^3.4.0",

@@ -1,4 +1,4 @@
-const path = require("path");
+import { join } from "path";
 
 const { set } = require("lodash");
 const Koa = require("koa");
@@ -29,7 +29,7 @@ render(app, {
   cache: false,
   viewExt: "ejs",
   layout: "_layout",
-  root: path.join(__dirname, "views")
+  root: join(__dirname, "views")
 });
 
 if (process.env.NODE_ENV === "production") {
