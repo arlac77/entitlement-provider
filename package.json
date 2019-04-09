@@ -4,6 +4,7 @@
   "publishConfig": {
     "access": "public"
   },
+  "module": "src/provider-cli.mjs",
   "description": "provide entitlements via OIDC",
   "keywords": [
     "oidc"
@@ -14,15 +15,14 @@
       "email": "markus.felten@gmx.de"
     }
   ],
-  "module": "src/provider-cli.mjs",
   "license": "BSD-2-Clause",
   "bin": {
     "entitlement-provider": "bin/entitlement-provider"
   },
   "scripts": {
     "cover": "c8 --temp-directory build/coverage ava && c8 report -r lcov --temp-directory build/coverage",
-    "docs": "documentation readme src/entitlement-provider.mjs --section=API",
-    "lint": "documentation lint src/entitlement-provider.mjs",
+    "docs": "documentation readme src/provider-cli.mjs --section=API",
+    "lint": "documentation lint src/provider-cli.mjs",
     "posttest": "npm run prepare && markdown-doctest",
     "prepare": "rollup -c",
     "test": "ava"
