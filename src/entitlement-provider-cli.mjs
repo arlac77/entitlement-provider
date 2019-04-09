@@ -3,8 +3,8 @@ import Koa from "koa";
 import helmet from "koa-helmet";
 import mount from "koa-mount";
 import render from "koa-ejs";
-
-const { set } = require("lodash");
+import {Account} from './account';
+import { config } from './config';
 
 //const render = require("koa-ejs");
 //const helmet = require("koa-helmet");
@@ -12,12 +12,12 @@ const { set } = require("lodash");
 
 const Provider = require("oidc-provider"); // require('oidc-provider');
 
-const Account = require("./support/account");
 const {
   provider: providerConfiguration,
   clients,
   keys
 } = require("./support/configuration");
+
 const routes = require("./routes/koa");
 
 const {
@@ -40,8 +40,8 @@ render(app, {
 if (process.env.NODE_ENV === "production") {
   app.keys = providerConfiguration.cookies.keys;
   app.proxy = true;
-  set(providerConfiguration, "cookies.short.secure", true);
-  set(providerConfiguration, "cookies.long.secure", true);
+  //set(providerConfiguration, "cookies.short.secure", true);
+  //set(providerConfiguration, "cookies.long.secure", true);
 
   app.use(async (ctx, next) => {
     if (ctx.secure) {
@@ -66,10 +66,8 @@ if (TIMEOUT) {
 let server;
 (async () => {
   await provider.initialize({
-    adapter: process.env.MONGODB_URI
-      ? require("./support/heroku_mongo_adapter")
-      : undefined, // eslint-disable-line global-require
-    clients,
+    adapter: undefined,
+    config.clients,
     keystore: { keys }
   });
   app.use(routes(provider).routes());
