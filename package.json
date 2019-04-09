@@ -5,23 +5,30 @@
     "access": "public"
   },
   "description": "provide entitlements via OIDC",
-  "keywords": [],
+  "keywords": [
+    "oidc"
+  ],
   "contributors": [
     {
       "name": "Markus Felten",
       "email": "markus.felten@gmx.de"
     }
   ],
+  "module": "src/provider-cli.mjs",
   "license": "BSD-2-Clause",
+  "bin": {
+    "entitlement-provider": "bin/entitlement-provider"
+  },
   "scripts": {
     "cover": "c8 --temp-directory build/coverage ava && c8 report -r lcov --temp-directory build/coverage",
-    "docs": "documentation readme {{module}} --section=API",
-    "lint": "documentation lint {{module}}",
+    "docs": "documentation readme src/entitlement-provider.mjs --section=API",
+    "lint": "documentation lint src/entitlement-provider.mjs",
     "posttest": "npm run prepare && markdown-doctest",
     "prepare": "rollup -c",
     "test": "ava"
   },
   "dependencies": {
+    "config-expander": "^10.2.3",
     "koa": "^2.7.0",
     "koa-ejs": "^4.2.0",
     "koa-helmet": "^4.1.0",
