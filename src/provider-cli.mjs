@@ -1,10 +1,14 @@
 import { join } from "path";
+import Koa from "koa";
+import helmet from "koa-helmet";
+import mount from "koa-mount";
+import render from "koa-ejs";
 
 const { set } = require("lodash");
-const Koa = require("koa");
-const render = require("koa-ejs");
-const helmet = require("koa-helmet");
-const mount = require("koa-mount");
+
+//const render = require("koa-ejs");
+//const helmet = require("koa-helmet");
+//const mount = require("koa-mount");
 
 const Provider = require("oidc-provider"); // require('oidc-provider');
 
@@ -21,6 +25,7 @@ const {
   ISSUER = `http://localhost:${PORT}`,
   TIMEOUT
 } = process.env;
+
 providerConfiguration.findById = Account.findById;
 
 const app = new Koa();

@@ -12,3 +12,6 @@
 [![docs](http://inch-ci.org/github/arlac77/entitlement-provider.svg?branch=master)](http://inch-ci.org/github/arlac77/entitlement-provider)
 [![downloads](http://img.shields.io/npm/dm/entitlement-provider.svg?style=flat-square)](https://npmjs.org/package/entitlement-provider)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+
+# entitlement-provider
+provide entitlements via OIDC

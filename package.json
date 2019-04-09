@@ -4,7 +4,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "description": "provide entitlements",
+  "description": "provide entitlements via OIDC",
   "keywords": [],
   "contributors": [
     {
