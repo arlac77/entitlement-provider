@@ -29,7 +29,7 @@
   },
   "dependencies": {
     "commander": "^2.20.0",
-    "config-expander": "^10.2.3",
+    "config-expander": "^10.2.5",
     "koa": "^2.7.0",
     "koa-ejs": "^4.2.0",
     "koa-helmet": "^4.1.0",
