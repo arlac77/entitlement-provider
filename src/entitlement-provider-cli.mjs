@@ -3,8 +3,8 @@ import Koa from "koa";
 import helmet from "koa-helmet";
 import mount from "koa-mount";
 import render from "koa-ejs";
-import {Account} from './account';
-import { config } from './config';
+import { Account } from "./account";
+import { config } from "./config";
 
 //const render = require("koa-ejs");
 //const helmet = require("koa-helmet");

@@ -45,7 +45,10 @@ const external = [
   "util",
   "v8",
   "vm",
-  "zlib"
+  "zlib",
+
+
+  "koa"
 ];
 
 export default Object.keys(pkg.bin || {}).map(name => {
@@ -60,12 +63,15 @@ export default Object.keys(pkg.bin || {}).map(name => {
     },
     plugins: [
       commonjs(),
+      resolve(),
       json({
-        include: "package.json",
+      //  include: "package.json",
         preferConst: true,
         compact: true
       }),
-      cleanup(),
+      cleanup({
+        extensions: ['js','mjs','jsx','tag']
+      }),
       executable()
     ],
     external

@@ -1,4 +1,5 @@
 import { createHash } from "crypto";
+import { homepage, version } from "../package.json";
 
 export const config = {
   acrValues: ["urn:mace:incommon:iap:bronze"],
@@ -12,15 +13,8 @@ export const config = {
     ]
   },
   discovery: {
-    service_documentation: pkg.homepage,
-    version: [
-      pkg.version,
-      process.env.HEROKU_SLUG_COMMIT
-        ? process.env.HEROKU_SLUG_COMMIT.slice(0, 7)
-        : undefined
-    ]
-      .filter(Boolean)
-      .join("-")
+    service_documentation: homepage,
+    version
   },
   claims: {
     amr: null,
