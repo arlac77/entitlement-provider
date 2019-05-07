@@ -91,11 +91,10 @@
     ]
   },
   "pacman": {
-    "groups": "webhook",
+    "groups": "user admin",
     "install": "pacman/install.sh",
     "backup": "etc/${name}/config.json",
     "depends": {
-      "redis": ">=5.0.4-1",
       "systemd": ">=242.0"
     },
     "installdir": "/services/${name}",
