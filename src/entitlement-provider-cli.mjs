@@ -67,7 +67,7 @@ let server;
 (async () => {
   await provider.initialize({
     adapter: undefined,
-    config.clients,
+    clients: config.clients,
     keystore: { keys }
   });
   app.use(routes(provider).routes());
