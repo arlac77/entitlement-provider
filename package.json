@@ -48,10 +48,24 @@
     "rollup-plugin-executable": "^1.4.5",
     "rollup-plugin-json": "^4.0.0",
     "rollup-plugin-node-resolve": "^4.2.3",
-    "semantic-release": "^15.13.12"
+    "semantic-release": "^15.13.12",
+    "npm-pkgbuild": "^5.3.2",
+    "@semantic-release/exec": "^3.3.3"
   },
   "engines": {
     "node": ">=10.15.3"
+  },
+  "release": {
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      [
+        "@semantic-release/exec",
+        {
+          "publishCmd": "npx npm-pkgbuild --pkgver ${nextRelease.version} --npm-dist --npm-modules pkgbuild pacman makepkg"
+        }
+      ]
+    ]
   },
   "repository": {
     "type": "git",
@@ -75,6 +89,25 @@
       "tests/*-test.js",
       "tests/*-test.mjs"
     ]
+  },
+  "pacman": {
+    "groups": "webhook",
+    "install": "pacman/install.sh",
+    "backup": "etc/${name}/config.json",
+    "depends": {
+      "redis": ">=5.0.4-1",
+      "systemd": ">=242.0"
+    },
+    "installdir": "/services/${name}",
+    "content": {
+      "/usr/lib/tmpfiles.d/${name}.conf": "pacman/tmpfiles.conf",
+      "/etc/${name}/config.json": "config/config.json"
+    }
+  },
+  "systemd": {
+    "units": {
+      "${name}": "systemd/${name}*"
+    }
   },
   "template": {
     "repository": {
