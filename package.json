@@ -37,25 +37,33 @@
     "oidc-provider": "^5.5.5"
   },
   "devDependencies": {
+    "@semantic-release/exec": "^3.3.3",
     "ava": "^1.4.1",
     "c8": "^4.1.4",
-    "documentation": "^10.1.0",
+    "config-expander": "^10.3.2",
+    "documentation": "^11.0.0",
     "esm": "^3.2.22",
     "markdown-doctest": "^0.9.1",
+    "npm-pkgbuild": "^6.0.7",
     "rollup": "^1.11.3",
     "rollup-plugin-cleanup": "^3.1.1",
     "rollup-plugin-commonjs": "^9.3.4",
     "rollup-plugin-executable": "^1.4.5",
     "rollup-plugin-json": "^4.0.0",
     "rollup-plugin-node-resolve": "^4.2.3",
-    "semantic-release": "^15.13.12",
-    "npm-pkgbuild": "^6.0.7",
-    "@semantic-release/exec": "^3.3.3",
-    "config-expander": "^10.3.2"
+    "semantic-release": "^15.13.12"
   },
   "engines": {
     "node": ">=10.15.3"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/arlac77/entitlement-provider.git"
+  },
+  "bugs": {
+    "url": "https://github.com/arlac77/entitlement-provider/issues"
+  },
+  "homepage": "https://github.com/arlac77/entitlement-provider#readme",
   "release": {
     "plugins": [
       "@semantic-release/commit-analyzer",
@@ -68,14 +76,6 @@
       ]
     ]
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/arlac77/entitlement-provider.git"
-  },
-  "bugs": {
-    "url": "https://github.com/arlac77/entitlement-provider/issues"
-  },
-  "homepage": "https://github.com/arlac77/entitlement-provider#readme",
   "ava": {
     "require": [
       "esm"
@@ -90,6 +90,11 @@
       "tests/*-test.js",
       "tests/*-test.mjs"
     ]
+  },
+  "template": {
+    "repository": {
+      "url": "https://github.com/arlac77/npm-package-template.git"
+    }
   },
   "pacman": {
     "groups": "user admin",
@@ -107,11 +112,6 @@
   "systemd": {
     "units": {
       "${name}": "systemd/${name}*"
-    }
-  },
-  "template": {
-    "repository": {
-      "url": "https://github.com/arlac77/npm-package-template.git"
     }
   }
 }
