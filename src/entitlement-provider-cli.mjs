@@ -3,6 +3,10 @@ import Koa from "koa";
 import helmet from "koa-helmet";
 import mount from "koa-mount";
 import render from "koa-ejs";
+import program from "commander";
+import { expand } from "config-expander";
+import { removeSensibleValues } from "remove-sensible-values";
+import { version, description } from "../package.json";
 import { Account } from "./account";
 import { config } from "./config";
 
@@ -20,11 +24,51 @@ const {
 
 const routes = require("./routes/koa");
 
-const {
-  PORT = 3000,
-  ISSUER = `http://localhost:${PORT}`,
-  TIMEOUT
-} = process.env;
+
+export const defaultServerConfig = {
+  http: {
+    port: "${first(env.PORT,8094)}"
+  }
+};
+
+program
+  .version(version)
+  .description(description)
+  .option("-c, --config <dir>", "use config directory")
+  .action(async () => {
+    let sd = { notify: () => {}, listeners: () => [] };
+
+    try {
+      sd = await import("sd-daemon");
+    } catch (e) {}
+
+    sd.notify("READY=1\nSTATUS=starting");
+
+    const configDir = process.env.CONFIGURATION_DIRECTORY || program.config;
+
+    const config = await expand(configDir ? "${include('config.json')}" : {}, {
+      constants: {
+        basedir: configDir || process.cwd(),
+        installdir: resolve(__dirname, "..")
+      },
+      default: {
+        version,
+        ...defaultServerConfig,
+      }
+    });
+
+    const listeners = sd.listeners();
+    if (listeners.length > 0) config.http.port = listeners[0];
+
+    console.log(removeSensibleValues(config));
+
+    try {
+    } catch (error) {
+      console.log(error);
+    }
+  })
+  .parse(process.argv);
+
 
 providerConfiguration.findById = Account.findById;
 
@@ -36,27 +80,6 @@ render(app, {
   layout: "_layout",
   root: join(__dirname, "views")
 });
-
-if (process.env.NODE_ENV === "production") {
-  app.keys = providerConfiguration.cookies.keys;
-  app.proxy = true;
-  //set(providerConfiguration, "cookies.short.secure", true);
-  //set(providerConfiguration, "cookies.long.secure", true);
-
-  app.use(async (ctx, next) => {
-    if (ctx.secure) {
-      await next();
-    } else if (ctx.method === "GET" || ctx.method === "HEAD") {
-      ctx.redirect(ctx.href.replace(/^http:\/\//i, "https://"));
-    } else {
-      ctx.body = {
-        error: "invalid_request",
-        error_description: "do yourself a favor and only use https"
-      };
-      ctx.status = 400;
-    }
-  });
-}
 
 const provider = new Provider(ISSUER, providerConfiguration);
 if (TIMEOUT) {
