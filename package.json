@@ -34,7 +34,7 @@
     "koa-helmet": "^4.1.0",
     "koa-mount": "^4.0.0",
     "oidc-provider": "^5.5.5",
-    "remove-sensible-values": "^1.0.0"
+    "remove-sensible-values": "^1.0.2"
   },
   "devDependencies": {
     "@semantic-release/exec": "^3.3.3",
