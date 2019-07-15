@@ -20,7 +20,7 @@
     "entitlement-provider": "bin/entitlement-provider"
   },
   "scripts": {
-    "cover": "c8 --temp-directory build/tmp ava && c8 report -r lcov -o build/coverage --temp-directory build/tmp",
+    "cover": "c8 -x tests/** --temp-directory build/tmp ava && c8 report -r lcov -o build/coverage --temp-directory build/tmp",
     "docs": "documentation readme src/entitlement-provider-cli.mjs --section=API",
     "lint": "documentation lint src/entitlement-provider-cli.mjs",
     "posttest": "npm run prepare && markdown-doctest",
@@ -68,6 +68,19 @@
     "url": "https://github.com/arlac77/entitlement-provider/issues"
   },
   "homepage": "https://github.com/arlac77/entitlement-provider#readme",
+  "pacman": {
+    "groups": "user admin",
+    "install": "pacman/install.sh",
+    "backup": "etc/${name}/config.json",
+    "depends": {
+      "systemd": ">=242.0"
+    },
+    "installdir": "/services/${name}",
+    "content": {
+      "/usr/lib/tmpfiles.d/${name}.conf": "pacman/tmpfiles.conf",
+      "/etc/${name}/config.json": "config/config.json"
+    }
+  },
   "release": {
     "plugins": [
       "@semantic-release/commit-analyzer",
@@ -96,19 +109,6 @@
   "template": {
     "repository": {
       "url": "https://github.com/arlac77/npm-package-template.git"
-    }
-  },
-  "pacman": {
-    "groups": "user admin",
-    "install": "pacman/install.sh",
-    "backup": "etc/${name}/config.json",
-    "depends": {
-      "systemd": ">=242.0"
-    },
-    "installdir": "/services/${name}",
-    "content": {
-      "/usr/lib/tmpfiles.d/${name}.conf": "pacman/tmpfiles.conf",
-      "/etc/${name}/config.json": "config/config.json"
     }
   },
   "systemd": {
