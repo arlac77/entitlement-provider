@@ -69,7 +69,7 @@
   },
   "homepage": "https://github.com/arlac77/entitlement-provider#readme",
   "config": {
-    "urlPrefix": "/services/${name}/api",
+    "urlPrefix": "/services/entitlements/api",
     "socket": "/run/${name}/socket"
   },
   "systemd": {
