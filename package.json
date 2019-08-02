@@ -68,6 +68,10 @@
     "url": "https://github.com/arlac77/entitlement-provider/issues"
   },
   "homepage": "https://github.com/arlac77/entitlement-provider#readme",
+  "config": {
+    "urlPrefix": "/services/${name}/api",
+    "socket": "/run/${name}/socket"
+  },
   "systemd": {
     "units": {
       "${name}": "systemd/${name}*"
@@ -75,10 +79,10 @@
   },
   "pacman": {
     "groups": "user admin",
-    "install": "pacman/install.sh",
+    "hooks": "pacman/install.sh",
     "backup": "etc/${name}/config.json",
     "depends": {
-      "systemd": ">=242.0"
+      "systemd": ">=242.32"
     },
     "installdir": "/services/${name}",
     "content": {
