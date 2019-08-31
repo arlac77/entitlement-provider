@@ -28,7 +28,7 @@
     "test": "ava"
   },
   "dependencies": {
-    "commander": "^3.0.0",
+    "commander": "^3.0.1",
     "koa": "^2.7.0",
     "koa-ejs": "^4.2.0",
     "koa-helmet": "^4.1.0",
