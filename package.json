@@ -31,9 +31,9 @@
     "commander": "^3.0.1",
     "koa": "^2.7.0",
     "koa-ejs": "^4.2.0",
-    "koa-helmet": "^4.1.0",
+    "koa-helmet": "^5.1.0",
     "koa-mount": "^4.0.0",
-    "oidc-provider": "^6.2.2",
+    "oidc-provider": "^6.7.0",
     "remove-sensible-values": "^1.0.2"
   },
   "devDependencies": {
