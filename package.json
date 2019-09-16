@@ -29,7 +29,7 @@
   },
   "dependencies": {
     "commander": "^3.0.1",
-    "koa": "^2.7.0",
+    "koa": "^2.8.1",
     "koa-ejs": "^4.2.0",
     "koa-helmet": "^5.1.0",
     "koa-mount": "^4.0.0",
