@@ -14,7 +14,7 @@ import { config } from "./config";
 //const helmet = require("koa-helmet");
 //const mount = require("koa-mount");
 
-const Provider = require("oidc-provider"); // require('oidc-provider');
+const Provider = require("oidc-provider");
 
 const {
   provider: providerConfiguration,
