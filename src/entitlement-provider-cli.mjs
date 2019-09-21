@@ -10,10 +10,6 @@ import { version, description } from "../package.json";
 import { Account } from "./account";
 import { config } from "./config";
 
-//const render = require("koa-ejs");
-//const helmet = require("koa-helmet");
-//const mount = require("koa-mount");
-
 const Provider = require("oidc-provider");
 
 const {
@@ -93,6 +89,7 @@ let server;
     clients: config.clients,
     keystore: { keys }
   });
+
   app.use(routes(provider).routes());
   app.use(mount(provider.app));
   server = app.listen(PORT, () => {
