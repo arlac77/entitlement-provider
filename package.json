@@ -28,7 +28,7 @@
     "test": "ava"
   },
   "dependencies": {
-    "commander": "^3.0.1",
+    "commander": "^3.0.2",
     "jsonwebtoken": "^8.5.1",
     "koa": "^2.8.1",
     "koa-ejs": "^4.2.0",
