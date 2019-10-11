@@ -12,14 +12,15 @@ import { config } from "./config";
 
 const Provider = require("oidc-provider");
 
+/*
 const {
-  provider: providerConfiguration,
-  clients,
+ // provider: providerConfiguration,
   keys
 } = require("./support/configuration");
 
-const routes = require("./routes/koa");
 
+const routes = require("./routes/koa");
+*/
 
 export const defaultServerConfig = {
   http: {
@@ -49,7 +50,7 @@ program
       },
       default: {
         version,
-        ...defaultServerConfig,
+        ...defaultServerConfig
       }
     });
 
@@ -59,46 +60,49 @@ program
     console.log(removeSensibleValues(config));
 
     try {
+      await server();
     } catch (error) {
       console.log(error);
     }
   })
   .parse(process.argv);
 
+async function server() {
+  const providerConfiguration = {};
+  providerConfiguration.findById = Account.findById;
 
-providerConfiguration.findById = Account.findById;
+  const app = new Koa();
+  app.use(helmet());
+  render(app, {
+    cache: false,
+    viewExt: "ejs",
+    layout: "_layout",
+    root: join(__dirname, "views")
+  });
 
-const app = new Koa();
-app.use(helmet());
-render(app, {
-  cache: false,
-  viewExt: "ejs",
-  layout: "_layout",
-  root: join(__dirname, "views")
-});
+  const provider = new Provider(ISSUER, providerConfiguration);
+  if (TIMEOUT) {
+    provider.defaultHttpOptions = { timeout: parseInt(TIMEOUT, 10) };
+  }
 
-const provider = new Provider(ISSUER, providerConfiguration);
-if (TIMEOUT) {
-  provider.defaultHttpOptions = { timeout: parseInt(TIMEOUT, 10) };
+  let server;
+  (async () => {
+    await provider.initialize({
+      adapter: undefined,
+      clients: config.clients,
+      keystore: { keys }
+    });
+
+    app.use(routes(provider).routes());
+    app.use(mount(provider.app));
+    server = app.listen(PORT, () => {
+      console.log(
+        `application is listening on port ${PORT}, check its /.well-known/openid-configuration`
+      );
+    });
+  })().catch(err => {
+    if (server && server.listening) server.close();
+    console.error(err);
+    process.exitCode = 1;
+  });
 }
-
-let server;
-(async () => {
-  await provider.initialize({
-    adapter: undefined,
-    clients: config.clients,
-    keystore: { keys }
-  });
-
-  app.use(routes(provider).routes());
-  app.use(mount(provider.app));
-  server = app.listen(PORT, () => {
-    console.log(
-      `application is listening on port ${PORT}, check its /.well-known/openid-configuration`
-    );
-  });
-})().catch(err => {
-  if (server && server.listening) server.close();
-  console.error(err);
-  process.exitCode = 1;
-});
