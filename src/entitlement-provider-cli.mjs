@@ -1,28 +1,34 @@
-import { join } from "path";
 import Koa from "koa";
-import helmet from "koa-helmet";
-import mount from "koa-mount";
-import render from "koa-ejs";
 import program from "commander";
 import { expand } from "config-expander";
 import { removeSensibleValues } from "remove-sensible-values";
+import BodyParser from "koa-bodyparser";
+import Router from "koa-better-router";
 import { version, description } from "../package.json";
-import { Account } from "./account";
-import { config } from "./config";
+import { accessTokenGenerator } from "./auth.mjs";
 
 const Provider = require("oidc-provider");
 
-/*
-const {
- // provider: providerConfiguration,
-  keys
-} = require("./support/configuration");
-
-
-const routes = require("./routes/koa");
-*/
-
 export const defaultServerConfig = {
+  jwt: {
+    options: {
+      algorithm: "RS256",
+      expiresIn: "12h"
+    }
+  },
+  ldap: {
+    url: "ldap://ldap.mf.de",
+    bindDN: "uid={{username}},ou=accounts,dc=mf,dc=de",
+    entitlements: {
+      base: "ou=groups,dc=mf,dc=de",
+      attribute: "cn",
+      scope: "sub",
+      filter:
+        "(&(objectclass=groupOfUniqueNames)(uniqueMember=uid={{username}},ou=accounts,dc=mf,dc=de))"
+    }
+  },
+
+
   http: {
     port: "${first(env.PORT,8094)}"
   }
@@ -68,41 +74,52 @@ program
   .parse(process.argv);
 
 async function server() {
-  const providerConfiguration = {};
-  providerConfiguration.findById = Account.findById;
+  const configuration = {
+    async findAccount(ctx, id) {
+      return {
+        accountId: id,
+        async claims(use, scope) { return { sub: id }; },
+      };
+    },
 
+    features: {
+      introspection: { enabled: true },
+      revocation: { enabled: true },
+    },
+    formats: {
+      AccessToken: 'jwt',
+    },
+    clients: [{
+      client_id: 'foo',
+      client_secret: 'bar',
+      redirect_uris: ['http://lvh.me:8080/cb']
+    }],
+  };
+
+  const provider = new Provider('https://mfelten.dynv6.net:/services/entitlement-provider', configuration);
+  
   const app = new Koa();
-  app.use(helmet());
-  render(app, {
-    cache: false,
-    viewExt: "ejs",
-    layout: "_layout",
-    root: join(__dirname, "views")
+
+  const router = Router({
+    notFound: async (ctx, next) => {
+      console.log("route not found", ctx.request.url);
+      return next();
+    }
   });
 
-  const provider = new Provider(ISSUER, providerConfiguration);
-  if (TIMEOUT) {
-    provider.defaultHttpOptions = { timeout: parseInt(TIMEOUT, 10) };
-  }
+  router.addRoute(
+    "POST",
+    "/authenticate",
+    BodyParser(),
+    accessTokenGenerator(config)
+  );
 
-  let server;
-  (async () => {
-    await provider.initialize({
-      adapter: undefined,
-      clients: config.clients,
-      keystore: { keys }
-    });
+  app.use(provider.app);
 
-    app.use(routes(provider).routes());
-    app.use(mount(provider.app));
-    server = app.listen(PORT, () => {
-      console.log(
-        `application is listening on port ${PORT}, check its /.well-known/openid-configuration`
-      );
-    });
-  })().catch(err => {
-    if (server && server.listening) server.close();
-    console.error(err);
-    process.exitCode = 1;
+  let server = app.listen(config.http.port, () => {
+    console.log("listen on", server.address());
+    bus.sd.notify("READY=1\nSTATUS=running");
   });
+
+  return server;
 }

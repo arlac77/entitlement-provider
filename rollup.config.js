@@ -10,6 +10,7 @@ const external = [
   ...builtins,
 
   "koa",
+  "koa-better-router",
   "sd-daemon"
 ];
 
