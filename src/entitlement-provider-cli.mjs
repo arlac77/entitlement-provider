@@ -1,3 +1,4 @@
+import { resolve } from "path";
 import Koa from "koa";
 import program from "commander";
 import { expand } from "config-expander";
@@ -66,14 +67,14 @@ program
     console.log(removeSensibleValues(config));
 
     try {
-      await server();
+      await server(config,sd);
     } catch (error) {
       console.log(error);
     }
   })
   .parse(process.argv);
 
-async function server() {
+async function server(config,sd) {
   const configuration = {
     async findAccount(ctx, id) {
       return {
@@ -96,7 +97,7 @@ async function server() {
     }],
   };
 
-  const provider = new Provider('https://mfelten.dynv6.net:/services/entitlement-provider', configuration);
+  const provider = new Provider('https://mfelten.dynv6.net/services/entitlement-provider', configuration);
   
   const app = new Koa();
 
@@ -114,11 +115,12 @@ async function server() {
     accessTokenGenerator(config)
   );
 
-  app.use(provider.app);
+  console.log(provider.app);
+  //app.use(provider.app);
 
   let server = app.listen(config.http.port, () => {
     console.log("listen on", server.address());
-    bus.sd.notify("READY=1\nSTATUS=running");
+    sd.notify("READY=1\nSTATUS=running");
   });
 
   return server;
