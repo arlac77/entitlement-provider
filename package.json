@@ -48,7 +48,7 @@
     "config-expander": "^11.0.5",
     "documentation": "^12.1.2",
     "esm": "^3.2.25",
-    "markdown-doctest": "^0.9.1",
+    "markdown-doctest": "^1.0.0",
     "npm-pkgbuild": "^6.10.1",
     "rollup": "^1.23.1",
     "rollup-plugin-cleanup": "^3.1.1",
@@ -62,7 +62,7 @@
     "sd-daemon": "^1.0.1"
   },
   "engines": {
-    "node": ">=12.11.1"
+    "node": ">=12.12.0"
   },
   "repository": {
     "type": "git",
