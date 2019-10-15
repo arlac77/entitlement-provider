@@ -37,7 +37,7 @@
     "koa-helmet": "^5.2.0",
     "koa-mount": "^4.0.0",
     "ldapts": "^1.10.0",
-    "oidc-provider": "^6.12.7",
+    "oidc-provider": "^6.12.10",
     "remove-sensible-values": "^1.0.2"
   },
   "devDependencies": {
