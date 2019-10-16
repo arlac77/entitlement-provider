@@ -16,6 +16,9 @@
     }
   ],
   "license": "BSD-2-Clause",
+  "files": [
+    "bin"
+  ],
   "bin": {
     "entitlement-provider": "bin/entitlement-provider"
   },
