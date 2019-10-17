@@ -1,39 +1,9 @@
 import { resolve } from "path";
-import Koa from "koa";
 import program from "commander";
 import { expand } from "config-expander";
 import { removeSensibleValues } from "remove-sensible-values";
-import BodyParser from "koa-bodyparser";
-import Router from "koa-better-router";
 import { version, description } from "../package.json";
-import { accessTokenGenerator } from "./auth.mjs";
-
-const Provider = require("oidc-provider");
-
-export const defaultServerConfig = {
-  jwt: {
-    options: {
-      algorithm: "RS256",
-      expiresIn: "12h"
-    }
-  },
-  ldap: {
-    url: "ldap://ldap.mf.de",
-    bindDN: "uid={{username}},ou=accounts,dc=mf,dc=de",
-    entitlements: {
-      base: "ou=groups,dc=mf,dc=de",
-      attribute: "cn",
-      scope: "sub",
-      filter:
-        "(&(objectclass=groupOfUniqueNames)(uniqueMember=uid={{username}},ou=accounts,dc=mf,dc=de))"
-    }
-  },
-
-
-  http: {
-    port: "${first(env.PORT,8094)}"
-  }
-};
+import { defaultServerConfig, server } from "./server.mjs";
 
 program
   .version(version)
@@ -67,61 +37,9 @@ program
     console.log(removeSensibleValues(config));
 
     try {
-      await server(config,sd);
+      await server(config, sd);
     } catch (error) {
       console.log(error);
     }
   })
   .parse(process.argv);
-
-async function server(config,sd) {
-  const configuration = {
-    async findAccount(ctx, id) {
-      return {
-        accountId: id,
-        async claims(use, scope) { return { sub: id }; },
-      };
-    },
-
-    features: {
-      introspection: { enabled: true },
-      revocation: { enabled: true },
-    },
-    formats: {
-      AccessToken: 'jwt',
-    },
-    clients: [{
-      client_id: 'foo',
-      client_secret: 'bar',
-      redirect_uris: ['http://lvh.me:8080/cb']
-    }],
-  };
-
-  const provider = new Provider('https://mfelten.dynv6.net/services/entitlement-provider', configuration);
-  
-  const app = new Koa();
-
-  const router = Router({
-    notFound: async (ctx, next) => {
-      console.log("route not found", ctx.request.url);
-      return next();
-    }
-  });
-
-  router.addRoute(
-    "POST",
-    "/authenticate",
-    BodyParser(),
-    accessTokenGenerator(config)
-  );
-
-  console.log(provider.app);
-  //app.use(provider.app);
-
-  let server = app.listen(config.http.port, () => {
-    console.log("listen on", server.address());
-    sd.notify("READY=1\nSTATUS=running");
-  });
-
-  return server;
-}
