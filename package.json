@@ -16,9 +16,6 @@
     }
   ],
   "license": "BSD-2-Clause",
-  "files": [
-    "bin"
-  ],
   "bin": {
     "entitlement-provider": "bin/entitlement-provider"
   },
@@ -72,6 +69,9 @@
     "type": "git",
     "url": "https://github.com/arlac77/entitlement-provider.git"
   },
+  "files": [
+    "bin"
+  ],
   "bugs": {
     "url": "https://github.com/arlac77/entitlement-provider/issues"
   },
