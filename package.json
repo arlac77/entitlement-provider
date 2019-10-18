@@ -86,6 +86,11 @@
     }
   },
   "pacman": {
+    "arch": [
+      "aarch64",
+      "armv7h",
+      "x86_64"
+    ],
     "groups": "user admin",
     "hooks": "pacman/install.sh",
     "backup": "etc/${name}/config.json",
