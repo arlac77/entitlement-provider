@@ -29,7 +29,7 @@ export const defaultServerConfig = {
     }
   };
   
-export async function server(config,sd) {
+export async function server(config) {
   const configuration = {
     async findAccount(ctx, id) {
       return {
@@ -75,7 +75,6 @@ export async function server(config,sd) {
 
   let server = app.listen(config.http.port, () => {
     console.log("listen on", server.address());
-    sd.notify("READY=1\nSTATUS=running");
   });
 
   return server;

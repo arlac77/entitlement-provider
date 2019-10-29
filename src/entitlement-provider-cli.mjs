@@ -4,19 +4,22 @@ import { expand } from "config-expander";
 import { removeSensibleValues } from "remove-sensible-values";
 import { version, description } from "../package.json";
 import { defaultServerConfig, server } from "./server.mjs";
+import { StandaloneServiceManager } from "@kronos-integration/service";
 
 program
   .version(version)
   .description(description)
   .option("-c, --config <dir>", "use config directory")
   .action(async () => {
-    let sd = { notify: () => {}, listeners: () => [] };
+    let serviceManagerClass = StandaloneServiceManager;
 
     try {
-      sd = await import("sd-daemon");
-    } catch (e) {}
+      serviceManagerClass = await import("@kronos-integration/service-systemd");
+    } catch (e) {
+      console.log(e);
+    }
 
-    sd.notify("READY=1\nSTATUS=starting");
+    const sm = new serviceManagerClass();
 
     const configDir = process.env.CONFIGURATION_DIRECTORY || program.config;
 
@@ -31,13 +34,10 @@ program
       }
     });
 
-    const listeners = sd.listeners();
-    if (listeners.length > 0) config.http.port = listeners[0];
-
     console.log(removeSensibleValues(config));
 
     try {
-      await server(config, sd);
+      await server(config);
     } catch (error) {
       console.log(error);
     }
