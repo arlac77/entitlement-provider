@@ -60,6 +60,7 @@
     "semantic-release": "^15.13.28"
   },
   "optionalDependencies": {
+    "@kronos-integration/service-systemd" : "^1.0.0",
     "sd-daemon": "^1.0.1"
   },
   "engines": {
