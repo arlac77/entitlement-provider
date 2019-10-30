@@ -15,3 +15,17 @@
 
 # entitlement-provider
 provide entitlements via OIDC
+
+# API
+
+# install
+
+With [npm](http://npmjs.org) do:
+
+```shell
+npm install content-entry
+```
+
+# license
+
+BSD-2-Clause
