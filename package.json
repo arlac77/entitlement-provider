@@ -39,7 +39,8 @@
     "ldapts": "^1.10.0",
     "oidc-provider": "^6.12.10",
     "remove-sensible-values": "^1.0.2",
-    "@kronos-integration/service": "^5.2.0"
+    "@kronos-integration/service": "^5.2.0",
+    "@kronos-integration/service-systemd": "^1.2.2"
   },
   "devDependencies": {
     "@semantic-release/exec": "^3.3.8",
@@ -60,9 +61,7 @@
     "rollup-plugin-node-resolve": "^5.2.0",
     "semantic-release": "^15.13.28"
   },
-  "optionalDependencies": {
-    "@kronos-integration/service-systemd": "^1.2.1"
-  },
+  "optionalDependencies": {},
   "engines": {
     "node": ">=12.12.0"
   },

@@ -5,21 +5,14 @@ import { removeSensibleValues } from "remove-sensible-values";
 import { version, description } from "../package.json";
 import { defaultServerConfig, server } from "./server.mjs";
 import { StandaloneServiceManager } from "@kronos-integration/service";
+import ServiceSystemd from "@kronos-integration/service-systemd";
 
 program
   .version(version)
   .description(description)
   .option("-c, --config <dir>", "use config directory")
   .action(async () => {
-    let serviceManagerClass = StandaloneServiceManager;
-
-    try {
-      serviceManagerClass = await import("@kronos-integration/service-systemd");
-    } catch (e) {
-      console.log(e);
-    }
-
-    const sm = new serviceManagerClass();
+    const sm = new ServiceSystemd();
 
     const configDir = process.env.CONFIGURATION_DIRECTORY || program.config;
 

@@ -10,8 +10,7 @@ const external = [
   ...builtins,
 
   "koa",
-  "koa-better-router",
-  "sd-daemon"
+  "koa-better-router"
 ];
 
 export default Object.keys(pkg.bin || {}).map(name => {
