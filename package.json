@@ -20,7 +20,7 @@
     "entitlement-provider": "bin/entitlement-provider"
   },
   "scripts": {
-    "cover": "c8 -x 'tests/**/*.mjs' --temp-directory build/tmp ava && c8 report -r lcov -o build/coverage --temp-directory build/tmp",
+    "cover": "c8 -x 'tests/**/*' --temp-directory build/tmp ava && c8 report -r lcov -o build/coverage --temp-directory build/tmp",
     "docs": "documentation readme src/entitlement-provider-cli.mjs --section=API",
     "lint": "documentation lint src/entitlement-provider-cli.mjs",
     "posttest": "npm run prepare && markdown-doctest",
@@ -28,6 +28,7 @@
     "test": "ava"
   },
   "dependencies": {
+    "@kronos-integration/service": "^5.2.0",
     "commander": "^3.0.2",
     "jsonwebtoken": "^8.5.1",
     "koa": "^2.11.0",
@@ -38,8 +39,7 @@
     "koa-mount": "^4.0.0",
     "ldapts": "^1.10.0",
     "oidc-provider": "^6.12.10",
-    "remove-sensible-values": "^1.0.2",
-    "@kronos-integration/service": "^5.2.0"
+    "remove-sensible-values": "^1.0.2"
   },
   "devDependencies": {
     "@semantic-release/exec": "^3.3.8",
