@@ -29,6 +29,7 @@
   },
   "dependencies": {
     "@kronos-integration/service": "^5.2.3",
+    "@kronos-integration/service-koa": "^5.0.5",
     "@kronos-integration/service-systemd": "^1.2.3",
     "commander": "^3.0.2",
     "jsonwebtoken": "^8.5.1",
@@ -39,15 +40,13 @@
     "koa-helmet": "^5.2.0",
     "koa-mount": "^4.0.0",
     "ldapts": "^1.10.0",
-    "oidc-provider": "^6.12.10",
-    "remove-sensible-values": "^1.0.2"
+    "oidc-provider": "^6.12.10"
   },
   "devDependencies": {
     "@semantic-release/exec": "^3.3.8",
     "ava": "^2.4.0",
     "builtin-modules": "^3.1.0",
     "c8": "^6.0.1",
-    "config-expander": "^11.0.5",
     "documentation": "^12.1.2",
     "esm": "^3.2.25",
     "got": "^9.6.0",
