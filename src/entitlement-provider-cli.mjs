@@ -7,7 +7,12 @@ import ServiceKOA from "@kronos-integration/service-koa";
 program
   .version(version)
   .description(description)
+  .option("-c, --config <directory>", "use config from directory")
   .action(async () => {
+    if(program.config) {
+      process.env.CONFIGURATION_DIRECTORY = program.config;
+    }
+
     try {
       const sm = new ServiceSystemd();
       sm.registerServiceFactory(ServiceKOA);
@@ -20,6 +25,8 @@ program
       );
 
       await sm.start();
+
+      sm.info(sm.services.http.status);
       //await server(config);
     } catch (error) {
       console.log(error);
