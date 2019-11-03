@@ -85,10 +85,6 @@
     }
   },
   "pacman": {
-    "install": [
-      "npm-dist",
-      "npm-dependencies"
-    ],
     "arch": [
       "aarch64",
       "armv7h",
@@ -101,6 +97,10 @@
       "systemd": ">=243.78"
     },
     "installdir": "/services/${name}",
+    "additional-content": [
+      "npm-dist",
+      "npm-dependencies"
+    ],
     "content": {
       "/usr/lib/tmpfiles.d/${name}.conf": "pacman/tmpfiles.conf",
       "/etc/${name}/config.json": "config/config.json",
