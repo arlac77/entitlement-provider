@@ -51,7 +51,7 @@
     "esm": "^3.2.25",
     "got": "^9.6.0",
     "markdown-doctest": "^1.0.0",
-    "npm-pkgbuild": "^6.10.4",
+    "npm-pkgbuild": "^6.10.5",
     "rollup": "^1.26.3",
     "rollup-plugin-cleanup": "^3.1.1",
     "rollup-plugin-commonjs": "^10.1.0",
@@ -85,13 +85,17 @@
     }
   },
   "pacman": {
+    "include": [
+      "npm-dist",
+      "npm-dependencies"
+    ],
     "arch": [
       "aarch64",
       "armv7h",
       "x86_64"
     ],
     "groups": "user admin",
-    "hooks": "pacman/install.sh",
+    "hooks": "pacman/hooks.sh",
     "backup": "etc/${name}/config.json",
     "depends": {
       "systemd": ">=243.78"
