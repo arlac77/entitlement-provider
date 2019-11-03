@@ -17,7 +17,7 @@ RuntimeDirectory={{name}}
 StateDirectory={{name}}
 ConfigurationDirectory={{name}}
 
-ENV="DEBUG=1"
+Environment="DEBUG=1"
 
 [Install]
 WantedBy=multi-user.target
