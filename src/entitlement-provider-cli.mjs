@@ -16,7 +16,7 @@ program
     try {
       const sm = new ServiceSystemd();
       sm.registerServiceFactory(ServiceKOA);
-      sm.declareService(
+      await sm.declareService(
         {
           name: "http",
           type: "koa"
