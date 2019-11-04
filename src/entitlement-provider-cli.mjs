@@ -1,6 +1,5 @@
 import program from "commander";
 import { version, description } from "../package.json";
-import { defaultServerConfig, server } from "./server.mjs";
 import ServiceSystemd from "@kronos-integration/service-systemd";
 import ServiceKOA from "@kronos-integration/service-koa";
 
@@ -28,7 +27,6 @@ program
       await http.start();
 
       sm.info(sm.services.http.state);
-      //await server(config);
     } catch (error) {
       console.log(error);
     }
