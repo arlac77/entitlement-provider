@@ -2,6 +2,7 @@ import program from "commander";
 import { version, description } from "../package.json";
 import ServiceSystemd from "@kronos-integration/service-systemd";
 import ServiceKOA from "@kronos-integration/service-koa";
+import { setupKoaService } from './koa.mjs';
 
 program
   .version(version)
@@ -22,6 +23,8 @@ program
         },
         true
       );
+
+      setupKoaService(http);
 
       await sm.start();
       await http.start();
