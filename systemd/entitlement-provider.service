@@ -17,7 +17,7 @@ RuntimeDirectory={{name}}
 StateDirectory={{name}}
 ConfigurationDirectory={{name}}
 
-Environment="DEBUG=1"
+Environment="LOGLEVEL=trace"
 
 [Install]
 WantedBy=multi-user.target
