@@ -28,7 +28,7 @@
     "test": "ava"
   },
   "dependencies": {
-    "@kronos-integration/service": "^5.4.1",
+    "@kronos-integration/service": "^5.5.0",
     "@kronos-integration/service-koa": "^5.0.11",
     "@kronos-integration/service-systemd": "^1.5.0",
     "commander": "^4.0.0",
