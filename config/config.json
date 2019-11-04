@@ -2,6 +2,8 @@
   "auth": {
   },
   "http": {
-    "logLevel": "trace"
+    "listen": {
+      "socket" : 9567
+    }
   }
 }
