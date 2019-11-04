@@ -16,7 +16,7 @@ program
     try {
       const sm = new ServiceSystemd();
       sm.registerServiceFactory(ServiceKOA);
-      await sm.declareService(
+      const http = await sm.declareService(
         {
           name: "http",
           type: "koa"
@@ -25,8 +25,9 @@ program
       );
 
       await sm.start();
+      await http.start();
 
-      sm.info(sm.services.http.status);
+      sm.info(sm.services.http.state);
       //await server(config);
     } catch (error) {
       console.log(error);
