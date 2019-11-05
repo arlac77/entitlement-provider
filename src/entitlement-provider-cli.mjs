@@ -15,11 +15,10 @@ program
 
     try {
       const sm = new ServiceSystemd();
-      sm.registerServiceFactory(ServiceKOA);
       const http = await sm.declareService(
         {
           name: "http",
-          type: "koa"
+          type: ServiceKOA
         },
         true
       );
