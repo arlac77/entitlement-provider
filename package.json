@@ -4,7 +4,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "module": "src/entitlement-provider-cli.mjs",
+  "module": "src/entitlement-provider.mjs",
   "description": "provide entitlements via OIDC",
   "keywords": [
     "OIDC"
@@ -17,12 +17,13 @@
   ],
   "license": "BSD-2-Clause",
   "bin": {
-    "entitlement-provider-systemd": "bin/entitlement-provider-systemd"
+    "entitlement-provider-systemd": "bin/entitlement-provider-systemd",
+    "entitlement-provider-cli": "bin/entitlement-provider-cli"
   },
   "scripts": {
     "cover": "c8 -x 'tests/**/*' --temp-directory build/tmp ava && c8 report -r lcov -o build/coverage --temp-directory build/tmp",
-    "docs": "documentation readme src/entitlement-provider-cli.mjs --section=API",
-    "lint": "documentation lint src/entitlement-provider-cli.mjs",
+    "docs": "documentation readme src/entitlement-provider.mjs --section=API",
+    "lint": "documentation lint src/entitlement-provider.mjs",
     "posttest": "npm run prepare && markdown-doctest",
     "prepare": "rollup -c",
     "test": "ava"
@@ -30,7 +31,6 @@
   "dependencies": {
     "@kronos-integration/service": "^5.6.0",
     "@kronos-integration/service-koa": "^5.0.15",
-    "@kronos-integration/service-systemd": "^1.5.3",
     "commander": "^4.0.0",
     "jsonwebtoken": "^8.5.1",
     "koa": "^2.11.0",
@@ -60,7 +60,9 @@
     "rollup-plugin-node-resolve": "^5.2.0",
     "semantic-release": "^15.13.30"
   },
-  "optionalDependencies": {},
+  "optionalDependencies": {
+    "@kronos-integration/service-systemd": "^1.5.3"
+  },
   "engines": {
     "node": ">=12.12.0"
   },

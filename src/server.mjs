@@ -22,10 +22,6 @@ export const defaultServerConfig = {
         filter:
           "(&(objectclass=groupOfUniqueNames)(uniqueMember=uid={{username}},ou=accounts,dc=mf,dc=de))"
       }
-    },
-  
-    http: {
-      port: "${first(env.PORT,8094)}"
     }
   };
   
@@ -72,10 +68,4 @@ export async function server(config) {
 
   console.log(provider.app);
   //app.use(provider.app);
-
-  let server = app.listen(config.http.port, () => {
-    console.log("listen on", server.address());
-  });
-
-  return server;
 }
