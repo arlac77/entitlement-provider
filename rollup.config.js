@@ -15,7 +15,7 @@ const external = [
 
 export default Object.keys(pkg.bin || {}).map(name => {
   return {
-    input: `src/${name}-cli.mjs`,
+    input: `src/${name}-systemd.mjs`,
     output: {
       file: pkg.bin[name],
       format: "cjs",

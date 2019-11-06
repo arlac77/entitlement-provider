@@ -17,7 +17,7 @@
   ],
   "license": "BSD-2-Clause",
   "bin": {
-    "entitlement-provider": "bin/entitlement-provider"
+    "entitlement-provider-systemd": "bin/entitlement-provider-systemd"
   },
   "scripts": {
     "cover": "c8 -x 'tests/**/*' --temp-directory build/tmp ava && c8 report -r lcov -o build/coverage --temp-directory build/tmp",
@@ -30,7 +30,7 @@
   "dependencies": {
     "@kronos-integration/service": "^5.6.0",
     "@kronos-integration/service-koa": "^5.0.15",
-    "@kronos-integration/service-systemd": "^1.5.4",
+    "@kronos-integration/service-systemd": "^1.5.3",
     "commander": "^4.0.0",
     "jsonwebtoken": "^8.5.1",
     "koa": "^2.11.0",
