@@ -29,8 +29,8 @@
     "test": "ava"
   },
   "dependencies": {
-    "@kronos-integration/service": "^5.6.0",
-    "@kronos-integration/service-koa": "^5.0.15",
+    "@kronos-integration/service": "^5.6.1",
+    "@kronos-integration/service-koa": "^5.0.17",
     "commander": "^4.0.0",
     "jsonwebtoken": "^8.5.1",
     "koa": "^2.11.0",
@@ -61,7 +61,7 @@
     "semantic-release": "^15.13.30"
   },
   "optionalDependencies": {
-    "@kronos-integration/service-systemd": "^1.5.3"
+    "@kronos-integration/service-systemd": "^1.5.4"
   },
   "engines": {
     "node": ">=12.12.0"
