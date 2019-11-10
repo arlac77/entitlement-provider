@@ -17,8 +17,8 @@
   ],
   "license": "BSD-2-Clause",
   "bin": {
-    "entitlement-provider-systemd": "bin/entitlement-provider-systemd",
-    "entitlement-provider-cli": "bin/entitlement-provider-cli"
+    "entitlement-provider-cli": "bin/entitlement-provider-cli",
+    "entitlement-provider-systemd": "bin/entitlement-provider-systemd"
   },
   "scripts": {
     "cover": "c8 -x 'tests/**/*' --temp-directory build/tmp ava && c8 report -r lcov -o build/coverage --temp-directory build/tmp",
@@ -53,7 +53,7 @@
     "got": "^9.6.0",
     "markdown-doctest": "^1.0.0",
     "npm-pkgbuild": "^6.10.6",
-    "rollup": "^1.26.3",
+    "rollup": "^1.26.4",
     "rollup-plugin-cleanup": "^3.1.1",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-executable": "^1.5.1",
