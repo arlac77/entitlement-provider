@@ -31,6 +31,7 @@ export function setupKoaService(koaService) {
   });
 
   router.addRoute("GET", "/hello", async (ctx, next) => {
+    koaService.info("GET /hello");
     ctx.body = "hello world";
     return next();
   });
