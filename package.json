@@ -30,7 +30,7 @@
   },
   "dependencies": {
     "@kronos-integration/service": "^5.6.3",
-    "@kronos-integration/service-health-check": "^3.0.6",
+    "@kronos-integration/service-health-check": "^3.0.7",
     "@kronos-integration/service-koa": "^5.1.2",
     "commander": "^4.0.1",
     "jsonwebtoken": "^8.5.1",
