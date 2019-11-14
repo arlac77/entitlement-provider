@@ -4,22 +4,17 @@ import ServiceHealthCheck from "@kronos-integration/service-health-check";
 import { setupKoaService } from "./koa-service.mjs";
 
 export async function setup(sm) {
-  const http = await sm.declareService(
-    {
-      name: "http",
+  const services = await sm.declareServices({
+    http: {
       type: ServiceKOA
-    }
-  );
-
-  const healthCheck = await sm.declareService(
-    {
+    },
+    "health-check": {
       type: ServiceHealthCheck
     }
-  );
+  });
 
-  setupKoaService(http);
+  setupKoaService(services[0]);
 
   await sm.start();
-  await http.start();
-  await healthCheck.start();
+  await Promise.all(services.map(s => s.start()));
 }
