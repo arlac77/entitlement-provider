@@ -1,6 +1,6 @@
 import program from "commander";
 import { version, description } from "../package.json";
-import { StandaloneServiceManager } from "@kronos-integration/service";
+import { StandaloneServiceProvider } from "@kronos-integration/service";
 import { setup } from "./entitlement-provider.mjs";
 
 program
@@ -12,7 +12,7 @@ program
     }
 
     try {
-      setup(new StandaloneServiceManager());
+      setup(new StandaloneServiceProvider());
     } catch (error) {
       console.log(error);
     }

@@ -3,6 +3,7 @@ import resolve from "rollup-plugin-node-resolve";
 import commonjs from "rollup-plugin-commonjs";
 import executable from "rollup-plugin-executable";
 import json from "rollup-plugin-json";
+import native from "rollup-plugin-native";
 import cleanup from "rollup-plugin-cleanup";
 import pkg from "./package.json";
 
@@ -15,7 +16,7 @@ const external = [
 
 export default Object.keys(pkg.bin || {}).map(name => {
   return {
-    input: `src/${name}.mjs`,
+    input: `src/${name}-cli.mjs`,
     output: {
       file: pkg.bin[name],
       format: "cjs",
@@ -25,6 +26,7 @@ export default Object.keys(pkg.bin || {}).map(name => {
       externalLiveBindings: false
     },
     plugins: [
+      native(),
       commonjs(),
       resolve(),
       json({

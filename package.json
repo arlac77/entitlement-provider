@@ -17,7 +17,7 @@
   ],
   "license": "BSD-2-Clause",
   "bin": {
-    "entitlement-provider-cli": "bin/entitlement-provider-cli",
+    "entitlement-provider": "bin/entitlement-provider",
     "entitlement-provider-systemd": "bin/entitlement-provider-systemd"
   },
   "scripts": {
@@ -58,6 +58,7 @@
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-executable": "^1.5.1",
     "rollup-plugin-json": "^4.0.0",
+    "rollup-plugin-native": "0.0.2",
     "rollup-plugin-node-resolve": "^5.2.0",
     "semantic-release": "^15.13.30"
   },
