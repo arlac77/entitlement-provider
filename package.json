@@ -17,7 +17,7 @@
   ],
   "license": "BSD-2-Clause",
   "bin": {
-    "entitlement-provider-cli": "bin/entitlement-provider-cli",
+    "entitlement-provider": "bin/entitlement-provider",
     "entitlement-provider-systemd": "bin/entitlement-provider-systemd"
   },
   "scripts": {
