@@ -1,5 +1,8 @@
 import Router from "koa-better-router";
 import BodyParser from "koa-bodyparser";
+import { RouteSendEndpoint, endpointRouter } from "@kronos-integration/service-koa";
+import { SendEndpoint } from "@kronos-integration/endpoint";
+
 import { accessTokenGenerator } from "./auth.mjs";
 
 export const config = {
@@ -22,7 +25,7 @@ export const config = {
   }
 };
 
-export function setupKoaService(koaService) {
+export function setupKoaService(sp,koaService) {
   const router = Router({
     notFound: async (ctx, next) => {
       console.log("route not found", ctx.request.url);
@@ -44,4 +47,15 @@ export function setupKoaService(koaService) {
   );
 
   koaService.koa.use(router.middleware());
+
+
+  const r2 = koaService.addEndpoint(new RouteSendEndpoint("r2", koaService, "/r2"));
+  const s2 = new SendEndpoint("s2");
+  s2.receive = async () => "OK S2";
+  r2.connected = s2;
+
+  const r1 = koaService.addEndpoint(new RouteSendEndpoint("r1", koaService, "/r1"));
+  r1.connected = sp.getService('health-check').endpoints.uptime;
+
+  koaService.koa.use(endpointRouter(koaService));  
 }

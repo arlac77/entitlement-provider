@@ -13,7 +13,7 @@ export async function setup(sm) {
     }
   });
 
-  setupKoaService(services[0]);
+  setupKoaService(sm, services[0]);
 
   await sm.start();
   await Promise.all(services.map(s => s.start()));
