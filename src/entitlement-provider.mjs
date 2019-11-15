@@ -6,7 +6,13 @@ import { setupKoaService } from "./koa-service.mjs";
 export async function setup(sm) {
   const services = await sm.declareServices({
     http: {
-      type: ServiceKOA
+      type: ServiceKOA,
+      endpoints: {
+        "/state" : {},
+        "/state/uptime" : {},
+        "/state/cpu" : {},
+        "/state/memory" : {}
+      }
     },
     "health-check": {
       type: ServiceHealthCheck
