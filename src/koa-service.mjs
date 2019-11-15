@@ -59,19 +59,5 @@ export function setupKoaService(sp,koaService) {
   koaService.endpoints["/state/cpu"].connected = sp.getService('health-check').endpoints.cpu;
   koaService.endpoints["/state"].connected = sp.getService('health-check').endpoints.state;
 
-  /*
-  const r1 = koaService.addEndpoint(new RouteSendEndpoint("r1", koaService, "/state/uptime"));
-  r1.connected = sp.getService('health-check').endpoints.uptime;
-
-  const r3 = koaService.addEndpoint(new RouteSendEndpoint("r3", koaService, "/state/memory"));
-  r3.connected = sp.getService('health-check').endpoints.memory;
-
-  const r4 = koaService.addEndpoint(new RouteSendEndpoint("r3", koaService, "/state/cpu"));
-  r4.connected = sp.getService('health-check').endpoints.cpu;
-
-  const r5 = koaService.addEndpoint(new RouteSendEndpoint("r4", koaService, "/state"));
-  r5.connected = sp.getService('health-check').endpoints.state;
-*/
-
   koaService.koa.use(endpointRouter(koaService));  
 }
