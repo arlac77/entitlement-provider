@@ -14,7 +14,7 @@ export async function setup(sm) {
         "/state/memory" : {}
       }
     },
-    "health-check": {
+    health: {
       type: ServiceHealthCheck
     }
   });

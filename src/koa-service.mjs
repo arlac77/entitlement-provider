@@ -54,10 +54,10 @@ export function setupKoaService(sp,koaService) {
   s2.receive = async () => "OK S2";
   r2.connected = s2;
 
-  koaService.endpoints["/state/uptime"].connected = sp.getService('health-check').endpoints.uptime;
-  koaService.endpoints["/state/memory"].connected = sp.getService('health-check').endpoints.memory;
-  koaService.endpoints["/state/cpu"].connected = sp.getService('health-check').endpoints.cpu;
-  koaService.endpoints["/state"].connected = sp.getService('health-check').endpoints.state;
+  koaService.endpoints["/state/uptime"].connected = sp.getService('health').endpoints.uptime;
+  koaService.endpoints["/state/memory"].connected = sp.getService('health').endpoints.memory;
+  koaService.endpoints["/state/cpu"].connected = sp.getService('health').endpoints.cpu;
+  koaService.endpoints["/state"].connected = sp.getService('health').endpoints.state;
 
   koaService.koa.use(endpointRouter(koaService));  
 }
