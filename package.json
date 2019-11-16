@@ -29,9 +29,9 @@
     "test": "ava"
   },
   "dependencies": {
-    "@kronos-integration/service": "^6.1.0",
+    "@kronos-integration/service": "^6.1.2",
     "@kronos-integration/service-health-check": "^3.0.8",
-    "@kronos-integration/service-koa": "^5.3.0",
+    "@kronos-integration/service-koa": "^5.3.2",
     "commander": "^4.0.1",
     "jsonwebtoken": "^8.5.1",
     "koa": "^2.11.0",
