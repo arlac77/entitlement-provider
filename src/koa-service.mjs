@@ -48,12 +48,6 @@ export function setupKoaService(sp,koaService) {
 
   koaService.koa.use(router.middleware());
 
-
-  const r2 = koaService.addEndpoint(new RouteSendEndpoint("r2", koaService, "/r2"));
-  const s2 = new SendEndpoint("s2");
-  s2.receive = async () => "OK S2";
-  r2.connected = s2;
-
   koaService.endpoints["/state/uptime"].connected = sp.getService('health').endpoints.uptime;
   koaService.endpoints["/state/memory"].connected = sp.getService('health').endpoints.memory;
   koaService.endpoints["/state/cpu"].connected = sp.getService('health').endpoints.cpu;
