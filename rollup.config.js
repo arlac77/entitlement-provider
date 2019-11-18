@@ -17,6 +17,7 @@ const extensions = ["js", "mjs", "jsx", "tag"];
 const plugins = [
   commonjs(),
   resolve(),
+  native(),
   json({
     preferConst: true,
     compact: true
