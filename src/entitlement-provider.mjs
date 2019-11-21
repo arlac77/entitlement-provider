@@ -34,7 +34,8 @@ export async function setup(sp) {
         "/state" : {},
         "/state/uptime" : {},
         "/state/cpu" : {},
-        "/state/memory" : {}
+        "/state/memory" : {},
+        "/authenticate" : { method: "POST" }
       }
     },
     health: {
@@ -57,12 +58,14 @@ export async function setup(sp) {
     return next();
   });
 
+  /*
   router.addRoute(
     "POST",
     "/authenticate",
     BodyParser(),
     accessTokenGenerator(config)
   );
+*/
 
   koaService.koa.use(router.middleware());
 
