@@ -1,75 +1,95 @@
 import ldapts from "ldapts";
-
+import { mergeAttributes, createAttributes } from "model-attributes";
 import { Service } from "@kronos-integration/service";
 
+/**
+ * LDAP
+ */
 export class ServiceLDAP extends Service {
-    static get endpoints() {
-        return {
-            ...super.endpoints,
-            authenticate: {
-                default: true,
-                receive: "authenticate"
-            }
-        };
+  static get configurationAttributes() {
+    return mergeAttributes(
+      Service.configurationAttributes,
+      createAttributes({
+        url: {
+          needsRestart: true,
+          type: "url"
+        },
+        bindDN: {
+          needsRestart: true,
+          type: "string"
+        },
+        entitlements: {
+          attributes: {
+            base: {
+              type: "string"
+            },
+            attribute: { default: "cn", type: "string" },
+            scope: { default: "sub", type: "string" },
+            filter: { type: "string" }
+          }
+        }
+      })
+    );
+  }
+
+  static get endpoints() {
+    return {
+      ...super.endpoints,
+      authenticate: {
+        default: true,
+        receive: "authenticate"
+      }
+    };
+  }
+
+  async _start() {
+    await super.start();
+    this.client = new ldapts.Client({ url: this.url });
+  }
+
+  async _stop() {
+    delete this.client;
+    return super._strop();
+  }
+
+  /**
+   * authorize user / password
+   * @param {string} username
+   * @param {string} password
+   * @return {Set<string>} entitlements
+   */
+  async authenticate(username, password) {
+    const entitlements = new Set();
+
+    const values = {
+      username
+    };
+
+    function expand(str) {
+      return str.replace(/\{\{(\w+)\}\}/, (match, g1) =>
+        values[g1] ? values[g1] : g1
+      );
     }
 
-    /**
-     * authorize user / password
-     * @param {string} username
-     * @param {string} password
-     * @return {Set<string>} entitlements
-     */
-    async authenticate(username, password) {
-        const auth = config.auth;
+    try {
+      await this.client.bind(expand(this.bindDN), password);
 
-        const entitlements = new Set();
-
-        const ldap = auth.ldap;
-        if (ldap !== undefined) {
-            const client = new ldapts.Client({
-                url: ldap.url
-            });
-
-            const values = {
-                username
-            };
-
-            function expand(str) {
-                return str.replace(/\{\{(\w+)\}\}/, (match, g1) => values[g1] ? values[g1] : g1);
-            }
-
-            try {
-                await client.bind(expand(ldap.bindDN), password);
-
-                const { searchEntries } = await client.search(
-                    expand(ldap.entitlements.base),
-                    {
-                        scope: ldap.entitlements.scope,
-                        filter: expand(ldap.entitlements.filter),
-                        attributes: [ldap.entitlements.attribute]
-                    }
-                );
-                searchEntries.forEach(e => {
-                    const entitlement = e[ldap.entitlements.attribute];
-                    entitlements.add(entitlement);
-                });
-            } finally {
-                await client.unbind();
-            }
+      const { searchEntries } = await this.client.search(
+        expand(this.entitlements.base),
+        {
+          scope: this.entitlements.scope,
+          filter: expand(this.entitlements.filter),
+          attributes: [this.entitlements.attribute]
         }
-
-        if (auth.users !== undefined) {
-            const user = auth.users[username];
-            if (user !== undefined) {
-                if (user.password === password) {
-                    user.entitlements.forEach(e => entitlements.add(e));
-                }
-                else {
-                    throw new Error("Wrong credentials");
-                }
-            }
-        }
-
-        return { entitlements };
+      );
+      searchEntries.forEach(e => {
+        const entitlement = e[this.entitlements.attribute];
+        entitlements.add(entitlement);
+      });
+    } finally {
+      await client.unbind();
     }
+
+    return { entitlements };
+  }
 }

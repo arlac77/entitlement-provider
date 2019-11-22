@@ -19,24 +19,31 @@ export const config = {
 };
 
 export async function setup(sp) {
-  const interceptorGETOptions = { interceptors: [CTXInterceptor] };
+  const GET = { interceptors: [CTXInterceptor] };
+  const POST = { method: "POST", interceptors: [CTXBodyParamInterceptor] };
 
   const services = await sp.declareServices({
     http: {
       type: ServiceKOA,
       endpoints: {
-        "/state": interceptorGETOptions,
-        "/state/uptime": interceptorGETOptions,
-        "/state/cpu": interceptorGETOptions,
-        "/state/memory": interceptorGETOptions,
-        "/authenticate": {
-          method: "POST",
-          interceptors: [CTXBodyParamInterceptor]
-        }
+        "/state": GET,
+        "/state/uptime": GET,
+        "/state/cpu": GET,
+        "/state/memory": GET,
+        "/authenticate": POST
       }
     },
     auth: {
-      type: ServiceAuthenticator
+      type: ServiceAuthenticator,
+      jwt: {
+        options: {
+          algorithm: "RS256",
+          expiresIn: "12h"
+        }
+      },
+      endpoints: {
+        ldap: { direction: "out" }
+      }
     },
     ldap: {
       type: ServiceLDAP,
@@ -55,7 +62,9 @@ export async function setup(sp) {
     }
   });
 
-  const [koaService, authService, healthService] = services;
+  const [koaService, authService, ldapService, healthService] = services;
+
+  authService.endpoints.ldap.connected = ldapService.endpoints.authenticate;
 
   const router = Router({
     notFound: async (ctx, next) => {
@@ -72,12 +81,14 @@ export async function setup(sp) {
 
   koaService.koa.use(router.middleware());
 
-  koaService.endpoints["/state/uptime"].connected = healthService.endpoints.uptime;
-  koaService.endpoints["/state/memory"].connected = healthService.endpoints.memory;
+  koaService.endpoints["/state/uptime"].connected =
+    healthService.endpoints.uptime;
+  koaService.endpoints["/state/memory"].connected =
+    healthService.endpoints.memory;
   koaService.endpoints["/state/cpu"].connected = healthService.endpoints.cpu;
   koaService.endpoints["/state"].connected = healthService.endpoints.state;
 
-  koaService.endpoints["/authenticate"].connected = authService.endpoints.authenticate;
+  koaService.endpoints["/authenticate"].connected = authService.endpoints.token;
 
   koaService.koa.use(endpointRouter(koaService));
 
