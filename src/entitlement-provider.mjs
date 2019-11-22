@@ -1,10 +1,11 @@
 import ServiceKOA from "@kronos-integration/service-koa";
 import ServiceHealthCheck from "@kronos-integration/service-health-check";
 import Router from "koa-better-router";
-import BodyParser from "koa-bodyparser";
-import { endpointRouter } from "@kronos-integration/service-koa";
-import { accessTokenGenerator } from "./auth.mjs";
-
+import {
+  BodyParserInterceptor,
+  endpointRouter
+} from "@kronos-integration/service-koa";
+import { ServiceAuthenticator } from "./service-authenticator.mjs";
 
 export const config = {
   jwt: {
@@ -31,19 +32,25 @@ export async function setup(sp) {
     http: {
       type: ServiceKOA,
       endpoints: {
-        "/state" : {},
-        "/state/uptime" : {},
-        "/state/cpu" : {},
-        "/state/memory" : {},
-        "/authenticate" : { method: "POST" }
+        "/state": {},
+        "/state/uptime": {},
+        "/state/cpu": {},
+        "/state/memory": {},
+        "/authenticate": {
+          method: "POST",
+          interceptors: [BodyParserInterceptor]
+        }
       }
+    },
+    auth: {
+      type: ServiceAuthenticator
     },
     health: {
       type: ServiceHealthCheck
     }
   });
 
-  const koaService = services[0];
+  const [koaService, authService, healthService ] = services;
 
   const router = Router({
     notFound: async (ctx, next) => {
@@ -58,23 +65,16 @@ export async function setup(sp) {
     return next();
   });
 
-  /*
-  router.addRoute(
-    "POST",
-    "/authenticate",
-    BodyParser(),
-    accessTokenGenerator(config)
-  );
-*/
-
   koaService.koa.use(router.middleware());
 
-  koaService.endpoints["/state/uptime"].connected = sp.getService('health').endpoints.uptime;
-  koaService.endpoints["/state/memory"].connected = sp.getService('health').endpoints.memory;
-  koaService.endpoints["/state/cpu"].connected = sp.getService('health').endpoints.cpu;
-  koaService.endpoints["/state"].connected = sp.getService('health').endpoints.state;
+  koaService.endpoints["/state/uptime"].connected = healthService.endpoints.uptime;
+  koaService.endpoints["/state/memory"].connected = healthService.endpoints.memory;
+  koaService.endpoints["/state/cpu"].connected = healthService.endpoints.cpu;
+  koaService.endpoints["/state"].connected = healthService.endpoints.state;
 
-  koaService.koa.use(endpointRouter(koaService));  
+  koaService.endpoints["/authenticate"].connected = authService.endpoints.authenticate;
+
+  koaService.koa.use(endpointRouter(koaService));
 
   await sp.start();
   await Promise.all(services.map(s => s.start()));

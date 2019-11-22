@@ -29,7 +29,7 @@
     "test": "ava"
   },
   "dependencies": {
-    "@kronos-integration/service": "^6.1.15",
+    "@kronos-integration/service": "^6.1.16",
     "@kronos-integration/service-health-check": "^3.0.10",
     "@kronos-integration/service-koa": "^5.4.4",
     "commander": "^4.0.1",
