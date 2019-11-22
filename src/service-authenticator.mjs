@@ -14,10 +14,12 @@ export class ServiceAuthenticator extends Service {
           attributes: {
             private: {
               description: "private key for token",
+              madatory: true,
               type: "blob"
             },
             public: {
               description: "public key for token",
+              madatory: true,
               type: "blob"
             },
             options: {
@@ -76,6 +78,7 @@ export class ServiceAuthenticator extends Service {
         throw new Error("Not authorized");
       }
     } catch (e) {
+      this.error(e);
       throw new Error("Authentication failed");
     }
   }

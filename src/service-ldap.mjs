@@ -12,6 +12,7 @@ export class ServiceLDAP extends Service {
       createAttributes({
         url: {
           needsRestart: true,
+          madatory: true,
           type: "url"
         },
         bindDN: {
@@ -59,8 +60,6 @@ export class ServiceLDAP extends Service {
    * @return {Set<string>} entitlements
    */
   async authenticate(username, password) {
-    const entitlements = new Set();
-
     const values = {
       username
     };
@@ -82,14 +81,16 @@ export class ServiceLDAP extends Service {
           attributes: [this.entitlements.attribute]
         }
       );
+
+      const entitlements = new Set();
+
       searchEntries.forEach(e => {
         const entitlement = e[this.entitlements.attribute];
         entitlements.add(entitlement);
       });
+      return { entitlements };
     } finally {
       await client.unbind();
     }
-
-    return { entitlements };
   }
 }
