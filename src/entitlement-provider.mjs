@@ -2,10 +2,12 @@ import ServiceKOA from "@kronos-integration/service-koa";
 import ServiceHealthCheck from "@kronos-integration/service-health-check";
 import Router from "koa-better-router";
 import {
-  BodyParserInterceptor,
+  CTXInterceptor,
+  CTXBodyParamInterceptor,
   endpointRouter
 } from "@kronos-integration/service-koa";
 import { ServiceAuthenticator } from "./service-authenticator.mjs";
+import { ServiceLDAP } from "./service-ldap.mjs";
 
 export const config = {
   jwt: {
@@ -13,44 +15,47 @@ export const config = {
       algorithm: "RS256",
       expiresIn: "12h"
     }
-  },
-  ldap: {
-    url: "ldap://ldap.mf.de",
-    bindDN: "uid={{username}},ou=accounts,dc=mf,dc=de",
-    entitlements: {
-      base: "ou=groups,dc=mf,dc=de",
-      attribute: "cn",
-      scope: "sub",
-      filter:
-        "(&(objectclass=groupOfUniqueNames)(uniqueMember=uid={{username}},ou=accounts,dc=mf,dc=de))"
-    }
   }
 };
 
 export async function setup(sp) {
+  const interceptorGETOptions = { interceptors: [CTXInterceptor] };
+
   const services = await sp.declareServices({
     http: {
       type: ServiceKOA,
       endpoints: {
-        "/state": {},
-        "/state/uptime": {},
-        "/state/cpu": {},
-        "/state/memory": {},
+        "/state": interceptorGETOptions,
+        "/state/uptime": interceptorGETOptions,
+        "/state/cpu": interceptorGETOptions,
+        "/state/memory": interceptorGETOptions,
         "/authenticate": {
           method: "POST",
-          interceptors: [BodyParserInterceptor]
+          interceptors: [CTXBodyParamInterceptor]
         }
       }
     },
     auth: {
       type: ServiceAuthenticator
     },
+    ldap: {
+      type: ServiceLDAP,
+      url: "ldap://ldap.mf.de",
+      bindDN: "uid={{username}},ou=accounts,dc=mf,dc=de",
+      entitlements: {
+        base: "ou=groups,dc=mf,dc=de",
+        attribute: "cn",
+        scope: "sub",
+        filter:
+          "(&(objectclass=groupOfUniqueNames)(uniqueMember=uid={{username}},ou=accounts,dc=mf,dc=de))"
+      }
+    },
     health: {
       type: ServiceHealthCheck
     }
   });
 
-  const [koaService, authService, healthService ] = services;
+  const [koaService, authService, healthService] = services;
 
   const router = Router({
     notFound: async (ctx, next) => {
