@@ -9,15 +9,6 @@ import {
 import { ServiceAuthenticator } from "./service-authenticator.mjs";
 import { ServiceLDAP } from "./service-ldap.mjs";
 
-export const config = {
-  jwt: {
-    options: {
-      algorithm: "RS256",
-      expiresIn: "12h"
-    }
-  }
-};
-
 export async function setup(sp) {
   const GET = { interceptors: [CTXInterceptor] };
   const POST = { method: "POST", interceptors: [CTXBodyParamInterceptor] };
@@ -35,12 +26,6 @@ export async function setup(sp) {
     },
     auth: {
       type: ServiceAuthenticator,
-      jwt: {
-        options: {
-          algorithm: "RS256",
-          expiresIn: "12h"
-        }
-      },
       endpoints: {
         ldap: { direction: "out" }
       }
