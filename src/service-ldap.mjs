@@ -101,7 +101,7 @@ export class ServiceLDAP extends Service {
 
       return { username, entitlements };
     } finally {
-      await client.unbind();
+      await this.client.unbind();
     }
   }
 }
