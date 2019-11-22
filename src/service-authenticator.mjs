@@ -53,17 +53,19 @@ export class ServiceAuthenticator extends Service {
   /**
    * Generate a request handler to deliver JWT access tokens
    * @param {Object} params
-   * @return request handler return jwt token
+   * @param {string} params.username
+   * @param {string} params.password
+   * @return {string} return jwt token
    */
   async accessTokenGenerator(params) {
     try {
       let entitlements = [];
 
       for (const e of this.outEndpoints) {
-        const x = await e.receive(params);
+        const response = await e.receive(params);
 
-        if (x.entitlements.length > 0) {
-          entitlements = x.entitlements;
+        if (response && response.entitlements.length > 0) {
+          entitlements = response.entitlements;
           break;
         }
       }
