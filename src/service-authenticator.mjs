@@ -18,7 +18,7 @@ export class ServiceAuthenticator extends Service {
             },
             options: {
               attributes: {
-                algorithm: { default: "RSA", type: "string" },
+                algorithm: { default: "RS256", type: "string" },
                 expiresIn: { default: "12h", type: "duration" }
               }
             }
