@@ -13,7 +13,11 @@ export class ServiceAuthenticator extends Service {
         jwt: {
           attributes: {
             private: {
-              description: "private key to sign token",
+              description: "private key for token",
+              type: "blob"
+            },
+            public: {
+              description: "public key for token",
               type: "blob"
             },
             options: {
