@@ -1,5 +1,6 @@
 import ServiceKOA from "@kronos-integration/service-koa";
 import ServiceHealthCheck from "@kronos-integration/service-health-check";
+import ServiceLDAP from "@kronos-integration/service-ldap";
 import Router from "koa-better-router";
 import {
   CTXInterceptor,
@@ -7,7 +8,6 @@ import {
   endpointRouter
 } from "@kronos-integration/service-koa";
 import { ServiceAuthenticator } from "./service-authenticator.mjs";
-import { ServiceLDAP } from "./service-ldap.mjs";
 
 export async function setup(sp) {
   const GET = { interceptors: [CTXInterceptor] };
@@ -36,8 +36,6 @@ export async function setup(sp) {
       bindDN: "uid={{username}},ou=accounts,dc=mf,dc=de",
       entitlements: {
         base: "ou=groups,dc=mf,dc=de",
-        attribute: "cn",
-        scope: "sub",
         filter:
           "(&(objectclass=groupOfUniqueNames)(uniqueMember=uid={{username}},ou=accounts,dc=mf,dc=de))"
       }
