@@ -35,7 +35,6 @@
     "@kronos-integration/service-ldap": "^1.0.2",
     "commander": "^4.0.1",
     "jsonwebtoken": "^8.5.1",
-    "ldapts": "^1.10.0",
     "oidc-provider": "^6.16.0"
   },
   "devDependencies": {
@@ -58,7 +57,7 @@
     "semantic-release": "^15.13.31"
   },
   "optionalDependencies": {
-    "@kronos-integration/service-systemd": "^1.6.0"
+    "@kronos-integration/service-systemd": "^1.6.1"
   },
   "engines": {
     "node": ">=13.2.0"
