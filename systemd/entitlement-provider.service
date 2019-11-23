@@ -6,6 +6,7 @@ Wants=network-online.target
 [Service]
 Type=notify
 ExecStart=/usr/bin/node --title {{name}} {{installdir}}/bin/{{name}}-systemd
+ExecReload=/bin/kill -HUP $MAINPID
 TimeoutStartSec=20
 StandardOutput=syslog
 User={{name}}
