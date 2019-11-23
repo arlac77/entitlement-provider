@@ -1,7 +1,6 @@
 import ServiceKOA from "@kronos-integration/service-koa";
 import ServiceHealthCheck from "@kronos-integration/service-health-check";
 import ServiceLDAP from "@kronos-integration/service-ldap";
-import Router from "koa-better-router";
 import {
   CTXInterceptor,
   CTXBodyParamInterceptor,
@@ -48,21 +47,6 @@ export async function setup(sp) {
   const [koaService, authService, ldapService, healthService] = services;
 
   authService.endpoints.ldap.connected = ldapService.endpoints.authenticate;
-
-  const router = Router({
-    notFound: async (ctx, next) => {
-      console.log("route not found", ctx.request.url);
-      return next();
-    }
-  });
-
-  router.addRoute("GET", "/hello", async (ctx, next) => {
-    koaService.info("GET /hello");
-    ctx.body = "hello world";
-    return next();
-  });
-
-  koaService.koa.use(router.middleware());
 
   koaService.endpoints["/state/uptime"].connected =
     healthService.endpoints.uptime;

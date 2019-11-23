@@ -14,13 +14,13 @@ export class ServiceAuthenticator extends Service {
           attributes: {
             private: {
               description: "private key for token",
-              madatory: true,
+              mandatory: true,
               private: true,
               type: "blob"
             },
             public: {
               description: "public key for token",
-              madatory: true,
+              mandatory: true,
               private: true,
               type: "blob"
             },
