@@ -55,7 +55,7 @@ export class ServiceAuthenticator extends Service {
    * @param {Object} params
    * @param {string} params.username
    * @param {string} params.password
-   * @return {string} return jwt token
+   * @return {Object} return jwt access_token
    */
   async accessTokenGenerator(params) {
     try {
@@ -73,11 +73,13 @@ export class ServiceAuthenticator extends Service {
       entitlements = [entitlements].filter(e => this.entitlementFilter(e));
 
       if (entitlements.length > 0) {
-        return jwt.sign(
-          { entitlements: entitlements.join(",") },
-          this.jwt.private,
-          this.jwt.options
-        );
+        return {
+          access_token: jwt.sign(
+            { entitlements: entitlements.join(",") },
+            this.jwt.private,
+            this.jwt.options
+          )
+        };
       } else {
         throw new Error("Not authorized");
       }

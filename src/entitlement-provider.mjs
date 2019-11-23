@@ -13,7 +13,7 @@ export async function setup(sp) {
   const GET = { interceptors: [CTXInterceptor] };
   const POST = {
     method: "POST",
-    interceptors: [CTXBodyParamInterceptor, LoggingInterceptor]
+    interceptors: [CTXBodyParamInterceptor /*, LoggingInterceptor*/]
   };
 
   const services = await sp.declareServices({
@@ -34,14 +34,7 @@ export async function setup(sp) {
       }
     },
     ldap: {
-      type: ServiceLDAP,
-      url: "ldap://ldap.mf.de",
-      bindDN: "uid={{username}},ou=accounts,dc=mf,dc=de",
-      entitlements: {
-        base: "ou=groups,dc=mf,dc=de",
-        filter:
-          "(&(objectclass=groupOfUniqueNames)(uniqueMember=uid={{username}},ou=accounts,dc=mf,dc=de))"
-      }
+      type: ServiceLDAP
     },
     health: {
       type: ServiceHealthCheck
