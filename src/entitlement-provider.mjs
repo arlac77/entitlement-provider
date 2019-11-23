@@ -1,3 +1,4 @@
+import { LoggingInterceptor } from "@kronos-integration/interceptor";
 import ServiceKOA from "@kronos-integration/service-koa";
 import ServiceHealthCheck from "@kronos-integration/service-health-check";
 import ServiceLDAP from "@kronos-integration/service-ldap";
@@ -10,7 +11,10 @@ import { ServiceAuthenticator } from "./service-authenticator.mjs";
 
 export async function setup(sp) {
   const GET = { interceptors: [CTXInterceptor] };
-  const POST = { method: "POST", interceptors: [CTXBodyParamInterceptor] };
+  const POST = {
+    method: "POST",
+    interceptors: [CTXBodyParamInterceptor, LoggingInterceptor]
+  };
 
   const services = await sp.declareServices({
     http: {
