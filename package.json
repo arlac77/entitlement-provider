@@ -29,10 +29,10 @@
     "test": "ava"
   },
   "dependencies": {
-    "@kronos-integration/service": "^6.1.22",
+    "@kronos-integration/service": "^6.1.23",
     "@kronos-integration/service-health-check": "^3.0.11",
     "@kronos-integration/service-koa": "^6.0.2",
-    "@kronos-integration/service-ldap": "^1.0.2",
+    "@kronos-integration/service-ldap": "^1.0.4",
     "commander": "^4.0.1",
     "jsonwebtoken": "^8.5.1",
     "oidc-provider": "^6.16.0"
