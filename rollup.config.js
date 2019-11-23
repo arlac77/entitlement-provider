@@ -32,8 +32,6 @@ const config = Object.keys(pkg.bin || {}).map(name => {
     input: `src/${name}-cli.mjs`,
     output: {
       plugins: [executable()],
-      banner:
-        '#!/bin/sh\n":" //# comment; exec /usr/bin/env node --experimental-modules --experimental-wasm-modules "$0" "$@"',
       file: pkg.bin[name]
     }
   };
