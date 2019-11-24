@@ -9,8 +9,7 @@ import pkg from "./package.json";
 
 const external = [
   ...builtins,
-  "koa",
-  "koa-better-router"
+  "koa"
 ];
 
 const extensions = ["js", "mjs", "jsx", "tag"];
