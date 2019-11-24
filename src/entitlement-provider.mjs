@@ -30,7 +30,7 @@ export async function setup(sp) {
     auth: {
       type: ServiceAuthenticator,
       endpoints: {
-        ldap: { direction: "out", connected: "service(ldap).authenticate" }
+        ldap: "service(ldap).authenticate"
       }
     },
     ldap: {
