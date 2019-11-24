@@ -25,5 +25,4 @@ export class ServiceOIDC extends Service {
     await super._start();
     this.provider = new Provider('https://mfelten.dynv6.net/services/entitlement-provider', this);
   }
-  
 }
