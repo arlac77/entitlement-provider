@@ -22,7 +22,7 @@ export async function setup(sp) {
       endpoints: {
         "/state": GET,
         "/state/uptime": GET,
-        "/state/cpu": GET,
+        "/state/cpu": { ...GET, connected: "service(health).cpu" },
         "/state/memory": GET,
         "/authenticate": POST
       }
@@ -49,7 +49,7 @@ export async function setup(sp) {
     healthService.endpoints.uptime;
   koaService.endpoints["/state/memory"].connected =
     healthService.endpoints.memory;
-  koaService.endpoints["/state/cpu"].connected = healthService.endpoints.cpu;
+ // koaService.endpoints["/state/cpu"].connected = healthService.endpoints.cpu;
   koaService.endpoints["/state"].connected = healthService.endpoints.state;
 
   koaService.endpoints["/authenticate"].connected = authService.endpoints.token;
