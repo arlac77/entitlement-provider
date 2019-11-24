@@ -20,17 +20,17 @@ export async function setup(sp) {
     http: {
       type: ServiceKOA,
       endpoints: {
-        "/state": GET,
-        "/state/uptime": GET,
+        "/state/uptime": { ...GET, connected: "service(health).uptime" },
         "/state/cpu": { ...GET, connected: "service(health).cpu" },
-        "/state/memory": GET,
-        "/authenticate": POST
+        "/state/memory": { ...GET, connected: "service(health).memory" },
+        "/state": { ...GET, connected: "service(health).state" },
+        "/authenticate": {...POST, connected: "service(auth).access_token" }
       }
     },
     auth: {
       type: ServiceAuthenticator,
       endpoints: {
-        ldap: { direction: "out" }
+        ldap: { direction: "out", connected: "service(ldap).authenticate" }
       }
     },
     ldap: {
@@ -43,16 +43,16 @@ export async function setup(sp) {
 
   const [koaService, authService, ldapService, healthService] = services;
 
+  /*
   authService.endpoints.ldap.connected = ldapService.endpoints.authenticate;
-
   koaService.endpoints["/state/uptime"].connected =
     healthService.endpoints.uptime;
   koaService.endpoints["/state/memory"].connected =
-    healthService.endpoints.memory;
- // koaService.endpoints["/state/cpu"].connected = healthService.endpoints.cpu;
+  healthService.endpoints.memory;
+  koaService.endpoints["/state/cpu"].connected = healthService.endpoints.cpu;
   koaService.endpoints["/state"].connected = healthService.endpoints.state;
-
-  koaService.endpoints["/authenticate"].connected = authService.endpoints.token;
+  koaService.endpoints["/authenticate"].connected = authService.endpoints.access_token;
+*/
 
   koaService.koa.use(endpointRouter(koaService));
 
