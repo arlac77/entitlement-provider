@@ -30,6 +30,7 @@
   },
   "dependencies": {
     "@kronos-integration/service": "^7.1.2",
+    "@kronos-integration/service-authentication": "^1.0.0",
     "@kronos-integration/service-health-check": "^4.0.0",
     "@kronos-integration/service-koa": "^7.0.0",
     "@kronos-integration/service-ldap": "^2.0.0",

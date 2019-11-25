@@ -2,12 +2,13 @@ import { LoggingInterceptor } from "@kronos-integration/interceptor";
 import ServiceKOA from "@kronos-integration/service-koa";
 import ServiceHealthCheck from "@kronos-integration/service-health-check";
 import ServiceLDAP from "@kronos-integration/service-ldap";
+import ServiceAuthenticator from "@kronos-integration/service-authentication";
+
 import {
   CTXInterceptor,
   CTXBodyParamInterceptor,
   endpointRouter
 } from "@kronos-integration/service-koa";
-import { ServiceAuthenticator } from "./service-authenticator.mjs";
 
 export async function setup(sp) {
   const GET = { interceptors: [CTXInterceptor] };
