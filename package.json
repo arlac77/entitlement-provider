@@ -35,7 +35,6 @@
     "@kronos-integration/service-koa": "^7.0.0",
     "@kronos-integration/service-ldap": "^2.0.0",
     "commander": "^4.0.1",
-    "jsonwebtoken": "^8.5.1",
     "oidc-provider": "^6.16.0"
   },
   "devDependencies": {
