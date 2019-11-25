@@ -58,7 +58,7 @@
     "semantic-release": "^15.13.31"
   },
   "optionalDependencies": {
-    "@kronos-integration/service-systemd": "^2.1.3"
+    "@kronos-integration/service-systemd": "^2.1.4"
   },
   "engines": {
     "node": ">=12.13.1"

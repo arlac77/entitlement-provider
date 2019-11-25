@@ -7,9 +7,7 @@ import ServiceAdmin from "@kronos-integration/service-admin";
 
 import {
   CTXInterceptor,
-  CTXBodyParamInterceptor,
-  endpointRouter
-} from "@kronos-integration/service-koa";
+  CTXBodyParamInterceptor } from "@kronos-integration/service-koa";
 
 export async function setup(sp) {
   const GET = { interceptors: [CTXInterceptor] };
