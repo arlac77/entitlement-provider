@@ -7,10 +7,12 @@ import ServiceAdmin from "@kronos-integration/service-admin";
 
 import {
   CTXInterceptor,
-  CTXBodyParamInterceptor } from "@kronos-integration/service-koa";
+  CTXJWTVerifyInterceptor,
+  CTXBodyParamInterceptor
+} from "@kronos-integration/service-koa";
 
 export async function setup(sp) {
-  const GET = { interceptors: [CTXInterceptor] };
+  const GET = { interceptors: [/*CTXJWTVerifyInterceptor,*/ CTXInterceptor] };
   const POST = {
     method: "POST",
     interceptors: [CTXBodyParamInterceptor /*, LoggingInterceptor*/]
@@ -24,8 +26,8 @@ export async function setup(sp) {
         "/state/uptime": { ...GET, connected: "service(health).uptime" },
         "/state/cpu": { ...GET, connected: "service(health).cpu" },
         "/state/memory": { ...GET, connected: "service(health).memory" },
-        "/authenticate": {...POST, connected: "service(auth).access_token" },
-        "/services": {...GET, connected: "service(admin).services" }
+        "/authenticate": { ...POST, connected: "service(auth).access_token" },
+        "/services": { ...GET, connected: "service(admin).services" }
       }
     },
     auth: {
