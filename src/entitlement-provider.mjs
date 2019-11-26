@@ -2,7 +2,7 @@ import { LoggingInterceptor } from "@kronos-integration/interceptor";
 import ServiceKOA from "@kronos-integration/service-koa";
 import ServiceHealthCheck from "@kronos-integration/service-health-check";
 import ServiceLDAP from "@kronos-integration/service-ldap";
-import ServiceAuthenticator from "@kronos-integration/service-authentication";
+import ServiceAuthenticator from "@kronos-integration/service-authenticator";
 import ServiceAdmin from "@kronos-integration/service-admin";
 
 import {

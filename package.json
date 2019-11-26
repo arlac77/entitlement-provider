@@ -29,9 +29,9 @@
     "test": "ava"
   },
   "dependencies": {
-    "@kronos-integration/service": "^7.1.5",
+    "@kronos-integration/service": "^7.1.7",
     "@kronos-integration/service-admin": "^3.0.0",
-    "@kronos-integration/service-authentication": "^1.0.1",
+    "@kronos-integration/service-authenticator": "^1.0.2",
     "@kronos-integration/service-health-check": "^4.0.1",
     "@kronos-integration/service-koa": "^7.1.0",
     "@kronos-integration/service-ldap": "^2.0.0",
