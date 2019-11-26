@@ -18,9 +18,10 @@ export async function setup(sp) {
     interceptors: [CTXBodyParamInterceptor /*, LoggingInterceptor*/]
   };
 
-  const services = await sp.declareServices({
+  await sp.declareServices({
     http: {
       type: ServiceKOA,
+      autostart: true,
       endpoints: {
         "/state": { ...GET, connected: "service(health).state" },
         "/state/uptime": { ...GET, connected: "service(health).uptime" },
@@ -32,21 +33,23 @@ export async function setup(sp) {
     },
     auth: {
       type: ServiceAuthenticator,
+      autostart: true,
       endpoints: {
         ldap: "service(ldap).authenticate"
       }
     },
     ldap: {
-      type: ServiceLDAP
+      type: ServiceLDAP,
+      autostart: true
     },
     health: {
       type: ServiceHealthCheck
     },
     admin: {
-      type: ServiceAdmin
+      type: ServiceAdmin,
+      autostart: true
     }
   });
 
   await sp.start();
-  await Promise.all(services.map(s => s.start()));
 }

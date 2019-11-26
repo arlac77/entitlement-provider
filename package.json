@@ -29,7 +29,7 @@
     "test": "ava"
   },
   "dependencies": {
-    "@kronos-integration/service": "^7.1.8",
+    "@kronos-integration/service": "^7.1.10",
     "@kronos-integration/service-admin": "^3.0.1",
     "@kronos-integration/service-authenticator": "^1.0.3",
     "@kronos-integration/service-health-check": "^4.0.2",
@@ -53,12 +53,12 @@
     "rollup-plugin-cleanup": "^3.1.1",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-executable": "^1.5.1",
-    "rollup-plugin-native": "0.0.10",
+    "rollup-plugin-native": "^1.0.0",
     "rollup-plugin-node-resolve": "^5.2.0",
     "semantic-release": "^15.13.31"
   },
   "optionalDependencies": {
-    "@kronos-integration/service-systemd": "^2.1.4"
+    "@kronos-integration/service-systemd": "^2.1.5"
   },
   "engines": {
     "node": ">=12.13.1"
