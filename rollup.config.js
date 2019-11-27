@@ -9,7 +9,9 @@ import pkg from "./package.json";
 
 const external = [
   ...builtins,
-  "koa"
+  "koa",
+  "bufferutil",
+  "utf-8-validate"
 ];
 
 const extensions = ["js", "mjs", "jsx", "tag"];
