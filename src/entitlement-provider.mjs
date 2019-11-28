@@ -25,6 +25,7 @@ export async function setup(sp) {
       endpoints: {
         "/state": { ...GET, connected: "service(health).state" },
         "/state/uptime": { ...GET, connected: "service(health).uptime" },
+        "/ws/state/uptime": { ws:true, connected: "service(health).uptime" },
         "/state/cpu": { ...GET, connected: "service(health).cpu" },
         "/state/memory": { ...GET, connected: "service(health).memory" },
         "/authenticate": { ...POST, connected: "service(auth).access_token" },
