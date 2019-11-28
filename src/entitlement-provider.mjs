@@ -12,7 +12,7 @@ import {
 } from "@kronos-integration/service-koa";
 
 export async function setup(sp) {
-  const GET = { interceptors: [/*CTXJWTVerifyInterceptor,*/ CTXInterceptor] };
+  const GET = { interceptors: [/*{ type: CTXJWTVerifyInterceptor, key : },*/ CTXInterceptor] };
   const POST = {
     method: "POST",
     interceptors: [CTXBodyParamInterceptor /*, LoggingInterceptor*/]
