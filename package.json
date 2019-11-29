@@ -33,7 +33,7 @@
     "@kronos-integration/service-admin": "^3.0.1",
     "@kronos-integration/service-authenticator": "^1.0.3",
     "@kronos-integration/service-health-check": "^4.1.0",
-    "@kronos-integration/service-koa": "^7.3.3",
+    "@kronos-integration/service-koa": "^7.3.4",
     "@kronos-integration/service-ldap": "^2.1.1",
     "commander": "^4.0.1",
     "oidc-provider": "^6.16.1"
