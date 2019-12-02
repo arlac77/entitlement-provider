@@ -1,37 +1,37 @@
 import test from "ava";
 import got from "got";
+import { StandaloneServiceProvider } from "@kronos-integration/service";
+import { setup } from "../src/entitlement-provider.mjs";
 
 let port = 3149;
 
 test.before(async t => {
   port++;
 
+  setup(new StandaloneServiceProvider());
+
   t.context.port = port;
 
   const response = await got.post(`http://localhost:${port}/authenticate`, {
-    body: {
+    json: {
       username: "user1",
       password: "secret"
-    },
-    json: true
+    }
   });
 
   t.context.token = response.body.access_token;
 });
 
 test.after.always(async t => {
-  t.context.server.close();
+  // t.context.server.close();
 });
 
 test.skip("logs", async t => {
-  const response = await got.get(
-    `http://localhost:${t.context.port}/logs`,
-    {
-      headers: {
-        Authorization: `Bearer ${t.context.token}`
-      }
+  const response = await got.get(`http://localhost:${t.context.port}/logs`, {
+    headers: {
+      Authorization: `Bearer ${t.context.token}`
     }
-  );
+  });
 
   t.is(response.statusCode, 200);
 
