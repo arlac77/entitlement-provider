@@ -1,14 +1,14 @@
 import test from "ava";
 import got from "got";
 import { StandaloneServiceProvider } from "@kronos-integration/service";
-import { setup } from "../src/entitlement-provider.mjs";
+//import { setup } from "../src/entitlement-provider.mjs";
 
 let port = 3149;
 
 test.before(async t => {
   port++;
 
-  setup(new StandaloneServiceProvider());
+  //await setup(new StandaloneServiceProvider());
 
   t.context.port = port;
 
