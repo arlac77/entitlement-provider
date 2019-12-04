@@ -1,15 +1,15 @@
 import { LoggingInterceptor } from "@kronos-integration/interceptor";
-import ServiceHTTP from "@kronos-integration/service-http";
 import ServiceHealthCheck from "@kronos-integration/service-health-check";
 import ServiceLDAP from "@kronos-integration/service-ldap";
 import ServiceAuthenticator from "@kronos-integration/service-authenticator";
 import ServiceAdmin from "@kronos-integration/service-admin";
 
 import {
+  ServiceHTTP,
   CTXInterceptor,
   CTXJWTVerifyInterceptor,
   CTXBodyParamInterceptor
-} from "@kronos-integration/service-koa";
+} from "@kronos-integration/service-http";
 
 export async function setup(sp) {
   const getInterceptors = [/*new CTXJWTVerifyInterceptor(),*/ new CTXInterceptor()]
