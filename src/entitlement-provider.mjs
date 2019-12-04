@@ -1,5 +1,5 @@
 import { LoggingInterceptor } from "@kronos-integration/interceptor";
-import ServiceKOA from "@kronos-integration/service-koa";
+import ServiceHTTP from "@kronos-integration/service-http";
 import ServiceHealthCheck from "@kronos-integration/service-health-check";
 import ServiceLDAP from "@kronos-integration/service-ldap";
 import ServiceAuthenticator from "@kronos-integration/service-authenticator";
@@ -24,7 +24,7 @@ export async function setup(sp) {
 
   await sp.declareServices({
     http: {
-      type: ServiceKOA,
+      type: ServiceHTTP,
       autostart: true,
       endpoints: {
         "/ws/state/uptime": {
