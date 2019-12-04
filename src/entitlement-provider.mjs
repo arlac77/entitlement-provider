@@ -12,9 +12,11 @@ import {
 } from "@kronos-integration/service-koa";
 
 export async function setup(sp) {
+  const getInterceptors = [/*new CTXJWTVerifyInterceptor(),*/ new CTXInterceptor()]
   const GET = {
-    interceptors: [/*{ type: CTXJWTVerifyInterceptor, key : },*/ CTXInterceptor]
+    interceptors: getInterceptors
   };
+
   const POST = {
     method: "POST",
     interceptors: [CTXBodyParamInterceptor /*, LoggingInterceptor*/]
@@ -25,16 +27,24 @@ export async function setup(sp) {
       type: ServiceKOA,
       autostart: true,
       endpoints: {
-        "/state": { ...GET, connected: "service(health).state" },
-        "/state/uptime": { ...GET, connected: "service(health).uptime" },
         "/ws/state/uptime": {
           ws: true,
-          connected: "service(health).uptime",
-          interceptors: [LoggingInterceptor],
-          opposite: {
-            interceptors: [LoggingInterceptor]
-          }
+          connected: "service(health).uptime"
         },
+        "/ws/state/cpu": {
+          ws: true,
+          connected: "service(health).cpu"
+        },
+        "/ws/state/memory": {
+          ws: true,
+          connected: "service(health).memory"
+        },
+        "/ws/state": {
+          ws: true,
+          connected: "service(health).state"
+        },
+        "/state": { ...GET, connected: "service(health).state" },
+        "/state/uptime": { ...GET, connected: "service(health).uptime" },
         "/state/cpu": { ...GET, connected: "service(health).cpu" },
         "/state/memory": { ...GET, connected: "service(health).memory" },
         "/authenticate": { ...POST, connected: "service(auth).access_token" },
