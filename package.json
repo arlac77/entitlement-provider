@@ -93,7 +93,7 @@
     "hooks": "pacman/hooks.sh",
     "backup": "etc/${name}/config.json",
     "depends": {
-      "systemd": ">=243.78"
+      "systemd": ">=244"
     },
     "installdir": "/services/${name}",
     "additional-content": [
