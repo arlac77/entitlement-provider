@@ -58,7 +58,8 @@
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-executable": "^1.5.1",
     "rollup-plugin-native": "^1.1.0",
-    "semantic-release": "^15.13.31"
+    "semantic-release": "^15.13.31",
+    "acorn-class-fields": "https://github.com/arlac77/acorn-class-fields.git"
   },
   "optionalDependencies": {
     "@kronos-integration/service-systemd": "^2.1.5"

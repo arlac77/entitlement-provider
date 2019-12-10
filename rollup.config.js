@@ -5,6 +5,8 @@ import commonjs from "rollup-plugin-commonjs";
 import executable from "rollup-plugin-executable";
 import native from "rollup-plugin-native";
 import cleanup from "rollup-plugin-cleanup";
+import acornClassFields from 'acorn-class-fields';
+
 import builtins from "builtin-modules";
 import pkg from "./package.json";
 
@@ -55,5 +57,5 @@ export default config.map(c => {
     format: "cjs",
     ...c.output
   };
-  return { plugins, external, ...c };
+  return { acornInjectPlugins:[ acornClassFields ], plugins, external, ...c };
 });
