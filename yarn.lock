@@ -1007,10 +1007,10 @@
   dependencies:
     "@kronos-integration/interceptor" "^7.0.0"
 
-"@kronos-integration/endpoint@^6.1.0":
-  version "6.1.0"
-  resolved "https://registry.yarnpkg.com/@kronos-integration/endpoint/-/endpoint-6.1.0.tgz#79a40a41b41c7ef095b5acdeedd4386c1c3a9e75"
-  integrity sha512-S4jjUnQJhfhN2vv7T+PITu+ovBcUQQoQcQKrZeSyBpbd9SookuooceWsLjof50ORaMXoQwmnKAl97y6ttExyPg==
+"@kronos-integration/endpoint@^7.0.0":
+  version "7.0.0"
+  resolved "https://registry.yarnpkg.com/@kronos-integration/endpoint/-/endpoint-7.0.0.tgz#cb505002012327456937eea5cf146f8f4b97f898"
+  integrity sha512-Sh/MfDqvXxtXJXl5SkdZq4Yav6GZd21lrENQfyxS9ktS/Y380kDEMGmCaAt1Oin1YuIKQR1FLOwyt/Wy5hiSVQ==
   dependencies:
     "@kronos-integration/interceptor" "^8.0.0"
 
@@ -1043,20 +1043,20 @@
     "@kronos-integration/service" "^8.0.0"
     jsonwebtoken "^8.5.1"
 
-"@kronos-integration/service-health-check@^5.0.0":
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/@kronos-integration/service-health-check/-/service-health-check-5.0.0.tgz#93e3a6b0033fcd29274fc048a6050230b4ed6a02"
-  integrity sha512-GAbAyJfm/sBkGsk0ZeNX2aUM/SibiUg2StN/1YrCKvgl+juYUw62bgqWStPFZOLG/GH8hMWJ/dXqFy1gcEbnqA==
+"@kronos-integration/service-health-check@^5.0.1":
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/@kronos-integration/service-health-check/-/service-health-check-5.0.1.tgz#30da9ae12f26c856b0e60c51a5cc4001676295fe"
+  integrity sha512-cjxLKm8sak2z04ynNvP/WHxGX64ccSJi8Z900s6UsFGWiq7pV92tHwR3xdidJV/Z0BBHpUJSOQBXjM4OH0KaDA==
   dependencies:
-    "@kronos-integration/service" "^8.0.0"
+    "@kronos-integration/service" "^8.0.7"
     model-attributes "^4.1.3"
 
-"@kronos-integration/service-http@^8.0.2":
-  version "8.0.2"
-  resolved "https://registry.yarnpkg.com/@kronos-integration/service-http/-/service-http-8.0.2.tgz#41ae2975190fd61dee2a2d1ef8895c39d02eea64"
-  integrity sha512-7SGYz88pdJaAMB2fb3HZwwNaTgPmDBA4lfXAwbsoIgCy1DdFNce0uHLpnz/xq2DOFclEYRa+wSBC1OvFesvDRw==
+"@kronos-integration/service-http@^8.0.3":
+  version "8.0.3"
+  resolved "https://registry.yarnpkg.com/@kronos-integration/service-http/-/service-http-8.0.3.tgz#c240e9ed32c81c71bffbddd98b25adef1e7988e6"
+  integrity sha512-IBXCfY0GchpLI97zGECcXBYqSRHn27VAnhVrE0C/bazTFjUMGnlw9oxTO54gXWMq4tPVitRlUFOpFsY6r7om4Q==
   dependencies:
-    "@kronos-integration/service" "^8.0.4"
+    "@kronos-integration/service" "^8.0.7"
     bufferutil "^4.0.1"
     jsonwebtoken "^8.5.1"
     koa "^2.11.0"
@@ -1065,12 +1065,12 @@
     utf-8-validate "^5.0.2"
     ws "^7.2.0"
 
-"@kronos-integration/service-ldap@^2.1.3":
-  version "2.1.3"
-  resolved "https://registry.yarnpkg.com/@kronos-integration/service-ldap/-/service-ldap-2.1.3.tgz#b149df5a956ffe6b3f2edb1047e6a34477ab86a9"
-  integrity sha512-EyUPJ/bwpW2a62L5HbvIe8rgyEDdX/kkZBQnp9uoyM2LRp47W5ZIhYAdsX/7vyXCykeyA9yaC/l8G8XHXyuxug==
+"@kronos-integration/service-ldap@^2.1.4":
+  version "2.1.4"
+  resolved "https://registry.yarnpkg.com/@kronos-integration/service-ldap/-/service-ldap-2.1.4.tgz#3f8b9aa2d7b92b50bc38100e32fb8a171f5bf577"
+  integrity sha512-BrH00vzvmt1KoRc1pKS3J0ts4FXL89AiJApmUctAbuDJj+BPAb1JA0IGo8XXOAl8HYrsc087AiObbf1sfhApUA==
   dependencies:
-    "@kronos-integration/service" "^8.0.0"
+    "@kronos-integration/service" "^8.0.7"
     ldapts "^1.10.0"
 
 "@kronos-integration/service-systemd@^2.1.5":
@@ -1091,12 +1091,12 @@
     model-attributes "^4.1.3"
     statetransition-mixin "^6.0.4"
 
-"@kronos-integration/service@^8.0.0", "@kronos-integration/service@^8.0.4", "@kronos-integration/service@^8.0.5":
-  version "8.0.6"
-  resolved "https://registry.yarnpkg.com/@kronos-integration/service/-/service-8.0.6.tgz#ef274d1526517b8ba11f93c675895114e5f5cd7c"
-  integrity sha512-AWU63sfmc8URkI+CByP30OfMNEqfdxeYjmZRVlqkXxBQTF+ypDJ8X0PsOShlmrRnMuK9DZ4/SUonVeardIRM4g==
+"@kronos-integration/service@^8.0.0", "@kronos-integration/service@^8.0.7":
+  version "8.0.7"
+  resolved "https://registry.yarnpkg.com/@kronos-integration/service/-/service-8.0.7.tgz#e198b369eb1343fda5a33fe8c320be250a2a96e9"
+  integrity sha512-bXDbkEbl+jEa9AEgOLEXN8qMXBLOJmq67NCK8tnPoZqNTL46Jw0XIXxucT4WzEuyTrthqJm0bY9NhC7vWnZ/Dg==
   dependencies:
-    "@kronos-integration/endpoint" "^6.1.0"
+    "@kronos-integration/endpoint" "^7.0.0"
     loglevel-mixin "^5.0.0"
     model-attributes "^4.1.3"
     statetransition-mixin "^6.0.4"
@@ -1470,9 +1470,9 @@
   integrity sha512-tHq6qdbT9U1IRSGf14CL0pUlULksvY9OZ+5eEgl1N7t+OA3tGvNpxJCzuKQlsNgCVwbAs670L1vcVQi8j9HjnA==
 
 "@types/node@*", "@types/node@>= 8", "@types/node@^12.12.14":
-  version "12.12.16"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-12.12.16.tgz#3ebcbd7bf978fa4c5120fee8be57083271a8b3ac"
-  integrity sha512-vRuMyoOr5yfNf8QWxXegOjeyjpWJxFePzHzmBOIzDIzo+rSqF94RW0PkS6y4T2+VjAWLXHWrfbIJY3E3aS7lUw==
+  version "12.12.17"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-12.12.17.tgz#191b71e7f4c325ee0fb23bc4a996477d92b8c39b"
+  integrity sha512-Is+l3mcHvs47sKy+afn2O1rV4ldZFU7W8101cNlOd+MRbjM4Onida8jSZnJdTe/0Pcf25g9BNIUsuugmE6puHA==
 
 "@types/node@~8.10.54":
   version "8.10.59"
@@ -4205,7 +4205,7 @@ globby@^6.1.0:
     pify "^2.0.0"
     pinkie-promise "^2.0.0"
 
-got@^10.0.1:
+got@^10.0.3:
   version "10.0.3"
   resolved "https://registry.yarnpkg.com/got/-/got-10.0.3.tgz#0bd93429fd2891de0026ed731a16143e6193e7ac"
   integrity sha512-5QBO/EhIq3nbt2madWsez9aTPc0k1oWBzXipfqLdb6JmnrWNxcHEvnxuWErec/PE67Jy/QAgacq6XzGbyzXCzg==
@@ -5166,9 +5166,9 @@ java-properties@^1.0.0:
   integrity sha512-qjdpeo2yKlYTH7nFdK0vbZWuTCesk4o63v5iVOlhMQPfuIZQfW/HI35SjfhA+4qpg36rnFSvUK5b1m+ckIblQQ==
 
 jose@^1.16.1:
-  version "1.17.0"
-  resolved "https://registry.yarnpkg.com/jose/-/jose-1.17.0.tgz#00d17e3af3750bf8dbcd651740b6cf7b8fea427c"
-  integrity sha512-6Cr281O2vtKquOHIYIgCqiGIVVYKFS8YvR6EZTKFwQTgAhgIMxtcji65fajqoc/2YNPb85cd71DDpHStIXDqmg==
+  version "1.17.1"
+  resolved "https://registry.yarnpkg.com/jose/-/jose-1.17.1.tgz#5fcc9ef2261798beda82bb7ea89e92a85e24f08e"
+  integrity sha512-HsCRnV2ZPaLbGLIKIVcRqepx0E/b/acIAF7cgnr/nJb7jRwk13fIViErVJ2a7r6Pgz7OX+oZieOOaPi57pbjgg==
   dependencies:
     asn1.js "^5.2.0"
 
@@ -5821,9 +5821,9 @@ log-symbols@^2.2.0:
     chalk "^2.0.1"
 
 loglevel-mixin@^5.0.0:
-  version "5.0.2"
-  resolved "https://registry.yarnpkg.com/loglevel-mixin/-/loglevel-mixin-5.0.2.tgz#9ce7cbd88c715e8b8b7016bb899f815835f4761d"
-  integrity sha512-LfLJ/CB9K3QNevboUUn0Z6q99zB0QTfDI/Ba6s2rynFBE1pSOnH1aCT4b6SNYO+GS/Xm6DukxjHLoyb3KF3zYw==
+  version "5.0.3"
+  resolved "https://registry.yarnpkg.com/loglevel-mixin/-/loglevel-mixin-5.0.3.tgz#6d3f3405113f3c5d8d39f6b10e5e4aba288dfa59"
+  integrity sha512-VdqcVZV6eNPzmQVKAePu7QONbMsqYk1QL8kSKJT38O74MMuIMGQIzjHHMQM+zrL5mvqqLTYeCVr8hskAA/IaGg==
 
 longest-streak@^2.0.1:
   version "2.0.3"
@@ -6873,7 +6873,7 @@ octokit-pagination-methods@^1.1.0:
   resolved "https://registry.yarnpkg.com/octokit-pagination-methods/-/octokit-pagination-methods-1.1.0.tgz#cf472edc9d551055f9ef73f6e42b4dbb4c80bea4"
   integrity sha512-fZ4qZdQ2nxJvtcasX7Ghl+WlWS/d9IgnBIwFZXVNNZUmzpno91SX5bc5vuxiuKoCtK78XxGGNuSCrDC7xYB3OQ==
 
-oidc-provider@^6.17.1:
+oidc-provider@^6.17.3:
   version "6.17.3"
   resolved "https://registry.yarnpkg.com/oidc-provider/-/oidc-provider-6.17.3.tgz#e82a90a7d2350ffd5a3d6df021e390605d279999"
   integrity sha512-7RsACEl8pXm3MjIal0CmDVogL6XmyuczucloSq0oqO6Sp9ZdmNLhkbTknvTVqJyODqyA4Tmv0lA1Pz2gsYMoWQ==
@@ -8201,7 +8201,7 @@ rollup-pluginutils@^2.3.3, rollup-pluginutils@^2.5.0, rollup-pluginutils@^2.8.1:
   dependencies:
     estree-walker "^0.6.1"
 
-rollup@^1.27.8:
+rollup@^1.27.9:
   version "1.27.9"
   resolved "https://registry.yarnpkg.com/rollup/-/rollup-1.27.9.tgz#742f1234c1fa935f35149a433807da675b10f9a6"
   integrity sha512-8AfW4cJTPZfG6EXWwT/ujL4owUsDI1Xl8J1t+hvK4wDX81F5I4IbwP9gvGbHzxnV19fnU4rRABZQwZSX9J402Q==
