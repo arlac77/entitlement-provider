@@ -32,7 +32,7 @@
     "test": "ava"
   },
   "dependencies": {
-    "@kronos-integration/service": "^8.0.9",
+    "@kronos-integration/service": "^8.1.ß",
     "@kronos-integration/service-admin": "^3.0.4",
     "@kronos-integration/service-authenticator": "^1.0.5",
     "@kronos-integration/service-health-check": "^5.0.2",
