@@ -1000,13 +1000,6 @@
   dependencies:
     vary "^1.1.2"
 
-"@kronos-integration/endpoint@^7.2.2":
-  version "7.2.2"
-  resolved "https://registry.yarnpkg.com/@kronos-integration/endpoint/-/endpoint-7.2.2.tgz#806c550845208f61ea1dff9aab7a24ef181323ca"
-  integrity sha512-7u2tRp2I2nSb2k45yIrXKzlpbI/jloBDakXgOzrYmRXg5TEIMb7GCL3bZR/iEdDubN6JtNevdJ2rtHkiJcU0UQ==
-  dependencies:
-    "@kronos-integration/interceptor" "^8.0.2"
-
 "@kronos-integration/endpoint@^7.3.0":
   version "7.3.0"
   resolved "https://registry.yarnpkg.com/@kronos-integration/endpoint/-/endpoint-7.3.0.tgz#71ad483fc14d09414be6ab67804cefd2546e9e5a"
@@ -1036,20 +1029,20 @@
     "@kronos-integration/service" "^8.1.0"
     jsonwebtoken "^8.5.1"
 
-"@kronos-integration/service-health-check@^5.0.3":
-  version "5.0.3"
-  resolved "https://registry.yarnpkg.com/@kronos-integration/service-health-check/-/service-health-check-5.0.3.tgz#d8d013eea36632b2856800431751d006d4201368"
-  integrity sha512-juTVvCipLhhpPc6vt9l5LUuxYUYxB8nPEA9DanFSRDPOt/t34ie49I5dEvG0UzsFBtSB0TIGJhHPqE6Hv5gnnw==
+"@kronos-integration/service-health-check@^5.0.4":
+  version "5.0.4"
+  resolved "https://registry.yarnpkg.com/@kronos-integration/service-health-check/-/service-health-check-5.0.4.tgz#06d90da3a8014ab676157dae2436fd60006181c9"
+  integrity sha512-i9OIY/kmcXsoSmQXqSQ5hudT/Aq2otTC9NbwqOIcmAk7EWRAwITgj8lEozWFpmT/SLBLNWV16rHTKhDCkibiXw==
   dependencies:
-    "@kronos-integration/service" "^8.1.0"
+    "@kronos-integration/service" "^8.1.6"
     model-attributes "^4.1.3"
 
 "@kronos-integration/service-http@^8.0.6":
-  version "8.0.6"
-  resolved "https://registry.yarnpkg.com/@kronos-integration/service-http/-/service-http-8.0.6.tgz#bdbcb69ca3e17e25b720a8d65e9be460354e78b0"
-  integrity sha512-bK0G5H/qN7GIwz25XiyklNZKQePuQB/06SH+HUchDdfjf8CzRqczCdduK79F2HItn8MC6zmfxwjp8PgZbfYPBQ==
+  version "8.0.7"
+  resolved "https://registry.yarnpkg.com/@kronos-integration/service-http/-/service-http-8.0.7.tgz#47f6860e51d38f18651f1e1d9e460681e4f2b00a"
+  integrity sha512-iHLLJOSK5c69PJVdQyYnfIrMD8cMkdN+dV9noaMFCmGNhsF9m8ZgQCNLenh4jas0oxeuZV0Mhx4JaasKMsiozA==
   dependencies:
-    "@kronos-integration/service" "^8.1.2"
+    "@kronos-integration/service" "^8.1.6"
     bufferutil "^4.0.1"
     jsonwebtoken "^8.5.1"
     koa "^2.11.0"
@@ -1059,32 +1052,22 @@
     ws "^7.2.0"
 
 "@kronos-integration/service-ldap@^2.1.5":
-  version "2.1.5"
-  resolved "https://registry.yarnpkg.com/@kronos-integration/service-ldap/-/service-ldap-2.1.5.tgz#a1c89bbc8eed4dff75c4c63aa021ef545da47101"
-  integrity sha512-M9AzKVkEcbVgPpMtHEeie26gOc+u8Bweai213UGValQTpiyhOy6gyJ+YOyDu0a+UjR9eUoybHuHZS7nRmPW8Mg==
+  version "2.1.6"
+  resolved "https://registry.yarnpkg.com/@kronos-integration/service-ldap/-/service-ldap-2.1.6.tgz#8166ceda2bf9f790c45da9866e23d9bec5f9fe8a"
+  integrity sha512-iyNXVhc71bU/NnDsKZu6hvMr0v+qBH/aek+2q4dqGPAsVXb5mmpX/nF3rV0LL8Yopse6l8K/bRXutJHg6GGMew==
   dependencies:
-    "@kronos-integration/service" "^8.0.9"
+    "@kronos-integration/service" "^8.1.6"
     ldapts "^1.10.0"
 
-"@kronos-integration/service-systemd@^2.1.6":
-  version "2.1.6"
-  resolved "https://registry.yarnpkg.com/@kronos-integration/service-systemd/-/service-systemd-2.1.6.tgz#9ace3b70e028702e47d6c1613966a13505b85bc1"
-  integrity sha512-/4l9C4e3zHsnBMxUyPjtO+ijY0mgx/mo3EC0J1US5ObZm9sDNjriPMIWgRccsMRbNnKjuLwxO6/F2pYtjaZSRQ==
+"@kronos-integration/service-systemd@^2.1.7":
+  version "2.1.7"
+  resolved "https://registry.yarnpkg.com/@kronos-integration/service-systemd/-/service-systemd-2.1.7.tgz#5ffd2c693060a77cff5e508fe6ac55b97913be3e"
+  integrity sha512-98jdeVYjBeSpj7tS0ZKhG3CPdmDzRmF9wz9o1sOQN8u5FRgc9ZiNHGaKQj3qyR5AGQYCEIMseF5jOsi/KGKlXw==
   dependencies:
-    "@kronos-integration/service" "^8.0.9"
+    "@kronos-integration/service" "^8.1.6"
     config-expander "^11.0.6"
 
-"@kronos-integration/service@^8.0.9", "@kronos-integration/service@^8.1.0", "@kronos-integration/service@^8.1.2":
-  version "8.1.5"
-  resolved "https://registry.yarnpkg.com/@kronos-integration/service/-/service-8.1.5.tgz#e54e8bddcc090f302e3abbdf8951eb45bb275798"
-  integrity sha512-nW6ldjPoc31Y7Gs6dDxP89BTMEyDgYO53WbkWmjdVFQ7Jr2QjcjQ17bUse/zQXGT52MuSk4gigCRHa8fZi1KRw==
-  dependencies:
-    "@kronos-integration/endpoint" "^7.2.2"
-    loglevel-mixin "^5.0.3"
-    model-attributes "^4.1.3"
-    statetransition-mixin "^6.0.4"
-
-"@kronos-integration/service@^8.1.6":
+"@kronos-integration/service@^8.1.0", "@kronos-integration/service@^8.1.6":
   version "8.1.6"
   resolved "https://registry.yarnpkg.com/@kronos-integration/service/-/service-8.1.6.tgz#88bb650ecfac864d48f519d69ef8ff5bbffb04e7"
   integrity sha512-98pu28T1I7yzK+nNKVW5yRBLR8ASglnfF9MZTE0Z1U/+ZsYres5nFDDiewZ4Sm8GC68qOwLlKeC3/FjVxbs7KA==
@@ -3051,7 +3034,7 @@ debug@^4.0.0, debug@^4.1.0, debug@^4.1.1, debug@~4.1.1:
   dependencies:
     ms "^2.1.1"
 
-debuglog@^1.0.1:
+debuglog@*, debuglog@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/debuglog/-/debuglog-1.0.1.tgz#aa24ffb9ac3df9a2351837cfb2d279360cd78492"
   integrity sha1-qiT/uaw9+aI1GDfPstJ5NgzXhJI=
@@ -4369,9 +4352,9 @@ he@^1.1.0:
   integrity sha512-F/1DnUGPopORZi0ni+CvrCgHQ5FyEAHRLSApuYWMmrbSwoN2Mn/7k+Gl38gJnR7yyDZk6WLXwiGod1JOWNDKGw==
 
 highlight.js@^9.15.5:
-  version "9.17.0"
-  resolved "https://registry.yarnpkg.com/highlight.js/-/highlight.js-9.17.0.tgz#d2f3f746611a4d33b1920b9b067d39423bee7a9d"
-  integrity sha512-PyO7FK7z8ZC7FqBlmAxm4d+1DYaoS6+uaxt9KGkyP1AnmGRLnWmNod1yp9BFjUyHoDF00k+V57gF6X9ifY7f/A==
+  version "9.17.1"
+  resolved "https://registry.yarnpkg.com/highlight.js/-/highlight.js-9.17.1.tgz#14a4eded23fd314b05886758bb906e39dd627f9a"
+  integrity sha512-TA2/doAur5Ol8+iM3Ov7qy3jYcr/QiJ2eDTdRF4dfbjG7AaaB99J5G+zSl11ljbl6cIcahgPY6SKb3sC3EJ0fw==
   dependencies:
     handlebars "^4.5.3"
 
@@ -4538,7 +4521,7 @@ import-local@^3.0.2:
     pkg-dir "^4.2.0"
     resolve-cwd "^3.0.0"
 
-imurmurhash@^0.1.4:
+imurmurhash@*, imurmurhash@^0.1.4:
   version "0.1.4"
   resolved "https://registry.yarnpkg.com/imurmurhash/-/imurmurhash-0.1.4.tgz#9218b9b2b928a238b13dc4fb6b6d576f231453ea"
   integrity sha1-khi5srkoojixPcT7a21XbyMUU+o=
@@ -5611,6 +5594,11 @@ lockfile@^1.0.4:
   dependencies:
     signal-exit "^3.0.2"
 
+lodash._baseindexof@*:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/lodash._baseindexof/-/lodash._baseindexof-3.1.0.tgz#fe52b53a1c6761e42618d654e4a25789ed61822c"
+  integrity sha1-/lK1OhxnYeQmGNZU5KJXie1hgiw=
+
 lodash._baseuniq@~4.6.0:
   version "4.6.0"
   resolved "https://registry.yarnpkg.com/lodash._baseuniq/-/lodash._baseuniq-4.6.0.tgz#0ebb44e456814af7905c6212fa2c9b2d51b841e8"
@@ -5619,10 +5607,32 @@ lodash._baseuniq@~4.6.0:
     lodash._createset "~4.0.0"
     lodash._root "~3.0.0"
 
+lodash._bindcallback@*:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/lodash._bindcallback/-/lodash._bindcallback-3.0.1.tgz#e531c27644cf8b57a99e17ed95b35c748789392e"
+  integrity sha1-5THCdkTPi1epnhftlbNcdIeJOS4=
+
+lodash._cacheindexof@*:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/lodash._cacheindexof/-/lodash._cacheindexof-3.0.2.tgz#3dc69ac82498d2ee5e3ce56091bafd2adc7bde92"
+  integrity sha1-PcaayCSY0u5ePOVgkbr9Ktx73pI=
+
+lodash._createcache@*:
+  version "3.1.2"
+  resolved "https://registry.yarnpkg.com/lodash._createcache/-/lodash._createcache-3.1.2.tgz#56d6a064017625e79ebca6b8018e17440bdcf093"
+  integrity sha1-VtagZAF2JeeevKa4AY4XRAvc8JM=
+  dependencies:
+    lodash._getnative "^3.0.0"
+
 lodash._createset@~4.0.0:
   version "4.0.3"
   resolved "https://registry.yarnpkg.com/lodash._createset/-/lodash._createset-4.0.3.tgz#0f4659fbb09d75194fa9e2b88a6644d363c9fe26"
   integrity sha1-D0ZZ+7CddRlPqeK4imZE02PJ/iY=
+
+lodash._getnative@*, lodash._getnative@^3.0.0:
+  version "3.9.1"
+  resolved "https://registry.yarnpkg.com/lodash._getnative/-/lodash._getnative-3.9.1.tgz#570bc7dede46d61cdcde687d65d3eecbaa3aaff5"
+  integrity sha1-VwvH3t5G1hzc3mh9ZdPuy6o6r/U=
 
 lodash._root@~3.0.0:
   version "3.0.1"
@@ -5703,6 +5713,11 @@ lodash.once@^4.0.0:
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/lodash.once/-/lodash.once-4.1.1.tgz#0dd3971213c7c56df880977d504c88fb471a97ac"
   integrity sha1-DdOXEhPHxW34gJd9UEyI+0cal6w=
+
+lodash.restparam@*:
+  version "3.6.1"
+  resolved "https://registry.yarnpkg.com/lodash.restparam/-/lodash.restparam-3.6.1.tgz#936a4e309ef330a7645ed4145986c85ae5b20805"
+  integrity sha1-k2pOMJ7zMKdkXtQUWYbIWuWyCAU=
 
 lodash.set@^4.3.2:
   version "4.3.2"
