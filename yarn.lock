@@ -1000,10 +1000,10 @@
   dependencies:
     vary "^1.1.2"
 
-"@kronos-integration/endpoint@^7.2.1":
-  version "7.2.1"
-  resolved "https://registry.yarnpkg.com/@kronos-integration/endpoint/-/endpoint-7.2.1.tgz#dc01f9a04c1b3cd4a2599686e9c68afe5a4e9ea6"
-  integrity sha512-UqUSNQNjtV4aWm3hm85qxU++ZDzdvPTDEkuyplJkt4No0rCs9GbPrR3BSrc5l2EimJhsac4xE4aRT+Q2BL+C/A==
+"@kronos-integration/endpoint@^7.2.2":
+  version "7.2.2"
+  resolved "https://registry.yarnpkg.com/@kronos-integration/endpoint/-/endpoint-7.2.2.tgz#806c550845208f61ea1dff9aab7a24ef181323ca"
+  integrity sha512-7u2tRp2I2nSb2k45yIrXKzlpbI/jloBDakXgOzrYmRXg5TEIMb7GCL3bZR/iEdDubN6JtNevdJ2rtHkiJcU0UQ==
   dependencies:
     "@kronos-integration/interceptor" "^8.0.2"
 
@@ -1067,12 +1067,12 @@
     "@kronos-integration/service" "^8.0.9"
     config-expander "^11.0.6"
 
-"@kronos-integration/service@^8.0.0", "@kronos-integration/service@^8.0.9", "@kronos-integration/service@^8.1.0", "@kronos-integration/service@^8.1.2", "@kronos-integration/service@^8.1.3":
-  version "8.1.3"
-  resolved "https://registry.yarnpkg.com/@kronos-integration/service/-/service-8.1.3.tgz#0edbdee07d7a63aeb84681de1968882b1ebb3f19"
-  integrity sha512-zgybOFlgcKw4sJ0aqc9Lp4kB0aopAkx8o+nIBPjMbpRJLIUF74R8R1KNE36E1J5zwIQO4UKy3nWLxOUfYC8ybw==
+"@kronos-integration/service@^8.0.0", "@kronos-integration/service@^8.0.9", "@kronos-integration/service@^8.1.0", "@kronos-integration/service@^8.1.2", "@kronos-integration/service@^8.1.5":
+  version "8.1.5"
+  resolved "https://registry.yarnpkg.com/@kronos-integration/service/-/service-8.1.5.tgz#e54e8bddcc090f302e3abbdf8951eb45bb275798"
+  integrity sha512-nW6ldjPoc31Y7Gs6dDxP89BTMEyDgYO53WbkWmjdVFQ7Jr2QjcjQ17bUse/zQXGT52MuSk4gigCRHa8fZi1KRw==
   dependencies:
-    "@kronos-integration/endpoint" "^7.2.1"
+    "@kronos-integration/endpoint" "^7.2.2"
     loglevel-mixin "^5.0.3"
     model-attributes "^4.1.3"
     statetransition-mixin "^6.0.4"
