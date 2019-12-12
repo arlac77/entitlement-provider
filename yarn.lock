@@ -1030,11 +1030,11 @@
     jsonwebtoken "^8.5.1"
 
 "@kronos-integration/service-health-check@^5.0.2":
-  version "5.0.2"
-  resolved "https://registry.yarnpkg.com/@kronos-integration/service-health-check/-/service-health-check-5.0.2.tgz#fe1c3ca518caeb1dd029fa597057d7c3640278d8"
-  integrity sha512-cxNRQR6dOie2PSOejH5J0eDC/SVNSshJXeS+jP8ChxKXE45dZkUdiZtKVx4ozkebmz+GjcOIlthbNqAac020cg==
+  version "5.0.3"
+  resolved "https://registry.yarnpkg.com/@kronos-integration/service-health-check/-/service-health-check-5.0.3.tgz#d8d013eea36632b2856800431751d006d4201368"
+  integrity sha512-juTVvCipLhhpPc6vt9l5LUuxYUYxB8nPEA9DanFSRDPOt/t34ie49I5dEvG0UzsFBtSB0TIGJhHPqE6Hv5gnnw==
   dependencies:
-    "@kronos-integration/service" "^8.0.8"
+    "@kronos-integration/service" "^8.1.0"
     model-attributes "^4.1.3"
 
 "@kronos-integration/service-http@^8.0.5":
@@ -1067,10 +1067,10 @@
     "@kronos-integration/service" "^8.0.9"
     config-expander "^11.0.6"
 
-"@kronos-integration/service@^8.0.0", "@kronos-integration/service@^8.0.8", "@kronos-integration/service@^8.0.9":
-  version "8.0.9"
-  resolved "https://registry.yarnpkg.com/@kronos-integration/service/-/service-8.0.9.tgz#ae0575fedf68704517ab0414094807c877b0754c"
-  integrity sha512-yom4dPbsFamceGXJ+Bsip67pLcK9JLsMLW9q6H3ab/75TKw097SuJ21ImUosKOrXbaI8lbP4aUk63/O7K2pavg==
+"@kronos-integration/service@^8.0.0", "@kronos-integration/service@^8.0.9", "@kronos-integration/service@^8.1.0":
+  version "8.1.0"
+  resolved "https://registry.yarnpkg.com/@kronos-integration/service/-/service-8.1.0.tgz#060450604041d1398520997a4bb815d21f21a723"
+  integrity sha512-ttQexL0EXNAOCr49qf6Xocg+p4Qye08vszUs12RO1ABnvXOaBToU00m1NhUPulb97iFJhXOhdmaMgHXpX9Nr6w==
   dependencies:
     "@kronos-integration/endpoint" "^7.0.2"
     loglevel-mixin "^5.0.3"
