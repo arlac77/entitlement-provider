@@ -1007,6 +1007,13 @@
   dependencies:
     "@kronos-integration/interceptor" "^8.0.2"
 
+"@kronos-integration/endpoint@^7.3.0":
+  version "7.3.0"
+  resolved "https://registry.yarnpkg.com/@kronos-integration/endpoint/-/endpoint-7.3.0.tgz#71ad483fc14d09414be6ab67804cefd2546e9e5a"
+  integrity sha512-wC0jxXjysAbV3VSkNpGWbn6B3yCoiuAeH3UojkD4I//XO7Fg1ICGdp5wQCI8vD+vg48QLpphgUPNEhL4gFFQng==
+  dependencies:
+    "@kronos-integration/interceptor" "^8.0.2"
+
 "@kronos-integration/interceptor@^8.0.2":
   version "8.0.2"
   resolved "https://registry.yarnpkg.com/@kronos-integration/interceptor/-/interceptor-8.0.2.tgz#4961737a43e6693d0c0bd0253a63211f8e46537a"
@@ -1014,12 +1021,12 @@
   dependencies:
     model-attributes "^4.1.3"
 
-"@kronos-integration/service-admin@^3.0.4":
-  version "3.0.4"
-  resolved "https://registry.yarnpkg.com/@kronos-integration/service-admin/-/service-admin-3.0.4.tgz#8e033fc17852163aeeb869d6c8a5aa918eb44a80"
-  integrity sha512-trlCdimvHxjqRFxELH0OKyBlmAFpMNh6BQJ645IXNAjIvPwXID+3ZZy6TqTkGXyVH44rKHFZmntY2XaE7CAOdQ==
+"@kronos-integration/service-admin@^3.0.5":
+  version "3.0.5"
+  resolved "https://registry.yarnpkg.com/@kronos-integration/service-admin/-/service-admin-3.0.5.tgz#306950b06e986b103106b63904d32788ebf31d87"
+  integrity sha512-vRzwq0xmNew+CMryK18f0TXg+bTHWeFodoBXVwZ8339p67EDoW5MrYTbOjEOT1VZUD0G4rfwQtIJlukMMKEvCg==
   dependencies:
-    "@kronos-integration/service" "^8.0.0"
+    "@kronos-integration/service" "^8.1.6"
 
 "@kronos-integration/service-authenticator@^1.0.6":
   version "1.0.6"
@@ -1067,12 +1074,22 @@
     "@kronos-integration/service" "^8.0.9"
     config-expander "^11.0.6"
 
-"@kronos-integration/service@^8.0.0", "@kronos-integration/service@^8.0.9", "@kronos-integration/service@^8.1.0", "@kronos-integration/service@^8.1.2", "@kronos-integration/service@^8.1.5":
+"@kronos-integration/service@^8.0.9", "@kronos-integration/service@^8.1.0", "@kronos-integration/service@^8.1.2":
   version "8.1.5"
   resolved "https://registry.yarnpkg.com/@kronos-integration/service/-/service-8.1.5.tgz#e54e8bddcc090f302e3abbdf8951eb45bb275798"
   integrity sha512-nW6ldjPoc31Y7Gs6dDxP89BTMEyDgYO53WbkWmjdVFQ7Jr2QjcjQ17bUse/zQXGT52MuSk4gigCRHa8fZi1KRw==
   dependencies:
     "@kronos-integration/endpoint" "^7.2.2"
+    loglevel-mixin "^5.0.3"
+    model-attributes "^4.1.3"
+    statetransition-mixin "^6.0.4"
+
+"@kronos-integration/service@^8.1.6":
+  version "8.1.6"
+  resolved "https://registry.yarnpkg.com/@kronos-integration/service/-/service-8.1.6.tgz#88bb650ecfac864d48f519d69ef8ff5bbffb04e7"
+  integrity sha512-98pu28T1I7yzK+nNKVW5yRBLR8ASglnfF9MZTE0Z1U/+ZsYres5nFDDiewZ4Sm8GC68qOwLlKeC3/FjVxbs7KA==
+  dependencies:
+    "@kronos-integration/endpoint" "^7.3.0"
     loglevel-mixin "^5.0.3"
     model-attributes "^4.1.3"
     statetransition-mixin "^6.0.4"
@@ -3034,7 +3051,7 @@ debug@^4.0.0, debug@^4.1.0, debug@^4.1.1, debug@~4.1.1:
   dependencies:
     ms "^2.1.1"
 
-debuglog@*, debuglog@^1.0.1:
+debuglog@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/debuglog/-/debuglog-1.0.1.tgz#aa24ffb9ac3df9a2351837cfb2d279360cd78492"
   integrity sha1-qiT/uaw9+aI1GDfPstJ5NgzXhJI=
@@ -4154,10 +4171,10 @@ globby@^6.1.0:
     pify "^2.0.0"
     pinkie-promise "^2.0.0"
 
-got@^10.0.3:
-  version "10.0.3"
-  resolved "https://registry.yarnpkg.com/got/-/got-10.0.3.tgz#0bd93429fd2891de0026ed731a16143e6193e7ac"
-  integrity sha512-5QBO/EhIq3nbt2madWsez9aTPc0k1oWBzXipfqLdb6JmnrWNxcHEvnxuWErec/PE67Jy/QAgacq6XzGbyzXCzg==
+got@^10.0.4:
+  version "10.0.4"
+  resolved "https://registry.yarnpkg.com/got/-/got-10.0.4.tgz#d3a5a6cafd2f6c342d562513cc2d2d7b6afdcbb4"
+  integrity sha512-yMaRLGZJ7iINsDcZ8hso+v44IXVOejz7xrqEabSvUewdHS3zOf57IqU3sWIBYwHlekSrk+CC2PCeLzabOBxnVA==
   dependencies:
     "@sindresorhus/is" "^1.0.0"
     "@szmarczak/http-timer" "^3.1.1"
@@ -4521,7 +4538,7 @@ import-local@^3.0.2:
     pkg-dir "^4.2.0"
     resolve-cwd "^3.0.0"
 
-imurmurhash@*, imurmurhash@^0.1.4:
+imurmurhash@^0.1.4:
   version "0.1.4"
   resolved "https://registry.yarnpkg.com/imurmurhash/-/imurmurhash-0.1.4.tgz#9218b9b2b928a238b13dc4fb6b6d576f231453ea"
   integrity sha1-khi5srkoojixPcT7a21XbyMUU+o=
@@ -5594,11 +5611,6 @@ lockfile@^1.0.4:
   dependencies:
     signal-exit "^3.0.2"
 
-lodash._baseindexof@*:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/lodash._baseindexof/-/lodash._baseindexof-3.1.0.tgz#fe52b53a1c6761e42618d654e4a25789ed61822c"
-  integrity sha1-/lK1OhxnYeQmGNZU5KJXie1hgiw=
-
 lodash._baseuniq@~4.6.0:
   version "4.6.0"
   resolved "https://registry.yarnpkg.com/lodash._baseuniq/-/lodash._baseuniq-4.6.0.tgz#0ebb44e456814af7905c6212fa2c9b2d51b841e8"
@@ -5607,32 +5619,10 @@ lodash._baseuniq@~4.6.0:
     lodash._createset "~4.0.0"
     lodash._root "~3.0.0"
 
-lodash._bindcallback@*:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/lodash._bindcallback/-/lodash._bindcallback-3.0.1.tgz#e531c27644cf8b57a99e17ed95b35c748789392e"
-  integrity sha1-5THCdkTPi1epnhftlbNcdIeJOS4=
-
-lodash._cacheindexof@*:
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/lodash._cacheindexof/-/lodash._cacheindexof-3.0.2.tgz#3dc69ac82498d2ee5e3ce56091bafd2adc7bde92"
-  integrity sha1-PcaayCSY0u5ePOVgkbr9Ktx73pI=
-
-lodash._createcache@*:
-  version "3.1.2"
-  resolved "https://registry.yarnpkg.com/lodash._createcache/-/lodash._createcache-3.1.2.tgz#56d6a064017625e79ebca6b8018e17440bdcf093"
-  integrity sha1-VtagZAF2JeeevKa4AY4XRAvc8JM=
-  dependencies:
-    lodash._getnative "^3.0.0"
-
 lodash._createset@~4.0.0:
   version "4.0.3"
   resolved "https://registry.yarnpkg.com/lodash._createset/-/lodash._createset-4.0.3.tgz#0f4659fbb09d75194fa9e2b88a6644d363c9fe26"
   integrity sha1-D0ZZ+7CddRlPqeK4imZE02PJ/iY=
-
-lodash._getnative@*, lodash._getnative@^3.0.0:
-  version "3.9.1"
-  resolved "https://registry.yarnpkg.com/lodash._getnative/-/lodash._getnative-3.9.1.tgz#570bc7dede46d61cdcde687d65d3eecbaa3aaff5"
-  integrity sha1-VwvH3t5G1hzc3mh9ZdPuy6o6r/U=
 
 lodash._root@~3.0.0:
   version "3.0.1"
@@ -5713,11 +5703,6 @@ lodash.once@^4.0.0:
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/lodash.once/-/lodash.once-4.1.1.tgz#0dd3971213c7c56df880977d504c88fb471a97ac"
   integrity sha1-DdOXEhPHxW34gJd9UEyI+0cal6w=
-
-lodash.restparam@*:
-  version "3.6.1"
-  resolved "https://registry.yarnpkg.com/lodash.restparam/-/lodash.restparam-3.6.1.tgz#936a4e309ef330a7645ed4145986c85ae5b20805"
-  integrity sha1-k2pOMJ7zMKdkXtQUWYbIWuWyCAU=
 
 lodash.set@^4.3.2:
   version "4.3.2"
@@ -8125,7 +8110,7 @@ rollup-pluginutils@^2.3.3, rollup-pluginutils@^2.5.0, rollup-pluginutils@^2.8.1:
   dependencies:
     estree-walker "^0.6.1"
 
-rollup@^1.27.10:
+rollup@^1.27.11:
   version "1.27.11"
   resolved "https://registry.yarnpkg.com/rollup/-/rollup-1.27.11.tgz#95d190432e3edbcf757d921857df01ad1596ef97"
   integrity sha512-ENXdvXk8tjtkNTvIvjRzOEu+vv54va7PiDR7VwP8TD+In6J87gKzzFmQMawQixEL2y9rsPEgomUS7ZVkq47Tww==
