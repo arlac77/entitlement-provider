@@ -1000,10 +1000,10 @@
   dependencies:
     vary "^1.1.2"
 
-"@kronos-integration/endpoint@^7.0.2":
-  version "7.0.2"
-  resolved "https://registry.yarnpkg.com/@kronos-integration/endpoint/-/endpoint-7.0.2.tgz#598263c2ffe0a66795b8f8b948a5e8f7418d91b8"
-  integrity sha512-cYfjQzwyz/ARhIoPRui+Q79AJOz2YPbeOGHDSHJdHMokqpKwVDbumYw9nK3OLoNno8eLiCcsdi00NrfXtVnRJw==
+"@kronos-integration/endpoint@^7.2.0":
+  version "7.2.0"
+  resolved "https://registry.yarnpkg.com/@kronos-integration/endpoint/-/endpoint-7.2.0.tgz#62164c40b6bf5031a01ee56acf700e95d8644a0b"
+  integrity sha512-o38UaSh3tRfhtpCUfxeRYRrSa1LPd1ioVY/hpZXYsd9AQte6vLI3/IfI5+p8VlkTCznnrakzFgSGlSa9imRFKg==
   dependencies:
     "@kronos-integration/interceptor" "^8.0.2"
 
@@ -1021,15 +1021,15 @@
   dependencies:
     "@kronos-integration/service" "^8.0.0"
 
-"@kronos-integration/service-authenticator@^1.0.5":
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/@kronos-integration/service-authenticator/-/service-authenticator-1.0.5.tgz#f0686bc67e57e793df100a7905d5f21340e1b990"
-  integrity sha512-Y3n6oDsy/Mg/3YBcPMQXxfMHN0eDwcLE45oKIWHFs/kZLLA/mxfFVlm7zdZVACfKdIGaHolp970XyVUSr40MYQ==
+"@kronos-integration/service-authenticator@^1.0.6":
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/@kronos-integration/service-authenticator/-/service-authenticator-1.0.6.tgz#d7c523075c61609f2999ed84eddf312e7530359e"
+  integrity sha512-rN9gkcwmAlXEMuCX+/PS+aLFvZEjebgf/gYu4AEsLJFrQnMfPg9pdlHBV43/xKlbE89xCOZ3W0XDTwJBjjUd+A==
   dependencies:
-    "@kronos-integration/service" "^8.0.0"
+    "@kronos-integration/service" "^8.1.0"
     jsonwebtoken "^8.5.1"
 
-"@kronos-integration/service-health-check@^5.0.2":
+"@kronos-integration/service-health-check@^5.0.3":
   version "5.0.3"
   resolved "https://registry.yarnpkg.com/@kronos-integration/service-health-check/-/service-health-check-5.0.3.tgz#d8d013eea36632b2856800431751d006d4201368"
   integrity sha512-juTVvCipLhhpPc6vt9l5LUuxYUYxB8nPEA9DanFSRDPOt/t34ie49I5dEvG0UzsFBtSB0TIGJhHPqE6Hv5gnnw==
@@ -1037,12 +1037,12 @@
     "@kronos-integration/service" "^8.1.0"
     model-attributes "^4.1.3"
 
-"@kronos-integration/service-http@^8.0.5":
-  version "8.0.5"
-  resolved "https://registry.yarnpkg.com/@kronos-integration/service-http/-/service-http-8.0.5.tgz#60d8bb86179f17507d1302981563a8ea496564fb"
-  integrity sha512-MmlqM215iLoLRM7cZo30ABPqVUpwR0fFAY9pUVF2TmvUDA/aC0qguK+pWJA6G3aVQUqMP4h78v/8nCk4PZo0QA==
+"@kronos-integration/service-http@^8.0.6":
+  version "8.0.6"
+  resolved "https://registry.yarnpkg.com/@kronos-integration/service-http/-/service-http-8.0.6.tgz#bdbcb69ca3e17e25b720a8d65e9be460354e78b0"
+  integrity sha512-bK0G5H/qN7GIwz25XiyklNZKQePuQB/06SH+HUchDdfjf8CzRqczCdduK79F2HItn8MC6zmfxwjp8PgZbfYPBQ==
   dependencies:
-    "@kronos-integration/service" "^8.0.9"
+    "@kronos-integration/service" "^8.1.2"
     bufferutil "^4.0.1"
     jsonwebtoken "^8.5.1"
     koa "^2.11.0"
@@ -1067,12 +1067,12 @@
     "@kronos-integration/service" "^8.0.9"
     config-expander "^11.0.6"
 
-"@kronos-integration/service@^8.0.0", "@kronos-integration/service@^8.0.9", "@kronos-integration/service@^8.1.0":
-  version "8.1.0"
-  resolved "https://registry.yarnpkg.com/@kronos-integration/service/-/service-8.1.0.tgz#060450604041d1398520997a4bb815d21f21a723"
-  integrity sha512-ttQexL0EXNAOCr49qf6Xocg+p4Qye08vszUs12RO1ABnvXOaBToU00m1NhUPulb97iFJhXOhdmaMgHXpX9Nr6w==
+"@kronos-integration/service@^8.0.0", "@kronos-integration/service@^8.0.9", "@kronos-integration/service@^8.1.0", "@kronos-integration/service@^8.1.2":
+  version "8.1.2"
+  resolved "https://registry.yarnpkg.com/@kronos-integration/service/-/service-8.1.2.tgz#557cc9bd4d306898f6ff9d41a26e9df78166a2b6"
+  integrity sha512-9DcKqtY5chZFPaZIUvtQu4nWVJSWVB/7dj4XzRsrdZghRLbpilOiDD2umk8vtSKJWgi3vS3RW2pezGSgTqiZmQ==
   dependencies:
-    "@kronos-integration/endpoint" "^7.0.2"
+    "@kronos-integration/endpoint" "^7.2.0"
     loglevel-mixin "^5.0.3"
     model-attributes "^4.1.3"
     statetransition-mixin "^6.0.4"
@@ -2901,9 +2901,9 @@ copy-descriptor@^0.1.0:
   integrity sha1-Z29us8OZl8LuGsOpJP1hJHSPV40=
 
 core-js-compat@^3.4.7:
-  version "3.4.8"
-  resolved "https://registry.yarnpkg.com/core-js-compat/-/core-js-compat-3.4.8.tgz#f72e6a4ed76437ea710928f44615f926a81607d5"
-  integrity sha512-l3WTmnXHV2Sfu5VuD7EHE2w7y+K68+kULKt5RJg8ZJk3YhHF1qLD4O8v8AmNq+8vbOwnPFFDvds25/AoEvMqlQ==
+  version "3.5.0"
+  resolved "https://registry.yarnpkg.com/core-js-compat/-/core-js-compat-3.5.0.tgz#5a11a619a9e9dd2dcf1c742b2060bc4a2143e5b6"
+  integrity sha512-E7iJB72svRjJTnm9HDvujzNVMCm3ZcDYEedkJ/sDTNsy/0yooCd9Cg7GSzE7b4e0LfIkjijdB1tqg0pGwxWeWg==
   dependencies:
     browserslist "^4.8.2"
     semver "^6.3.0"

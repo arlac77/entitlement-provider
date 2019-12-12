@@ -32,11 +32,11 @@
     "test": "ava"
   },
   "dependencies": {
-    "@kronos-integration/service": "^8.1.0",
+    "@kronos-integration/service": "^8.1.2",
     "@kronos-integration/service-admin": "^3.0.4",
-    "@kronos-integration/service-authenticator": "^1.0.5",
-    "@kronos-integration/service-health-check": "^5.0.2",
-    "@kronos-integration/service-http": "^8.0.5",
+    "@kronos-integration/service-authenticator": "^1.0.6",
+    "@kronos-integration/service-health-check": "^5.0.3",
+    "@kronos-integration/service-http": "^8.0.6",
     "@kronos-integration/service-ldap": "^2.1.5",
     "commander": "^4.0.1",
     "oidc-provider": "^6.17.3"
