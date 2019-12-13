@@ -1,6 +1,5 @@
 [![Build Status](https://secure.travis-ci.org/arlac77/entitlement-provider.png)](http://travis-ci.org/arlac77/entitlement-provider)
 [![codecov.io](http://codecov.io/github/arlac77/entitlement-provider/coverage.svg?branch=master)](http://codecov.io/github/arlac77/entitlement-provider?branch=master)
-[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 [![Coverage Status](https://coveralls.io/repos/arlac77/entitlement-provider/badge.svg)](https://coveralls.io/r/arlac77/entitlement-provider)
 [![downloads](http://img.shields.io/npm/dm/entitlement-provider.svg?style=flat-square)](https://npmjs.org/package/entitlement-provider)
 [![GitHub Issues](https://img.shields.io/github/issues/arlac77/entitlement-provider.svg?style=flat-square)](https://github.com/arlac77/entitlement-provider/issues)
