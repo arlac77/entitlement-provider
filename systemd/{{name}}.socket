@@ -1,0 +1,7 @@
+[Socket]
+ListenStream=/run/${name}/socket
+MaxConnections=4
+FileDescriptorName=http.listen.socket
+
+[Install]
+RequiredBy=entitlement-provider.service

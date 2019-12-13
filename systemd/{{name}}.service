@@ -1,0 +1,25 @@
+[Unit]
+Description=provide entitlements via OIDC
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=notify
+ExecStart=/usr/bin/node --title entitlement-provider {{installdir}}/bin/entitlement-provider-systemd
+ExecReload=/bin/kill -HUP $MAINPID
+TimeoutStartSec=20
+StandardOutput=syslog
+User=entitlement-provider
+Group=entitlement-provider
+PrivateTmp=true
+NoNewPrivileges=true
+RuntimeDirectory=entitlement-provider
+StateDirectory=entitlement-provider
+ConfigurationDirectory=entitlement-provider
+NotifyAccess=all
+FileDescriptorStoreMax=2
+
+Environment="LOGLEVEL=trace"
+
+[Install]
+WantedBy=multi-user.target
