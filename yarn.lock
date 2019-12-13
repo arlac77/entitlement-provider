@@ -1059,10 +1059,10 @@
     "@kronos-integration/service" "^8.1.6"
     ldapts "^1.10.0"
 
-"@kronos-integration/service-systemd@^2.1.7":
-  version "2.1.7"
-  resolved "https://registry.yarnpkg.com/@kronos-integration/service-systemd/-/service-systemd-2.1.7.tgz#5ffd2c693060a77cff5e508fe6ac55b97913be3e"
-  integrity sha512-98jdeVYjBeSpj7tS0ZKhG3CPdmDzRmF9wz9o1sOQN8u5FRgc9ZiNHGaKQj3qyR5AGQYCEIMseF5jOsi/KGKlXw==
+"@kronos-integration/service-systemd@^2.2.0":
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/@kronos-integration/service-systemd/-/service-systemd-2.2.0.tgz#59119a4f79b72dafac785eda9f812b3c83dfe2a8"
+  integrity sha512-+DmkyFJ+7jZP6O4DyxP2iWAbYJ2xyVcBzl/awr98bHUHBxMos2/C25U1NnQLJkR5bmfqXwAdUrM4p8HAcTss3Q==
   dependencies:
     "@kronos-integration/service" "^8.1.6"
     config-expander "^11.0.6"
@@ -8111,10 +8111,10 @@ rollup-plugin-executable@^1.5.1:
   dependencies:
     "@babel/runtime" "^7.6.2"
 
-rollup-plugin-native@^1.1.2:
-  version "1.1.2"
-  resolved "https://registry.yarnpkg.com/rollup-plugin-native/-/rollup-plugin-native-1.1.2.tgz#25bc130d61e3b97131c4574be984b15c6730ed3c"
-  integrity sha512-DPRoMEKF4Kw05p+SZGZ1IMGFQQPERO69ceQ5392o7znVmcqlcWa0vmACJdsJ9i28Vi5WPg6lep27AKXEL57BwA==
+rollup-plugin-native@^1.1.3:
+  version "1.1.3"
+  resolved "https://registry.yarnpkg.com/rollup-plugin-native/-/rollup-plugin-native-1.1.3.tgz#139dc07da6d054aaa65356b15e4ea6c7bb843ede"
+  integrity sha512-FONqwULVdyINQDKOyu5NDiQwcB9jAKGChcuyAw3dhXZuyQrYQ2JPhX0YostcdglRiZR3M56sKh0yjxlJFi7/EA==
   dependencies:
     "@rollup/pluginutils" "^3.0.0"
 
