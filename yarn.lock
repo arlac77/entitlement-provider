@@ -1059,12 +1059,12 @@
     "@kronos-integration/service" "^8.1.6"
     ldapts "^1.10.0"
 
-"@kronos-integration/service-systemd@^2.2.0":
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/@kronos-integration/service-systemd/-/service-systemd-2.2.0.tgz#59119a4f79b72dafac785eda9f812b3c83dfe2a8"
-  integrity sha512-+DmkyFJ+7jZP6O4DyxP2iWAbYJ2xyVcBzl/awr98bHUHBxMos2/C25U1NnQLJkR5bmfqXwAdUrM4p8HAcTss3Q==
+"@kronos-integration/service-systemd@^2.2.1":
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/@kronos-integration/service-systemd/-/service-systemd-2.2.1.tgz#53b186e8d73b3db12eb946bd369eb7d3eb18d78f"
+  integrity sha512-GDBA+D/N8CrvuBKg7YPtp4PU9ZnuXl+Nb4+pt6XgrnSH3e2htt9B3eebwe37Qvy+eFZ1lXslh7wXh5qPRxPvEQ==
   dependencies:
-    "@kronos-integration/service" "^8.1.6"
+    "@kronos-integration/service" "^8.2.2"
     config-expander "^11.0.6"
 
 "@kronos-integration/service@^8.1.0", "@kronos-integration/service@^8.1.6", "@kronos-integration/service@^8.2.0", "@kronos-integration/service@^8.2.2":
