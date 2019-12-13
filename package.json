@@ -19,20 +19,16 @@
     }
   ],
   "license": "BSD-2-Clause",
-  "bin": {
-    "entitlement-provider": "bin/entitlement-provider",
-    "entitlement-provider-systemd": "bin/entitlement-provider-systemd"
-  },
+  "bin": {},
   "scripts": {
     "cover": "c8 -x 'tests/**/*' --temp-directory build/tmp ava && c8 report -r lcov -o build/coverage --temp-directory build/tmp",
     "docs": "documentation readme src/entitlement-provider.mjs --section=API",
     "lint": "documentation lint src/entitlement-provider.mjs",
-    "posttest": "npm run prepare && markdown-doctest",
     "prepare": "rollup -c",
     "test": "ava"
   },
   "dependencies": {
-    "@kronos-integration/service": "^8.2.1",
+    "@kronos-integration/service": "^8.2.2",
     "@kronos-integration/service-admin": "^3.0.5",
     "@kronos-integration/service-authenticator": "^1.0.6",
     "@kronos-integration/service-health-check": "^5.0.4",
@@ -51,7 +47,6 @@
     "documentation": "^12.1.4",
     "esm": "^3.2.25",
     "got": "^10.0.4",
-    "markdown-doctest": "^1.0.0",
     "npm-pkgbuild": "^6.11.0",
     "rollup": "^1.27.12",
     "rollup-plugin-cleanup": "^3.1.1",
