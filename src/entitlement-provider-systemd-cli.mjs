@@ -1,5 +1,6 @@
 import program from "commander";
-import { version, description } from "../package.json";
+import version from 'consts:version';
+import description from 'consts:description';
 import ServiceSystemd from "@kronos-integration/service-systemd";
 import { setup } from "./entitlement-provider.mjs";
 

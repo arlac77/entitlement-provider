@@ -1,51 +1,47 @@
-import resolve from '@rollup/plugin-node-resolve';
-import json from "@rollup/plugin-json";
+import resolve from "@rollup/plugin-node-resolve";
 
 import commonjs from "rollup-plugin-commonjs";
 import executable from "rollup-plugin-executable";
 import native from "rollup-plugin-native";
 import cleanup from "rollup-plugin-cleanup";
-import acornClassFields from 'acorn-class-fields';
+import consts from "rollup-plugin-consts";
+import acornClassFields from "acorn-class-fields";
 
 import builtins from "builtin-modules";
-import pkg from "./package.json";
+import { name, version, description, main, module, bin } from "./package.json";
 
-const external = [
-  ...builtins,
-  "koa",
-  "bufferutil",
-  "utf-8-validate"
-];
+const external = [...builtins, "koa", "bufferutil", "utf-8-validate"];
 
 const extensions = ["js", "mjs", "jsx", "tag"];
 const plugins = [
+  consts({
+    name,
+    version,
+    description
+  }),
   commonjs(),
   resolve(),
   native(),
-  json({
-    preferConst: true,
-    compact: true
-  }),
   cleanup({
     extensions
   })
 ];
 
-const config = Object.keys(pkg.bin || {}).map(name => {
+const config = Object.keys(bin || {}).map(name => {
   return {
     input: `src/${name}-cli.mjs`,
     output: {
       plugins: [executable()],
-      file: pkg.bin[name]
+      file: bin[name]
     }
   };
 });
 
-if (pkg.module !== undefined && pkg.main !== undefined) {
+if (module !== undefined && main !== undefined) {
   config.push({
-    input: pkg.module,
+    input: module,
     output: {
-      file: pkg.main
+      file: main
     }
   });
 }
@@ -57,5 +53,5 @@ export default config.map(c => {
     format: "cjs",
     ...c.output
   };
-  return { acornInjectPlugins:[ acornClassFields ], plugins, external, ...c };
+  return { acornInjectPlugins: [acornClassFields], plugins, external, ...c };
 });
