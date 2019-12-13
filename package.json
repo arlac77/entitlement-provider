@@ -19,7 +19,10 @@
     }
   ],
   "license": "BSD-2-Clause",
-  "bin": {},
+  "bin": {
+    "entitlement-provider": "bin/entitlement-provider",
+    "entitlement-provider-systemd": "bin/entitlement-provider-systemd"
+  },
   "scripts": {
     "cover": "c8 -x 'tests/**/*' --temp-directory build/tmp ava && c8 report -r lcov -o build/coverage --temp-directory build/tmp",
     "docs": "documentation readme src/entitlement-provider.mjs --section=API",

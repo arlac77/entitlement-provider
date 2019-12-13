@@ -33,7 +33,7 @@
   dependencies:
     "@babel/highlight" "^7.0.0"
 
-"@babel/core@^7.1.2", "@babel/core@^7.6.0", "@babel/core@^7.6.4":
+"@babel/core@^7.1.2", "@babel/core@^7.6.0":
   version "7.7.5"
   resolved "https://registry.yarnpkg.com/@babel/core/-/core-7.7.5.tgz#ae1323cd035b5160293307f50647e83f8ba62f7e"
   integrity sha512-M42+ScN4+1S9iB6f+TL7QBpoQETxbclx+KNoKJABghnKYE+fMzSGqst0BZJc8CpI625bwPwYgUyRvxZ+0mZzpw==
@@ -860,7 +860,7 @@
     "@babel/helper-create-regexp-features-plugin" "^7.7.4"
     "@babel/helper-plugin-utils" "^7.0.0"
 
-"@babel/preset-env@^7.1.0", "@babel/preset-env@^7.6.3":
+"@babel/preset-env@^7.1.0":
   version "7.7.6"
   resolved "https://registry.yarnpkg.com/@babel/preset-env/-/preset-env-7.7.6.tgz#39ac600427bbb94eec6b27953f1dfa1d64d457b2"
   integrity sha512-k5hO17iF/Q7tR9Jv8PdNBZWYW6RofxhnxKjBMc0nG4JTaWvOTiPoO/RLFwAKcA4FpmuBFm6jkoqaRJLGi0zdaQ==
@@ -1067,10 +1067,10 @@
     "@kronos-integration/service" "^8.1.6"
     config-expander "^11.0.6"
 
-"@kronos-integration/service@^8.1.0", "@kronos-integration/service@^8.1.6", "@kronos-integration/service@^8.2.0", "@kronos-integration/service@^8.2.1":
-  version "8.2.1"
-  resolved "https://registry.yarnpkg.com/@kronos-integration/service/-/service-8.2.1.tgz#ce5c502913ab09f914ec3d57867ee7d3ac4691e9"
-  integrity sha512-BbAL5aOWz9mYGA9xWSmQOx9gfzMbmsWgh7f7Eqr26O4fCRsvlbI7LMfH9yxsdz/Ea8OpecyZHHsWiq6Wcfw/pQ==
+"@kronos-integration/service@^8.1.0", "@kronos-integration/service@^8.1.6", "@kronos-integration/service@^8.2.0", "@kronos-integration/service@^8.2.2":
+  version "8.2.2"
+  resolved "https://registry.yarnpkg.com/@kronos-integration/service/-/service-8.2.2.tgz#fe200e60cc2ae90a6748e0f19e6199fbf252c62c"
+  integrity sha512-HLslDNStLjVa2IH0K+t9FvM4E6IVd3+3+gO3ctrUJVu6WptnvhuRYtnYLecfLb/VOviMjb9BHXixkuSXwahcOg==
   dependencies:
     "@kronos-integration/endpoint" "^7.3.3"
     loglevel-mixin "^5.0.3"
@@ -5892,16 +5892,6 @@ map-visit@^1.0.0:
   integrity sha1-7Nyo8TFE5mDxtb1B8S80edmN+48=
   dependencies:
     object-visit "^1.0.0"
-
-markdown-doctest@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/markdown-doctest/-/markdown-doctest-1.0.0.tgz#3548462165f7d7a1d9aa830fce8e18206d7435f9"
-  integrity sha512-wE7+m7GlJHWAN0ZUlU1nbfe+7h+kwMh1qW08dJCGvNgFGl8Z1fL4vNxaBw4AJM7hbe4cvA1TsBgCU+IzspFzUQ==
-  dependencies:
-    "@babel/core" "^7.6.4"
-    "@babel/preset-env" "^7.6.3"
-    chalk "^2.4.2"
-    glob "^7.1.4"
 
 markdown-escapes@^1.0.0:
   version "1.0.3"
