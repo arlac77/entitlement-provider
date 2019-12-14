@@ -1000,10 +1000,10 @@
   dependencies:
     vary "^1.1.2"
 
-"@kronos-integration/endpoint@^7.3.3":
-  version "7.3.3"
-  resolved "https://registry.yarnpkg.com/@kronos-integration/endpoint/-/endpoint-7.3.3.tgz#ab922ba9a3fa626439a79ade2570dd2c4fb9e7bd"
-  integrity sha512-hrvD9A2VUYsiS3zurEWNcdo/hhxAOqO/j1iFCNU9Egej2fwHYxo1mRNBkhqTOqCxng8oMQl9QUMo4v21J8jPzg==
+"@kronos-integration/endpoint@^7.4.0":
+  version "7.4.0"
+  resolved "https://registry.yarnpkg.com/@kronos-integration/endpoint/-/endpoint-7.4.0.tgz#94f3cf6ce3b4d6bd0d664358d47d0cb2362d2313"
+  integrity sha512-qWaA5w2vBQ/r9ZHwLzdovnAmv/PrgtzbQL390xZXJUxa7NQynOonm3M5dJvzOdZAifOLY/gz48f2qx75Fa3KBg==
   dependencies:
     "@kronos-integration/interceptor" "^8.0.2"
 
@@ -1037,12 +1037,12 @@
     "@kronos-integration/service" "^8.1.6"
     model-attributes "^4.1.3"
 
-"@kronos-integration/service-http@^8.0.10":
-  version "8.0.10"
-  resolved "https://registry.yarnpkg.com/@kronos-integration/service-http/-/service-http-8.0.10.tgz#89c8975b86303e5027e843a138ea0f6f6c880a2a"
-  integrity sha512-XsArovv7CBmRe7jS62uz12GoEi6rA7BVrAdPLNrhddZM+FSSiYtMj/CWml0I2eODT4kXAtUULCm+ZAcoKlIcPg==
+"@kronos-integration/service-http@^8.0.11":
+  version "8.0.11"
+  resolved "https://registry.yarnpkg.com/@kronos-integration/service-http/-/service-http-8.0.11.tgz#4b632b46998b2ab7f2de5b011189d14038e622ae"
+  integrity sha512-ql9+Upg1bJlf4W+Y2mZcQEFenEpJLGTIhj0daVHm63OqE8nrI89wxQy4jlA3kDt9VychYEQOYnghH9I82Yj6Ew==
   dependencies:
-    "@kronos-integration/service" "^8.2.0"
+    "@kronos-integration/service" "^8.2.3"
     bufferutil "^4.0.1"
     jsonwebtoken "^8.5.1"
     koa "^2.11.0"
@@ -1067,12 +1067,12 @@
     "@kronos-integration/service" "^8.2.2"
     config-expander "^11.0.6"
 
-"@kronos-integration/service@^8.1.0", "@kronos-integration/service@^8.1.6", "@kronos-integration/service@^8.2.0", "@kronos-integration/service@^8.2.2":
-  version "8.2.2"
-  resolved "https://registry.yarnpkg.com/@kronos-integration/service/-/service-8.2.2.tgz#fe200e60cc2ae90a6748e0f19e6199fbf252c62c"
-  integrity sha512-HLslDNStLjVa2IH0K+t9FvM4E6IVd3+3+gO3ctrUJVu6WptnvhuRYtnYLecfLb/VOviMjb9BHXixkuSXwahcOg==
+"@kronos-integration/service@^8.1.0", "@kronos-integration/service@^8.1.6", "@kronos-integration/service@^8.2.2", "@kronos-integration/service@^8.2.3":
+  version "8.2.3"
+  resolved "https://registry.yarnpkg.com/@kronos-integration/service/-/service-8.2.3.tgz#c98fd828405b054d286b674a23a335bb597f9b74"
+  integrity sha512-GqmpqW8l4yzJvL1xI8xqNiQZCI9mti3pTWqrrXT99Uc5Wk2YW7Ni+ko4w2J8wslL/vEWpHOYTvKF0zZf/zx+Mg==
   dependencies:
-    "@kronos-integration/endpoint" "^7.3.3"
+    "@kronos-integration/endpoint" "^7.4.0"
     loglevel-mixin "^5.0.3"
     model-attributes "^4.1.3"
     statetransition-mixin "^6.0.4"
@@ -1131,9 +1131,9 @@
     universal-user-agent "^4.0.0"
 
 "@octokit/rest@^16.27.0":
-  version "16.35.0"
-  resolved "https://registry.yarnpkg.com/@octokit/rest/-/rest-16.35.0.tgz#7ccc1f802f407d5b8eb21768c6deca44e7b4c0d8"
-  integrity sha512-9ShFqYWo0CLoGYhA1FdtdykJuMzS/9H6vSbbQWDX4pWr4p9v+15MsH/wpd/3fIU+tSxylaNO48+PIHqOkBRx3w==
+  version "16.35.2"
+  resolved "https://registry.yarnpkg.com/@octokit/rest/-/rest-16.35.2.tgz#0098c9e2a895d4afb0fa6578479283553543143c"
+  integrity sha512-iijaNZpn9hBpUdh8YdXqNiWazmq4R1vCUsmxpBB0kCQ0asHZpCx+HNs22eiHuwYKRhO31ZSAGBJLi0c+3XHaKQ==
   dependencies:
     "@octokit/request" "^5.2.0"
     "@octokit/request-error" "^1.0.2"
@@ -9544,9 +9544,9 @@ vinyl@^2.0.0, vinyl@^2.1.0:
     replace-ext "^1.0.0"
 
 vue-template-compiler@^2.5.16:
-  version "2.6.10"
-  resolved "https://registry.yarnpkg.com/vue-template-compiler/-/vue-template-compiler-2.6.10.tgz#323b4f3495f04faa3503337a82f5d6507799c9cc"
-  integrity sha512-jVZkw4/I/HT5ZMvRnhv78okGusqe0+qH2A0Em0Cp8aq78+NK9TII263CDVz2QXZsIT+yyV/gZc/j/vlwa+Epyg==
+  version "2.6.11"
+  resolved "https://registry.yarnpkg.com/vue-template-compiler/-/vue-template-compiler-2.6.11.tgz#c04704ef8f498b153130018993e56309d4698080"
+  integrity sha512-KIq15bvQDrcCjpGjrAhx4mUlyyHfdmTaoNfeoATHLAiWB+MU3cx4lOzMwrnUh9cCxy0Lt1T11hAFY6TQgroUAA==
   dependencies:
     de-indent "^1.0.2"
     he "^1.1.0"
