@@ -1029,10 +1029,10 @@
     "@kronos-integration/service" "^8.1.0"
     jsonwebtoken "^8.5.1"
 
-"@kronos-integration/service-health-check@^5.0.6":
-  version "5.0.6"
-  resolved "https://registry.yarnpkg.com/@kronos-integration/service-health-check/-/service-health-check-5.0.6.tgz#ee3ffc5ece2c310ea14ea301fc68d239f6e17d52"
-  integrity sha512-GSRxWxZEQiW4I19mFMKDbwE/TTr8fEbpVcIZGAez3YZz2p7/61EQUJWX+ELF4t4lc12ORS7kgzoVvFmxjw6oxA==
+"@kronos-integration/service-health-check@^5.0.7":
+  version "5.0.7"
+  resolved "https://registry.yarnpkg.com/@kronos-integration/service-health-check/-/service-health-check-5.0.7.tgz#0a13bd701ef1b2b7b381fa65f4aba461d6b5480f"
+  integrity sha512-cJiCAbpPNKt6KGPURsxK8KdmhAtv7SQ5Yv3yWdjK3HwucfeTNBvglEg4vnVF+aX6ijrX0qrDKMQxinzVRZxb7A==
   dependencies:
     "@kronos-integration/service" "^8.2.6"
     model-attributes "^4.1.3"
