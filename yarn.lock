@@ -1000,10 +1000,10 @@
   dependencies:
     vary "^1.1.2"
 
-"@kronos-integration/endpoint@^7.5.0":
-  version "7.5.0"
-  resolved "https://registry.yarnpkg.com/@kronos-integration/endpoint/-/endpoint-7.5.0.tgz#0925a37215039444a4f9aa9d6c94fbd5aadfb580"
-  integrity sha512-p0wJ1jwDiUAiJaUm+z4iEnB9GavW6xiAK8GKOYcor49Qh3hjOEhfGBpl4Q3FR9ZSaEYEKXK71VWtTAuOv/chog==
+"@kronos-integration/endpoint@^7.5.1":
+  version "7.5.1"
+  resolved "https://registry.yarnpkg.com/@kronos-integration/endpoint/-/endpoint-7.5.1.tgz#b11887084355b87e0a2f066d59bfd1f0f972bb6b"
+  integrity sha512-vdbb0hq7LLVH/+4u5XvIsj1ZTzYMyp2TNGOToU0URB8pqspNuejAdhPTr2UlPT70V4eiBc1G65kfBXFi87N/tg==
   dependencies:
     "@kronos-integration/interceptor" "^8.0.2"
 
@@ -1037,12 +1037,12 @@
     "@kronos-integration/service" "^8.1.6"
     model-attributes "^4.1.3"
 
-"@kronos-integration/service-http@^8.0.12":
-  version "8.0.12"
-  resolved "https://registry.yarnpkg.com/@kronos-integration/service-http/-/service-http-8.0.12.tgz#a8cb529b3531f24dc7eb3a2b655801e1c9cd10e1"
-  integrity sha512-WdHnvOtgyZZBofvAAYO/ZjQSYBtcNAK+eFhtlabJMpasy+fjqqsdxZgcQhM6YnA3oYxzt73gzf+lHURu03gWsQ==
+"@kronos-integration/service-http@^8.0.13":
+  version "8.0.13"
+  resolved "https://registry.yarnpkg.com/@kronos-integration/service-http/-/service-http-8.0.13.tgz#0d6afaef3df894cd4a18ed1bb179ad903f025ae6"
+  integrity sha512-uYyl1JsEiT71uHSBWoqeEmrz0X6Y310cW2HlYXcI9ikOM+66G5aNppkIW4wJ5FHoCDf6wyp+S9dOsz+DvShlfA==
   dependencies:
-    "@kronos-integration/service" "^8.2.4"
+    "@kronos-integration/service" "^8.2.6"
     bufferutil "^4.0.1"
     jsonwebtoken "^8.5.1"
     koa "^2.11.0"
@@ -1067,12 +1067,12 @@
     "@kronos-integration/service" "^8.2.2"
     config-expander "^11.0.6"
 
-"@kronos-integration/service@^8.1.0", "@kronos-integration/service@^8.1.6", "@kronos-integration/service@^8.2.2", "@kronos-integration/service@^8.2.4", "@kronos-integration/service@^8.2.5":
-  version "8.2.5"
-  resolved "https://registry.yarnpkg.com/@kronos-integration/service/-/service-8.2.5.tgz#5c2867841c0aa55a3a755866e3a8dacf7fc8cf69"
-  integrity sha512-9tlJbu2F/S0skILDwHXFZS07T8Xqs4UdLMcwFLD4sy6uFqjJBhLPi+XaoaghIqZF8FKXq1NXIEx/xOSiTmucaQ==
+"@kronos-integration/service@^8.1.0", "@kronos-integration/service@^8.1.6", "@kronos-integration/service@^8.2.2", "@kronos-integration/service@^8.2.6":
+  version "8.2.6"
+  resolved "https://registry.yarnpkg.com/@kronos-integration/service/-/service-8.2.6.tgz#19b74b53a1f4581b5b1eac5f81d8d02a0c7dbc21"
+  integrity sha512-pmGeKbPo0o9qEp5oYcJ6kDmxOlyUlYK2vJoDxmLYaLIhJStOF2RM6zpEFu/SbofMUYoADx8H6K7v5e7h/3nCNA==
   dependencies:
-    "@kronos-integration/endpoint" "^7.5.0"
+    "@kronos-integration/endpoint" "^7.5.1"
     loglevel-mixin "^5.0.3"
     model-attributes "^4.1.3"
     statetransition-mixin "^6.0.4"
@@ -6776,7 +6776,7 @@ octokit-pagination-methods@^1.1.0:
   resolved "https://registry.yarnpkg.com/octokit-pagination-methods/-/octokit-pagination-methods-1.1.0.tgz#cf472edc9d551055f9ef73f6e42b4dbb4c80bea4"
   integrity sha512-fZ4qZdQ2nxJvtcasX7Ghl+WlWS/d9IgnBIwFZXVNNZUmzpno91SX5bc5vuxiuKoCtK78XxGGNuSCrDC7xYB3OQ==
 
-oidc-provider@^6.17.3:
+oidc-provider@^6.17.4:
   version "6.17.4"
   resolved "https://registry.yarnpkg.com/oidc-provider/-/oidc-provider-6.17.4.tgz#97044ddfa445784266cd73261862d22281ead63b"
   integrity sha512-uruqUfNPD0H58jsg4AKlfoGtPiFmtllQ1lrvyHKAfZOH1iOHlTplvJ25L8z6PrWgMbkbAb3w8DwzG0XLI3fhNA==
