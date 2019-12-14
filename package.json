@@ -63,7 +63,7 @@
     "@kronos-integration/service-systemd": "^2.2.1"
   },
   "engines": {
-    "node": ">=13.13.0"
+    "node": ">=13.3.0"
   },
   "repository": {
     "type": "git",
