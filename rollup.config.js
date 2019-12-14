@@ -10,9 +10,9 @@ import acornClassFields from "acorn-class-fields";
 import builtins from "builtin-modules";
 import { name, version, description, main, module, bin } from "./package.json";
 
-const external = [...builtins, "koa", "bufferutil", "utf-8-validate"];
+const external = [...builtins, "bufferutil", "utf-8-validate"];
 
-const extensions = ["js", "mjs", "jsx", "tag"];
+const extensions = ["js", "mjs"];
 const plugins = [
   consts({
     name,
