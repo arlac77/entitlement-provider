@@ -1037,10 +1037,10 @@
     "@kronos-integration/service" "^8.2.6"
     model-attributes "^4.1.3"
 
-"@kronos-integration/service-http@^9.0.3":
-  version "9.0.3"
-  resolved "https://registry.yarnpkg.com/@kronos-integration/service-http/-/service-http-9.0.3.tgz#a67d831cebc2dd6140559fc2fb115c809576b67f"
-  integrity sha512-d02Uf8BSyDcmXddCBzKAwc7CDUevoBIv2wEAipY9z+6y8Ovf4wMTcuUlMhjKoBb7P9G/UmEStRRcoueIPn3YRQ==
+"@kronos-integration/service-http@^9.0.4":
+  version "9.0.4"
+  resolved "https://registry.yarnpkg.com/@kronos-integration/service-http/-/service-http-9.0.4.tgz#ecf25b5ac83e18b3d8206db23cf24c9cad41a4a6"
+  integrity sha512-VyuaWFoIVDxSbMs+uD44sSICcUhMJtEvl/iTDFqBT5nn4srYtEtUv3GifR0FT34a8HKgnriiTSW+KdnDok5UBg==
   dependencies:
     "@kronos-integration/service" "^8.2.6"
     bufferutil "^4.0.1"
@@ -6267,9 +6267,9 @@ nan@^2.12.1:
   integrity sha512-INOFj37C7k3AfaNTtX8RhsTw7qRy7eLET14cROi9+5HAVbbHuIWUHEauBv5qT4Av2tWasiTY1Jw6puUNqRJXQg==
 
 nanoid@^2.1.7:
-  version "2.1.7"
-  resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-2.1.7.tgz#d775e3e7c6470bbaaae3da9a647a80e228e0abf7"
-  integrity sha512-fmS3qwDldm4bE01HCIRqNk+f255CNjnAoeV3Zzzv0KemObHKqYgirVaZA9DtKcjogicWjYcHkJs4D5A8CjnuVQ==
+  version "2.1.8"
+  resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-2.1.8.tgz#2dbb0224231b246e3b4c819de7bfea6384dabf08"
+  integrity sha512-g1z+n5s26w0TGKh7gjn7HCqurNKMZWzH08elXzh/gM/csQHd/UqDV6uxMghQYg9IvqRPm1QpeMk50YMofHvEjQ==
 
 nanomatch@^1.2.9:
   version "1.2.13"
@@ -8121,9 +8121,9 @@ rollup-pluginutils@^2.3.3, rollup-pluginutils@^2.8.1:
     estree-walker "^0.6.1"
 
 rollup@^1.27.12:
-  version "1.27.12"
-  resolved "https://registry.yarnpkg.com/rollup/-/rollup-1.27.12.tgz#cf84db4b4edaf187eaba95232f34de7cd4d22d9c"
-  integrity sha512-51iR7n6NQfdQJlRrIktaGmkdt395A8Vue7CdnlrK6UhY9DY2GaKsTdljWeXisJuZh+w90Gz8VFNh5X+yxP20oQ==
+  version "1.27.13"
+  resolved "https://registry.yarnpkg.com/rollup/-/rollup-1.27.13.tgz#d6d3500512daacbf8de54d2800de62d893085b90"
+  integrity sha512-hDi7M07MpmNSDE8YVwGVFA8L7n8jTLJ4lG65nMAijAyqBe//rtu4JdxjUBE7JqXfdpqxqDTbCDys9WcqdpsQvw==
   dependencies:
     "@types/estree" "*"
     "@types/node" "*"
