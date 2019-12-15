@@ -1066,10 +1066,10 @@
     "@kronos-integration/service" "^8.2.2"
     config-expander "^11.0.6"
 
-"@kronos-integration/service@^8.1.6", "@kronos-integration/service@^8.2.2", "@kronos-integration/service@^8.2.6":
-  version "8.2.6"
-  resolved "https://registry.yarnpkg.com/@kronos-integration/service/-/service-8.2.6.tgz#19b74b53a1f4581b5b1eac5f81d8d02a0c7dbc21"
-  integrity sha512-pmGeKbPo0o9qEp5oYcJ6kDmxOlyUlYK2vJoDxmLYaLIhJStOF2RM6zpEFu/SbofMUYoADx8H6K7v5e7h/3nCNA==
+"@kronos-integration/service@^8.1.6", "@kronos-integration/service@^8.2.2", "@kronos-integration/service@^8.2.6", "@kronos-integration/service@^8.3.0":
+  version "8.3.0"
+  resolved "https://registry.yarnpkg.com/@kronos-integration/service/-/service-8.3.0.tgz#5444285995db6b90a9bf5d19bf42a0dc49dea049"
+  integrity sha512-lHV7OX+BegGaYnonYoGhP/wpOjIOBn1xrk5mLMWeNI8E/pgpBCmvl+SaiIIXtxEoUcZo9A8xA+LuvXNCxBbayw==
   dependencies:
     "@kronos-integration/endpoint" "^7.5.1"
     loglevel-mixin "^5.0.3"
