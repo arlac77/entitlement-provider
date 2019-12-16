@@ -1050,7 +1050,7 @@
     utf-8-validate "^5.0.2"
     ws "^7.2.1"
 
-"@kronos-integration/service-ldap@^2.1.7":
+"@kronos-integration/service-ldap@^2.1.8":
   version "2.1.8"
   resolved "https://registry.yarnpkg.com/@kronos-integration/service-ldap/-/service-ldap-2.1.8.tgz#d7beaf2eeef1eb01222270edbb02a209b5b91ce4"
   integrity sha512-LERmwwARIdf5a05YjXxSlpWwFaLP8JF90aBl6+pxmdoD/UGNKGFyPdlAm38fxsyPJy192sX0X+RDduXx6YcdAw==
@@ -1058,10 +1058,10 @@
     "@kronos-integration/service" "^8.3.2"
     ldapts "^1.10.0"
 
-"@kronos-integration/service-systemd@^2.2.2":
-  version "2.2.2"
-  resolved "https://registry.yarnpkg.com/@kronos-integration/service-systemd/-/service-systemd-2.2.2.tgz#a6653408772540739fe1848660b10cddd51efd70"
-  integrity sha512-gPxMRDS7p1zDhIzUOCxCK5NJaVLGufMW6/XQ2fVPYoj8UvBmlXa4oM77sTlq8Bumc57K2P2faAjVE49Jh7WW3w==
+"@kronos-integration/service-systemd@^2.2.3":
+  version "2.2.3"
+  resolved "https://registry.yarnpkg.com/@kronos-integration/service-systemd/-/service-systemd-2.2.3.tgz#5905821e8a805b4cde8295ba3e7e3d53c4edcb90"
+  integrity sha512-ov2MDggVXYze/DcO4q1xOXw3+WzV8f2JQDsoRqY7tvlPQUdTs43DyZQjYhZhUBh3y2EnBJFZ+dt+qxqP2FQ6mg==
   dependencies:
     "@kronos-integration/service" "^8.3.3"
     config-expander "^11.0.6"
