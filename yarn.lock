@@ -1037,7 +1037,7 @@
     "@kronos-integration/service" "^8.2.6"
     model-attributes "^4.1.3"
 
-"@kronos-integration/service-http@^9.0.8":
+"@kronos-integration/service-http@^9.0.9":
   version "9.0.9"
   resolved "https://registry.yarnpkg.com/@kronos-integration/service-http/-/service-http-9.0.9.tgz#ffc0b6e79d8116593f1a6793907f8a54839a4d18"
   integrity sha512-86dCvzqRrYZ6CAFuA6qgxzAVMjV4FuZyHAIkwAGQ7XnT4Zrq8nmmYp27VrEPGXdaSIBVvvnT+VuXRfwuoqJQKg==
@@ -1050,7 +1050,7 @@
     utf-8-validate "^5.0.2"
     ws "^7.2.1"
 
-"@kronos-integration/service-ldap@^2.1.5":
+"@kronos-integration/service-ldap@^2.1.7":
   version "2.1.7"
   resolved "https://registry.yarnpkg.com/@kronos-integration/service-ldap/-/service-ldap-2.1.7.tgz#dd36d1f7327e0576a41bdab5743866aebb6ff644"
   integrity sha512-2DAldekOUqVB5yxBnherL2ohpn8YqYogdqg6BMx4tuSRnMNMvVzBmEulrzXWYU+o37KQF2qPlvjJ3Q8h5JrTHw==
