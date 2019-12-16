@@ -12,9 +12,9 @@ import {
 } from "@kronos-integration/service-http";
 
 export async function setup(sp) {
-  const getInterceptors = [/*new CTXJWTVerifyInterceptor(),*/ new CTXInterceptor()]
+  const GETInterceptors = [new CTXJWTVerifyInterceptor(), new CTXInterceptor()];
   const GET = {
-    interceptors: getInterceptors
+    interceptors: GETInterceptors
   };
 
   const POST = {
@@ -69,6 +69,9 @@ export async function setup(sp) {
       autostart: true
     }
   });
+
+  sp.trace(`jwt: ${JSON.stringify(sp.services.auth.jwt)}`);
+  GETInterceptors[0].configure({ key: sp.services.auth.jwt.public });
 
   await sp.start();
 }
