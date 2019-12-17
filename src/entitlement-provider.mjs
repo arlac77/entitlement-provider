@@ -70,8 +70,8 @@ export async function setup(sp) {
     }
   });
 
+  await sp.start();
+
   sp.trace(`jwt: ${JSON.stringify(sp.services.auth.jwt)}`);
   GETInterceptors[0].configure({ key: sp.services.auth.jwt.public });
-
-  await sp.start();
 }
