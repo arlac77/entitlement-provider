@@ -1050,13 +1050,13 @@
     utf-8-validate "^5.0.2"
     ws "^7.2.1"
 
-"@kronos-integration/service-ldap@^2.1.8":
-  version "2.1.8"
-  resolved "https://registry.yarnpkg.com/@kronos-integration/service-ldap/-/service-ldap-2.1.8.tgz#d7beaf2eeef1eb01222270edbb02a209b5b91ce4"
-  integrity sha512-LERmwwARIdf5a05YjXxSlpWwFaLP8JF90aBl6+pxmdoD/UGNKGFyPdlAm38fxsyPJy192sX0X+RDduXx6YcdAw==
+"@kronos-integration/service-ldap@^2.1.9":
+  version "2.1.9"
+  resolved "https://registry.yarnpkg.com/@kronos-integration/service-ldap/-/service-ldap-2.1.9.tgz#454fcd846630714cb83ba5ff14150493dea3c76f"
+  integrity sha512-dOsV45qcnaKTzzFV8FvnuoZOqxCChdyg3+b2CrEWwVO2W8/Yt08W8Zq0Y5C1Mt4+IDlcDdZoFsx9eZlgJMw0sg==
   dependencies:
-    "@kronos-integration/service" "^8.3.2"
-    ldapts "^1.10.0"
+    "@kronos-integration/service" "^8.3.4"
+    ldapts "^2.0.1"
 
 "@kronos-integration/service-systemd@^2.2.3":
   version "2.2.3"
@@ -1442,10 +1442,10 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-12.12.18.tgz#8d16634797d63c2af5bc647ce879f8de20b56469"
   integrity sha512-DBkZuIMFuAfjJHiunyRc+aNvmXYNwV1IPMgGKGlwCp6zh6MKrVtmvjSWK/axWcD25KJffkXgkfvFra8ndenXAw==
 
-"@types/node@~8.10.54":
-  version "8.10.59"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-8.10.59.tgz#9e34261f30183f9777017a13d185dfac6b899e04"
-  integrity sha512-8RkBivJrDCyPpBXhVZcjh7cQxVBSmRk9QM7hOketZzp6Tg79c0N8kkpAIito9bnJ3HCVCHVYz+KHTEbfQNfeVQ==
+"@types/node@~10.17.9":
+  version "10.17.9"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-10.17.9.tgz#4f251a1ed77ac7ef09d456247d67fc8173f6b9da"
+  integrity sha512-+6VygF9LbG7Gaqeog2G7u1+RUcmo0q1rI+2ZxdIg2fAUngk5Vz9fOCHXdloNUOHEPd1EuuOpL5O0CdgN9Fx5UQ==
 
 "@types/normalize-package-data@^2.4.0":
   version "2.4.0"
@@ -5373,13 +5373,13 @@ lcid@^2.0.0:
   dependencies:
     invert-kv "^2.0.0"
 
-ldapts@^1.10.0:
-  version "1.10.0"
-  resolved "https://registry.yarnpkg.com/ldapts/-/ldapts-1.10.0.tgz#8fa4487ba6814f024bf4e92553baaa5eceea0e6c"
-  integrity sha512-5L06EuLEXGbStDyhrT31Fp+4tNFzOUnd1Unz5GCbNM1IemtHmxlBujVHhsgT6AUq5RXWhMUUvuXZrDt7XMa95Q==
+ldapts@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/ldapts/-/ldapts-2.0.1.tgz#7f90f5b3f7dc222a468968d6bdae062cfd10941d"
+  integrity sha512-c6N54mxf6oyGL9uh7VOyrAS7oOhoH+0VQtKmHjtD6I1aFv6aKd1YAx0bWESTNur6f/tm7ffQYx/nJfvb1fN0iw==
   dependencies:
     "@types/asn1" "~0.2.0"
-    "@types/node" "~8.10.54"
+    "@types/node" "~10.17.9"
     asn1 "~0.2.4"
     debug "~4.1.1"
     strict-event-emitter-types "~2.0.0"
