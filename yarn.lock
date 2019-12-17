@@ -1058,15 +1058,15 @@
     "@kronos-integration/service" "^8.3.4"
     ldapts "^2.0.1"
 
-"@kronos-integration/service-systemd@^2.2.3":
-  version "2.2.3"
-  resolved "https://registry.yarnpkg.com/@kronos-integration/service-systemd/-/service-systemd-2.2.3.tgz#5905821e8a805b4cde8295ba3e7e3d53c4edcb90"
-  integrity sha512-ov2MDggVXYze/DcO4q1xOXw3+WzV8f2JQDsoRqY7tvlPQUdTs43DyZQjYhZhUBh3y2EnBJFZ+dt+qxqP2FQ6mg==
+"@kronos-integration/service-systemd@^2.2.4":
+  version "2.2.4"
+  resolved "https://registry.yarnpkg.com/@kronos-integration/service-systemd/-/service-systemd-2.2.4.tgz#614b3dcda8085e853722e13d5bf27b2efaadd16a"
+  integrity sha512-w+10NQJnZbVZHaRdoWXd1VJl0yKBCQEwJ2Je120JzwGWBPCyZLn/9TvsD9LGX3EwQvAiyLYHtr6k5pJ7M8azyw==
   dependencies:
-    "@kronos-integration/service" "^8.3.3"
+    "@kronos-integration/service" "^8.3.7"
     config-expander "^11.0.6"
 
-"@kronos-integration/service@^8.3.2", "@kronos-integration/service@^8.3.3", "@kronos-integration/service@^8.3.4", "@kronos-integration/service@^8.3.6", "@kronos-integration/service@^8.3.7":
+"@kronos-integration/service@^8.3.2", "@kronos-integration/service@^8.3.4", "@kronos-integration/service@^8.3.6", "@kronos-integration/service@^8.3.7":
   version "8.3.7"
   resolved "https://registry.yarnpkg.com/@kronos-integration/service/-/service-8.3.7.tgz#daece1d0a2212195a0b492b2dacde5d47de8301b"
   integrity sha512-Gr768i87GcJqakA0SvDGcvIwm02bH0e+S8yQ9qhI8MX3S8iAk8nghwfUbFylwN01J70zOqMAkANKv8SItT6DMg==
@@ -1319,9 +1319,9 @@
   integrity sha512-rr+OQyAjxze7GgWrSaJwydHStIhHq2lvY3BOC2Mj7KnzI7XK0Uw1TOOdI9lDoajEbSWLiYgoo4f1R51erQfhPQ==
 
 "@types/connect@*":
-  version "3.4.32"
-  resolved "https://registry.yarnpkg.com/@types/connect/-/connect-3.4.32.tgz#aa0e9616b9435ccad02bc52b5b454ffc2c70ba28"
-  integrity sha512-4r8qa0quOvh7lGD0pre62CAb1oni1OO6ecJLGCezTmhQ8Fz50Arx9RUszryR8KlgK6avuSXvviL6yWyViQABOg==
+  version "3.4.33"
+  resolved "https://registry.yarnpkg.com/@types/connect/-/connect-3.4.33.tgz#31610c901eca573b8713c3330abc6e6b9f588546"
+  integrity sha512-2+FrkXY4zllzTNfJth7jOqEHC+enpLeGslEhpnTAkg21GkRrWV4SsAtqchtT4YS9/nODBU2/ZfsBY2X4J/dX7A==
   dependencies:
     "@types/node" "*"
 
@@ -1438,14 +1438,14 @@
   integrity sha512-tHq6qdbT9U1IRSGf14CL0pUlULksvY9OZ+5eEgl1N7t+OA3tGvNpxJCzuKQlsNgCVwbAs670L1vcVQi8j9HjnA==
 
 "@types/node@*", "@types/node@>= 8", "@types/node@^12.12.14":
-  version "12.12.18"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-12.12.18.tgz#8d16634797d63c2af5bc647ce879f8de20b56469"
-  integrity sha512-DBkZuIMFuAfjJHiunyRc+aNvmXYNwV1IPMgGKGlwCp6zh6MKrVtmvjSWK/axWcD25KJffkXgkfvFra8ndenXAw==
+  version "12.12.19"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-12.12.19.tgz#6133aa2a765accdec89ad7792b651a0830f7a34e"
+  integrity sha512-OXw80IpKyLeuZ5a8r2XCxVNnRAtS3lRDHBleSUQmbgu3C6eKqRsz7/5XNBU0EvK0RTVfotvYFgvRwwe2jeoiKw==
 
 "@types/node@~10.17.9":
-  version "10.17.9"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-10.17.9.tgz#4f251a1ed77ac7ef09d456247d67fc8173f6b9da"
-  integrity sha512-+6VygF9LbG7Gaqeog2G7u1+RUcmo0q1rI+2ZxdIg2fAUngk5Vz9fOCHXdloNUOHEPd1EuuOpL5O0CdgN9Fx5UQ==
+  version "10.17.10"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-10.17.10.tgz#929a0064c4fb99af3ec0ca981649e4d049de2b72"
+  integrity sha512-K9E84otvA2HQBTp0TWPwWf/986N6v0v7ers6q7wL48w5SXKzYjqlYkaxHYMwWRzQdgZg5p6eI7L0D6FLJYY7ag==
 
 "@types/normalize-package-data@^2.4.0":
   version "2.4.0"
