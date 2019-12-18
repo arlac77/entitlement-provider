@@ -1058,13 +1058,13 @@
     "@kronos-integration/service" "^8.3.9"
     ldapts "^2.0.1"
 
-"@kronos-integration/service-systemd@^2.2.5":
-  version "2.2.5"
-  resolved "https://registry.yarnpkg.com/@kronos-integration/service-systemd/-/service-systemd-2.2.5.tgz#f1ca2de514307e4da714f7457d67725d001366e2"
-  integrity sha512-86zVa/IfZQRqsp/Br5KjyJs5L2BExgq3rl92yGxvGNcwi278CwjAfOYvxLGgqkasfrCWM0jhxE5zJdxjKUqE9A==
+"@kronos-integration/service-systemd@^2.2.6":
+  version "2.2.6"
+  resolved "https://registry.yarnpkg.com/@kronos-integration/service-systemd/-/service-systemd-2.2.6.tgz#c4b73e7e51d6e079efc60b69bd362a30857d0dd2"
+  integrity sha512-e8or21douRYia++VhopHvCHCzGse6veXZ5nIPNACu9PFTfE+fyvoVp6qL+9JXB4cSTZYJ/5EPM7nqR58Ts9mCQ==
   dependencies:
-    "@kronos-integration/service" "^8.3.9"
-    config-expander "^11.0.6"
+    "@kronos-integration/service" "^8.3.10"
+    config-expander "^11.0.7"
 
 "@kronos-integration/service@^8.3.10", "@kronos-integration/service@^8.3.9":
   version "8.3.10"
@@ -2758,7 +2758,7 @@ config-chain@^1.1.12:
     ini "^1.3.4"
     proto-list "~1.2.1"
 
-config-expander@^11.0.6:
+config-expander@^11.0.7:
   version "11.0.7"
   resolved "https://registry.yarnpkg.com/config-expander/-/config-expander-11.0.7.tgz#c724e5b34bc1adb8a6ddbb161b1c422ce0a3cd31"
   integrity sha512-3J6a32c5v8ynCwO34L5QItsOHJzxNKBNW04hPaTGLl7OXS+y9REtyc5woXu8gR9V8Py1CE0UFjWUamMnY3X7pg==
