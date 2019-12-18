@@ -1066,10 +1066,10 @@
     "@kronos-integration/service" "^8.3.9"
     config-expander "^11.0.6"
 
-"@kronos-integration/service@^8.3.9":
-  version "8.3.9"
-  resolved "https://registry.yarnpkg.com/@kronos-integration/service/-/service-8.3.9.tgz#6f522a92c0dc26fe68294e19c06f9044d1c726f1"
-  integrity sha512-MjOzoX2OF81BP6bfRGVmWTXOEbv7UPphfpASKWo9xDq6d5kdl7SZ16Tx30kEcCfRLajzO9qFYJ61GdP0/u+PpQ==
+"@kronos-integration/service@^8.3.10", "@kronos-integration/service@^8.3.9":
+  version "8.3.10"
+  resolved "https://registry.yarnpkg.com/@kronos-integration/service/-/service-8.3.10.tgz#e61302b8188c1119a15a43533ddb052287f673d7"
+  integrity sha512-3rrTlgIRLQvq77pY8vfEO96kVYHXd8EpB+gPqGn0EOY/GUgXGBC7O8iJ5ojsuiT4PRg1/LhP0o9tI8+eU3POWg==
   dependencies:
     "@kronos-integration/endpoint" "^7.5.1"
     loglevel-mixin "^5.0.3"
@@ -2759,9 +2759,9 @@ config-chain@^1.1.12:
     proto-list "~1.2.1"
 
 config-expander@^11.0.6:
-  version "11.0.6"
-  resolved "https://registry.yarnpkg.com/config-expander/-/config-expander-11.0.6.tgz#32f5fa6eedb5693398fc33ea6cfd062aee5724f3"
-  integrity sha512-kGPX6EPqPLemvh+iWjEctdewVqzG579zu1nZc/aWSkIjggcwnOFe/NwjIJnncmD4a24KXZESk/BlEsDpSZa5Kw==
+  version "11.0.7"
+  resolved "https://registry.yarnpkg.com/config-expander/-/config-expander-11.0.7.tgz#c724e5b34bc1adb8a6ddbb161b1c422ce0a3cd31"
+  integrity sha512-3J6a32c5v8ynCwO34L5QItsOHJzxNKBNW04hPaTGLl7OXS+y9REtyc5woXu8gR9V8Py1CE0UFjWUamMnY3X7pg==
   dependencies:
     expression-expander "^7.0.3"
     pratt-parser "^8.0.1"
