@@ -60,7 +60,7 @@
     "semantic-release": "^15.13.31"
   },
   "optionalDependencies": {
-    "@kronos-integration/service-systemd": "^2.2.5"
+    "@kronos-integration/service-systemd": "^2.2.6"
   },
   "engines": {
     "node": ">=13.3.0"
