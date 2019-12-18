@@ -1037,10 +1037,10 @@
     "@kronos-integration/service" "^8.3.9"
     model-attributes "^4.1.3"
 
-"@kronos-integration/service-http@^9.0.15":
-  version "9.0.15"
-  resolved "https://registry.yarnpkg.com/@kronos-integration/service-http/-/service-http-9.0.15.tgz#64d7295c505967a8b25eae000077fb46adca00e9"
-  integrity sha512-dZY92kUycgpXjC8gGkPbLPQXeJmA8Ww15pdIVrIg6GfD25wnFN1vQqWbJnAmEd3OXicjqBECc+rfWAAfe/wH1Q==
+"@kronos-integration/service-http@^9.0.16":
+  version "9.0.16"
+  resolved "https://registry.yarnpkg.com/@kronos-integration/service-http/-/service-http-9.0.16.tgz#41a404f9f58f36aeb90bfc0cc82b58fca108c0a0"
+  integrity sha512-g9HJ0i7K58uOh7EjPJst59NkFQRA7OCxjRShKS7lbYK5kXodcvpzi2ne3nbKEaQgt8tuxNS1ltdDIHJ6r8lOUA==
   dependencies:
     "@kronos-integration/service" "^8.3.9"
     bufferutil "^4.0.1"
@@ -1438,9 +1438,9 @@
   integrity sha512-tHq6qdbT9U1IRSGf14CL0pUlULksvY9OZ+5eEgl1N7t+OA3tGvNpxJCzuKQlsNgCVwbAs670L1vcVQi8j9HjnA==
 
 "@types/node@*", "@types/node@>= 8", "@types/node@^12.12.14":
-  version "12.12.20"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-12.12.20.tgz#7b693038ce661fe57a7ffa4679440b5e7c5e8b99"
-  integrity sha512-VAe+DiwpnC/g448uN+/3gRl4th0BTdrR9gSLIOHA+SUQskaYZQDOHG7xmjiE7JUhjbXnbXytf6Ih+/pA6CtMFQ==
+  version "12.12.21"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-12.12.21.tgz#aa44a6363291c7037111c47e4661ad210aded23f"
+  integrity sha512-8sRGhbpU+ck1n0PGAUgVrWrWdjSW2aqNeyC15W88GRsMpSwzv6RJGlLhE7s2RhVSOdyDmxbqlWSeThq4/7xqlA==
 
 "@types/node@~10.17.9":
   version "10.17.11"
