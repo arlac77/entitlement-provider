@@ -1,6 +1,6 @@
 
 pre_install() {
-	useradd -U -l -M -r -s /usr/bin/nologin -d /var/lib/{{name}} -c "{{description}}" {{name}}
+	useradd -U -l -M -r -s /usr/bin/nologin -d /var/lib/{{name}} -G http -c "{{description}}" {{name}}
 }
 
 post_install() {
@@ -11,6 +11,7 @@ post_install() {
 }
 
 pre_upgrade() {
+	usermode -G http {{name}}
 	systemctl stop {{name}}.socket
 	systemctl stop {{name}}
 }
