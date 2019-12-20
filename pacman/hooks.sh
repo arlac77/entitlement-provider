@@ -11,7 +11,7 @@ post_install() {
 }
 
 pre_upgrade() {
-	usermode -G http {{name}}
+	usermod -G http {{name}}
 	systemctl stop {{name}}.socket
 	systemctl stop {{name}}
 }
