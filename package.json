@@ -36,7 +36,7 @@
     "@kronos-integration/service-authenticator": "^1.0.10",
     "@kronos-integration/service-health-check": "^5.0.9",
     "@kronos-integration/service-http": "^9.0.17",
-    "@kronos-integration/service-ldap": "^2.1.10",
+    "@kronos-integration/service-ldap": "^2.1.11",
     "commander": "^4.0.1",
     "oidc-provider": "^6.17.4"
   },
@@ -63,7 +63,7 @@
     "@kronos-integration/service-systemd": "^2.2.7"
   },
   "engines": {
-    "node": ">=13.3.0"
+    "node": ">=13.4.0"
   },
   "os": [
     "linux",
