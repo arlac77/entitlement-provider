@@ -84,7 +84,7 @@
   "homepage": "https://github.com/arlac77/entitlement-provider#readme",
   "config": {
     "base": "/services/entitlements/api",
-    "socket": "/run/${name}/socket"
+    "socket": "/run/${name}/http/socket"
   },
   "systemd": {
     "units": {
