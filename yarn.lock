@@ -1050,10 +1050,10 @@
     utf-8-validate "^5.0.2"
     ws "^7.2.1"
 
-"@kronos-integration/service-ldap@^2.1.10":
-  version "2.1.10"
-  resolved "https://registry.yarnpkg.com/@kronos-integration/service-ldap/-/service-ldap-2.1.10.tgz#9a34ebcf174d928644a2862f068ffc2d23d4d64c"
-  integrity sha512-lxKT1qzm5aDXxcSIXx6x/2GHPuEvFf+I9XDR6mtpe3QT2G2EqE9IdF1NZ+WMTXV6XItt+pYoNEoA1GLWvgLuWw==
+"@kronos-integration/service-ldap@^2.1.11":
+  version "2.1.11"
+  resolved "https://registry.yarnpkg.com/@kronos-integration/service-ldap/-/service-ldap-2.1.11.tgz#0abce2b23f4ef96d151c6645bbd45a0e602f499d"
+  integrity sha512-yr5DtOX3qYuaTNpcdnr9AWa9UVv3z6PM/pPO9EcyFoZjh27XpH8oY35oUeKoKEL+XWzj4a/bRVhI7JEm9cr9IA==
   dependencies:
     "@kronos-integration/service" "^8.3.9"
     ldapts "^2.0.1"
@@ -1351,9 +1351,9 @@
   integrity sha512-EaObqwIvayI5a8dCzhFrjKzVwKLxjoG9T6Ppd5CEo07LRKfQ8Yokw54r5+Wq7FaBQ+yXRvQAYPrHwya1/UFt9g==
 
 "@types/express-serve-static-core@*":
-  version "4.17.0"
-  resolved "https://registry.yarnpkg.com/@types/express-serve-static-core/-/express-serve-static-core-4.17.0.tgz#e80c25903df5800e926402b7e8267a675c54a281"
-  integrity sha512-Xnub7w57uvcBqFdIGoRg1KhNOeEj0vB6ykUM7uFWyxvbdE89GFyqgmUcanAriMr4YOxNFZBAWkfcWIb4WBPt3g==
+  version "4.17.1"
+  resolved "https://registry.yarnpkg.com/@types/express-serve-static-core/-/express-serve-static-core-4.17.1.tgz#82be64a77211b205641e0209096fd3afb62481d3"
+  integrity sha512-9e7jj549ZI+RxY21Cl0t8uBnWyb22HzILupyHZjYEVK//5TT/1bZodU+yUbLnPdoYViBBnNWbxp4zYjGV0zUGw==
   dependencies:
     "@types/node" "*"
     "@types/range-parser" "*"
