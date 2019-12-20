@@ -42,10 +42,10 @@ export async function setup(sp) {
           ws: true,
           connected: "service(health).state"
         },
-        "/state": { ...GET, connected: "service(health).state" },
-        "/state/uptime": { ...GET, connected: "service(health).uptime" },
-        "/state/cpu": { ...GET, connected: "service(health).cpu" },
-        "/state/memory": { ...GET, connected: "service(health).memory" },
+        //"/state": { ...GET, connected: "service(health).state" },
+        //"/state/uptime": { ...GET, connected: "service(health).uptime" },
+        //"/state/cpu": { ...GET, connected: "service(health).cpu" },
+        //"/state/memory": { ...GET, connected: "service(health).memory" },
         "/authenticate": { ...POST, connected: "service(auth).access_token" },
         "/services": { ...GET, connected: "service(admin).services" },
         "/entitlements": { ...GET, connected: "service(ldap).search" }
