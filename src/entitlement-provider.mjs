@@ -26,26 +26,22 @@ export async function setup(sp) {
       type: ServiceHTTP,
       autostart: true,
       endpoints: {
-        "/ws/state/uptime": {
+        "/state/uptime": {
           ws: true,
           connected: "service(health).uptime"
         },
-        "/ws/state/cpu": {
+        "/state/cpu": {
           ws: true,
           connected: "service(health).cpu"
         },
-        "/ws/state/memory": {
+        "/state/memory": {
           ws: true,
           connected: "service(health).memory"
         },
-        "/ws/state": {
+        "/state": {
           ws: true,
           connected: "service(health).state"
         },
-        //"/state": { ...GET, connected: "service(health).state" },
-        //"/state/uptime": { ...GET, connected: "service(health).uptime" },
-        //"/state/cpu": { ...GET, connected: "service(health).cpu" },
-        //"/state/memory": { ...GET, connected: "service(health).memory" },
         "/authenticate": { ...POST, connected: "service(auth).access_token" },
         "/services": { ...GET, connected: "service(admin).services" },
         "/entitlements": { ...GET, connected: "service(ldap).search" }
