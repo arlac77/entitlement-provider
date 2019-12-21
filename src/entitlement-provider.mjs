@@ -73,5 +73,4 @@ export async function setup(sp) {
   await sp.start();
 
   GETInterceptors[0].configure({ key: sp.services.auth.jwt.public });
-  sp.info(`jwt: ${GETInterceptors[0]}`);
 }
