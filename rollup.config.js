@@ -1,6 +1,6 @@
 import resolve from "@rollup/plugin-node-resolve";
+import commonjs from "@rollup/plugin-commonjs";
 
-import commonjs from "rollup-plugin-commonjs";
 import executable from "rollup-plugin-executable";
 import native from "rollup-plugin-native";
 import cleanup from "rollup-plugin-cleanup";
@@ -12,7 +12,6 @@ import { name, version, description, main, module, bin } from "./package.json";
 
 const external = [...builtins, "bufferutil", "utf-8-validate"];
 
-const extensions = ["js", "mjs"];
 const plugins = [
   consts({
     name,
@@ -23,11 +22,11 @@ const plugins = [
   resolve(),
   native(),
   cleanup({
-    extensions
+    extensions: ["js", "mjs"]
   })
 ];
 
-const config = Object.keys(bin || {}).map(name => {
+const config = Object.keys(bin).map(name => {
   return {
     input: `src/${name}-cli.mjs`,
     output: {
