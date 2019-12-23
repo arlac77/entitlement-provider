@@ -1012,10 +1012,10 @@
   dependencies:
     "@kronos-integration/interceptor" "^8.1.0"
 
-"@kronos-integration/interceptor-decode-json@^2.1.0":
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/@kronos-integration/interceptor-decode-json/-/interceptor-decode-json-2.1.0.tgz#4fa7d274cd05ac3afb6a897654ef5cd3d1cc1f43"
-  integrity sha512-xbOgh53PPmn5ZWHpnraffI3hzE9syyadADgddqAB1oDZ9I2XxAWcb6aKxC6FTTjgvWGj9zpl8LcrBjxzpfjnog==
+"@kronos-integration/interceptor-decode-json@^2.1.1":
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/@kronos-integration/interceptor-decode-json/-/interceptor-decode-json-2.1.1.tgz#f433822177eeb732c005988321ab7f1b9d149fb5"
+  integrity sha512-TxIjOb4ELTBDOosZBgKtQl0U9KvhcBhBDR1pnPXF26cN5EgLK/fo1trvlup0wvVPFBeuhYTphdMulp6fagfyGA==
   dependencies:
     "@kronos-integration/interceptor" "^8.1.0"
 
@@ -1070,10 +1070,10 @@
     "@kronos-integration/service" "^8.3.12"
     ldapts "^2.0.1"
 
-"@kronos-integration/service-systemd@^2.2.8":
-  version "2.2.8"
-  resolved "https://registry.yarnpkg.com/@kronos-integration/service-systemd/-/service-systemd-2.2.8.tgz#a09f6c9dc22e611109992e3031ff17bef093af44"
-  integrity sha512-nL5RiH74Q4WEthVL7HaVUWcTFd/jMT1IDE8f+aNFdpwNwakqwgtCMGATazgD5y6Kdc2UcWhxWow8IStDZKNbKw==
+"@kronos-integration/service-systemd@^2.2.9":
+  version "2.2.9"
+  resolved "https://registry.yarnpkg.com/@kronos-integration/service-systemd/-/service-systemd-2.2.9.tgz#2bcf0f353e6c350fbe36d04afcd360afeb9bb4df"
+  integrity sha512-3NQPh8z4mbuKrhV9iKky61cBxZABc6Utn2Z7h5i/oEQ+sMDr95TDLxSnvv8eRG1SKJS84uVTl+jMn3gCfYBtqg==
   dependencies:
     "@kronos-integration/service" "^8.3.13"
     config-expander "^11.0.7"
@@ -1425,9 +1425,9 @@
   integrity sha1-/1QEYtL7TQqIRBzq8n0oewHD2Hg=
 
 "@types/keyv@*":
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/@types/keyv/-/keyv-3.1.0.tgz#1961f73b3bf1084c044f79a070b45a5bfa6578b9"
-  integrity sha512-OxT2IEeRdwvoUyp8n1v1hTIFzATb3NQYN8OHv/XbXRHiF2DXwKyzoI4UUaQgwZkRflLaSgyttat+RfWgsKIMIQ==
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/@types/keyv/-/keyv-3.1.1.tgz#e45a45324fca9dab716ab1230ee249c9fb52cfa7"
+  integrity sha512-MPtoySlAZQ37VoLaPcTHCu1RWJ4llDkULYZIzOYxlhxBqYPB0RsRlmMU0R6tahtFe27mIdkHV+551ZWV4PLmVw==
   dependencies:
     "@types/node" "*"
 
