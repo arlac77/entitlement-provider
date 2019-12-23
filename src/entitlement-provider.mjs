@@ -2,7 +2,10 @@ import ServiceHealthCheck from "@kronos-integration/service-health-check";
 import ServiceLDAP from "@kronos-integration/service-ldap";
 import ServiceAuthenticator from "@kronos-integration/service-authenticator";
 import ServiceAdmin from "@kronos-integration/service-admin";
-import { DecodeJSONInterceptor } from "@kronos-integration/interceptor-decode-json";
+import {
+  DecodeJSONInterceptor,
+  EncodeJSONInterceptor
+} from "@kronos-integration/interceptor-decode-json";
 
 import {
   ServiceHTTP,
@@ -75,4 +78,8 @@ export async function setup(sp) {
   await sp.start();
 
   GETInterceptors[0].configure({ key: sp.services.auth.jwt.public });
+
+  sp.services.health.endpoints.memory.interceptors = [
+    new EncodeJSONInterceptor()
+  ];
 }

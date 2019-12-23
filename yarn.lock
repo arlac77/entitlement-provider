@@ -1012,10 +1012,10 @@
   dependencies:
     "@kronos-integration/interceptor" "^8.1.0"
 
-"@kronos-integration/interceptor-decode-json@^2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@kronos-integration/interceptor-decode-json/-/interceptor-decode-json-2.0.0.tgz#afebac1cc51a78bafd508d10d5df6c0cf201466e"
-  integrity sha512-y6VcT/a98afzh8oB21OotP876EB4z8DtZBQDh3gEZ8moB34B/BfARCXDD8DGTUYCQW6hijpjGR6XnX+yo6nMAw==
+"@kronos-integration/interceptor-decode-json@^2.1.0":
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@kronos-integration/interceptor-decode-json/-/interceptor-decode-json-2.1.0.tgz#4fa7d274cd05ac3afb6a897654ef5cd3d1cc1f43"
+  integrity sha512-xbOgh53PPmn5ZWHpnraffI3hzE9syyadADgddqAB1oDZ9I2XxAWcb6aKxC6FTTjgvWGj9zpl8LcrBjxzpfjnog==
   dependencies:
     "@kronos-integration/interceptor" "^8.1.0"
 
