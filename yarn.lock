@@ -1005,10 +1005,10 @@
   dependencies:
     vary "^1.1.2"
 
-"@kronos-integration/endpoint@^7.5.4":
-  version "7.5.4"
-  resolved "https://registry.yarnpkg.com/@kronos-integration/endpoint/-/endpoint-7.5.4.tgz#19623dbc55dd912df1c1a7511c5251014fc3a0c4"
-  integrity sha512-qy4qXx1Tv97uoSa4rqZvDxNhz345F06fDHNBalOQT6iIKR0KF8aomrG7bkS9GWE+QnyeFzSqhhVZvdkIkG4njA==
+"@kronos-integration/endpoint@^7.5.5":
+  version "7.5.5"
+  resolved "https://registry.yarnpkg.com/@kronos-integration/endpoint/-/endpoint-7.5.5.tgz#b9512303d02023df09f0e6696ba34b5f7f68cd91"
+  integrity sha512-vy26Uvs9N0+6qN0yc72YuN+8Iz4FwFvw03ILlRvvdLLnxmF4R5nUJ54L7gywr/UPCDApuQsn3vjTmUVfb188tw==
   dependencies:
     "@kronos-integration/interceptor" "^8.1.0"
 
@@ -1026,35 +1026,35 @@
   dependencies:
     model-attributes "^4.1.3"
 
-"@kronos-integration/service-admin@^3.0.8":
-  version "3.0.8"
-  resolved "https://registry.yarnpkg.com/@kronos-integration/service-admin/-/service-admin-3.0.8.tgz#6f1e29644caae6373648a6dc8defd47b9d7f48d5"
-  integrity sha512-NbYMMF6xeuBkRRgUeKoBBOgDeem2kpOThjG0m3yQ0k8UoLPHYn2VghMSGNXYQYlY5yFTu97WxjLdOB9K8FMLjA==
+"@kronos-integration/service-admin@^3.0.9":
+  version "3.0.9"
+  resolved "https://registry.yarnpkg.com/@kronos-integration/service-admin/-/service-admin-3.0.9.tgz#1dbb193848c8943264c254f5d8672b359b390973"
+  integrity sha512-NAMfmoIFRkE0WQ3SsGz/wr8KoUl63WxV7MlZd+i5d6181Zj5ci1LgcKuRuaY9+qhAxDHR+ht3VvBrOEuk1HqhA==
   dependencies:
-    "@kronos-integration/service" "^8.3.13"
+    "@kronos-integration/service" "^8.3.14"
 
-"@kronos-integration/service-authenticator@^1.0.12":
-  version "1.0.12"
-  resolved "https://registry.yarnpkg.com/@kronos-integration/service-authenticator/-/service-authenticator-1.0.12.tgz#6a6bdb2bde39079f7031f5323edc3f2763ec58a7"
-  integrity sha512-0RppmaFCbD/Q4Hjfi49UlFoPyLZVw4tex6pCjBGjuc8TMW1rhZFg3y9pCgdnp0ysFzvvTUI2DuoBCRhPzfO7hA==
+"@kronos-integration/service-authenticator@^1.0.13":
+  version "1.0.13"
+  resolved "https://registry.yarnpkg.com/@kronos-integration/service-authenticator/-/service-authenticator-1.0.13.tgz#511f56b933e582e465345c61a2f8eda27d97cf3c"
+  integrity sha512-Thw0vy4QMIRF/JeuQqNGHcpyzf5xZH3814k1Ar+/PQxFpCBPgDYkvjANNKvC2BClsaeMCftRwePKafqXEm5myA==
   dependencies:
-    "@kronos-integration/service" "^8.3.13"
+    "@kronos-integration/service" "^8.3.14"
     jsonwebtoken "^8.5.1"
 
-"@kronos-integration/service-health-check@^5.0.10":
-  version "5.0.10"
-  resolved "https://registry.yarnpkg.com/@kronos-integration/service-health-check/-/service-health-check-5.0.10.tgz#3743333201e5237ebabe870e52afa1ea5be8bcb6"
-  integrity sha512-xRpOfHTz6PtK7FJ1NgJibzs0pa1cQqfvtVGJvz/FwUCDq//pZhvw+i7BoRql2s++pOkCKnIWRBbJVBw/FV9uOg==
+"@kronos-integration/service-health-check@^5.0.11":
+  version "5.0.11"
+  resolved "https://registry.yarnpkg.com/@kronos-integration/service-health-check/-/service-health-check-5.0.11.tgz#acbe3f82a103f9dde6eea00ce2d2537cd1c9dc4f"
+  integrity sha512-KIgjP07q79gqlCHed3PrC+TmH3ibQZEYKYx2JE8qoQQvL0MPdd8v/jGAf2B1koKhXJZ/Svfix85+mm3pWy6CYQ==
   dependencies:
-    "@kronos-integration/service" "^8.3.12"
+    "@kronos-integration/service" "^8.3.14"
     model-attributes "^4.1.3"
 
-"@kronos-integration/service-http@^9.0.22":
-  version "9.0.22"
-  resolved "https://registry.yarnpkg.com/@kronos-integration/service-http/-/service-http-9.0.22.tgz#0abc388a32f260a6b840c1ea724604315f32a4d4"
-  integrity sha512-yUzuvgXRRrOGe5ejIwjnH39TFO8TZdz5zEqaReXDLiSTKRChVmPTolj0oyLujPIaZK4CFuMoNFwOenO+Py/ReA==
+"@kronos-integration/service-http@^9.0.23":
+  version "9.0.23"
+  resolved "https://registry.yarnpkg.com/@kronos-integration/service-http/-/service-http-9.0.23.tgz#8a6d310ffc43197ba17f173663a0ddba6d1afe49"
+  integrity sha512-JPw2RjB4mbXRMTLFbm5w384Jy4lFz10IQdDYWiamIMUHLLqcfGK7oPh4MU3pH9/4bTjw+0smPaydFdgKnAGJ+Q==
   dependencies:
-    "@kronos-integration/service" "^8.3.13"
+    "@kronos-integration/service" "^8.3.14"
     bufferutil "^4.0.1"
     jsonwebtoken "^8.5.1"
     model-attributes "^4.1.3"
@@ -1062,12 +1062,12 @@
     utf-8-validate "^5.0.2"
     ws "^7.2.1"
 
-"@kronos-integration/service-ldap@^2.1.12":
-  version "2.1.12"
-  resolved "https://registry.yarnpkg.com/@kronos-integration/service-ldap/-/service-ldap-2.1.12.tgz#6744f26c0d9750cf6a4234d3a4fb247e5574198e"
-  integrity sha512-7/E5X4FVgxXUuyS6AN1L6ctdJC9PP0MUUADhyqN63lOBxX97RLffQTqweTa83DUQ9D3qAv/LmqIh0q8tdly5jQ==
+"@kronos-integration/service-ldap@^2.1.13":
+  version "2.1.13"
+  resolved "https://registry.yarnpkg.com/@kronos-integration/service-ldap/-/service-ldap-2.1.13.tgz#4679b3982a410bea272d7165d9b8af6a3370fe98"
+  integrity sha512-d6y9lL0FyZrUHvmujV+Q1F3isOMMoiwOrIG5u9TkhzqhkPHzrwRyC+H+5jq8JhDiZIe87+Q4kamyzU3wRToytg==
   dependencies:
-    "@kronos-integration/service" "^8.3.12"
+    "@kronos-integration/service" "^8.3.14"
     ldapts "^2.0.1"
 
 "@kronos-integration/service-systemd@^2.2.9":
@@ -1078,12 +1078,12 @@
     "@kronos-integration/service" "^8.3.13"
     config-expander "^11.0.7"
 
-"@kronos-integration/service@^8.3.12", "@kronos-integration/service@^8.3.13":
-  version "8.3.13"
-  resolved "https://registry.yarnpkg.com/@kronos-integration/service/-/service-8.3.13.tgz#96282c3e678125d39cb18ccef2622525fa99403a"
-  integrity sha512-LpDU7I7kSyHUl0JTKDYeIsITMrOlK18q3xDQfB5FrHlEA7/NxtE8+apj2YCY1Dj7OpEevwn6jBG/YSkAk1i4eA==
+"@kronos-integration/service@^8.3.13", "@kronos-integration/service@^8.3.14":
+  version "8.3.14"
+  resolved "https://registry.yarnpkg.com/@kronos-integration/service/-/service-8.3.14.tgz#21284eb623adba46a93ca02eac932c98aa99dfc5"
+  integrity sha512-2iZNf9cIogTfuEv+5Yf8QKvaRg+pXnOf0rgTAd11qqVpjjSnV3QxXLhpbQstYbfqt+JyG4yjpZNKfgfH3CAANg==
   dependencies:
-    "@kronos-integration/endpoint" "^7.5.4"
+    "@kronos-integration/endpoint" "^7.5.5"
     loglevel-mixin "^5.0.3"
     model-attributes "^4.1.3"
     statetransition-mixin "^6.0.4"
@@ -1142,9 +1142,9 @@
     universal-user-agent "^4.0.0"
 
 "@octokit/rest@^16.27.0":
-  version "16.35.2"
-  resolved "https://registry.yarnpkg.com/@octokit/rest/-/rest-16.35.2.tgz#0098c9e2a895d4afb0fa6578479283553543143c"
-  integrity sha512-iijaNZpn9hBpUdh8YdXqNiWazmq4R1vCUsmxpBB0kCQ0asHZpCx+HNs22eiHuwYKRhO31ZSAGBJLi0c+3XHaKQ==
+  version "16.36.0"
+  resolved "https://registry.yarnpkg.com/@octokit/rest/-/rest-16.36.0.tgz#99892c57ba632c2a7b21845584004387b56c2cb7"
+  integrity sha512-zoZj7Ya4vWBK4fjTwK2Cnmu7XBB1p9ygSvTk2TthN6DVJXM4hQZQoAiknWFLJWSTix4dnA3vuHtjPZbExYoCZA==
   dependencies:
     "@octokit/request" "^5.2.0"
     "@octokit/request-error" "^1.0.2"
@@ -1359,9 +1359,9 @@
     "@types/node" "*"
 
 "@types/estree@*":
-  version "0.0.40"
-  resolved "https://registry.yarnpkg.com/@types/estree/-/estree-0.0.40.tgz#0e6cb9b9bbd098031fa19e4b4e8131bc70e5de13"
-  integrity sha512-p3KZgMto/JyxosKGmnLDJ/dG5wf+qTRMUjHJcspC2oQKa4jP7mz+tv0ND56lLBu3ojHlhzY33Ol+khLyNmilkA==
+  version "0.0.41"
+  resolved "https://registry.yarnpkg.com/@types/estree/-/estree-0.0.41.tgz#fd90754150b57432b72bf560530500597ff04421"
+  integrity sha512-rIAmXyJlqw4KEBO7+u9gxZZSQHaCNnIzYrnNmYVpgfJhxTqO0brCX0SYpqUTkVI5mwwUwzmtspLBGBKroMeynA==
 
 "@types/estree@0.0.39":
   version "0.0.39"
@@ -4188,9 +4188,9 @@ globby@^6.1.0:
     pinkie-promise "^2.0.0"
 
 got@^10.0.4:
-  version "10.1.0"
-  resolved "https://registry.yarnpkg.com/got/-/got-10.1.0.tgz#f8437664bdc95a80638db9e101fa81d6e730b67a"
-  integrity sha512-7tFtiOkTc47O9PyQ8or0urxjs8XF+4K7CfZMRM9RiZAm4kbllG3D8tGlA04PloiFDA2e178mS8yiLSZut1C6Zw==
+  version "10.2.0"
+  resolved "https://registry.yarnpkg.com/got/-/got-10.2.0.tgz#c7d54e5b41881e5c64952a4013986af12dbab47f"
+  integrity sha512-X14b2uo+20s+HrJz9qyUmGNdIyYbRUZNE05fUz0aS4eXp1l82oUvsvFcMjwY3D25zgWwittqEQWEia0XqSlzzw==
   dependencies:
     "@sindresorhus/is" "^1.0.0"
     "@szmarczak/http-timer" "^3.1.1"
