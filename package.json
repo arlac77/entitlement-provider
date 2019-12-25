@@ -52,7 +52,7 @@
     "documentation": "^12.1.4",
     "esm": "^3.2.25",
     "got": "^10.0.4",
-    "npm-pkgbuild": "^6.11.1",
+    "npm-pkgbuild": "^6.11.2",
     "rollup": "^1.27.14",
     "rollup-plugin-cleanup": "^3.1.1",
     "rollup-plugin-consts": "^1.0.1",
