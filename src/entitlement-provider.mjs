@@ -15,6 +15,7 @@ import {
 } from "@kronos-integration/service-http";
 
 export async function setup(sp) {
+  const WSOutInterceptors = [ new EncodeJSONInterceptor()];
   const GETInterceptors = [new CTXJWTVerifyInterceptor(), new CTXInterceptor()];
   const GET = {
     interceptors: GETInterceptors
@@ -79,7 +80,8 @@ export async function setup(sp) {
 
   GETInterceptors[0].configure({ key: sp.services.auth.jwt.public });
 
-  sp.services.health.endpoints.memory.interceptors = [
-    new EncodeJSONInterceptor()
-  ];
+  sp.services.health.endpoints.memory.interceptors = WSOutInterceptors;
+  sp.services.health.endpoints.cpu.interceptors = WSOutInterceptors;
+  sp.services.health.endpoints.uptime.interceptors = WSOutInterceptors;
+  sp.services.health.endpoints.state.interceptors = WSOutInterceptors;
 }
