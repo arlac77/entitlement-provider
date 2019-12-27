@@ -18,8 +18,10 @@ StateDirectory={{name}}
 ConfigurationDirectory={{name}}
 NotifyAccess=all
 FileDescriptorStoreMax=2
-
 Environment="LOGLEVEL=trace"
+MemoryAccounting=true
+MemoryHigh=150M
+MemoryMax=200M
 
 [Install]
 WantedBy=multi-user.target
