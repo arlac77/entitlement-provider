@@ -34,7 +34,7 @@
     "@kronos-integration/interceptor-decode-json": "^2.1.1",
     "@kronos-integration/service": "^8.3.14",
     "@kronos-integration/service-admin": "^3.0.10",
-    "@kronos-integration/service-authenticator": "^1.0.13",
+    "@kronos-integration/service-authenticator": "^1.0.14",
     "@kronos-integration/service-health-check": "^5.0.12",
     "@kronos-integration/service-http": "^9.0.23",
     "@kronos-integration/service-ldap": "^2.1.13",
@@ -57,11 +57,11 @@
     "rollup-plugin-cleanup": "^3.1.1",
     "rollup-plugin-consts": "^1.0.1",
     "rollup-plugin-executable": "^1.5.2",
-    "rollup-plugin-native": "^1.1.5",
+    "rollup-plugin-native": "^1.2.0",
     "semantic-release": "^15.14.0"
   },
   "optionalDependencies": {
-    "@kronos-integration/service-systemd": "^2.2.10"
+    "@kronos-integration/service-systemd": "^2.2.11"
   },
   "engines": {
     "node": ">=13.5.0"
