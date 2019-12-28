@@ -1465,7 +1465,7 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-13.1.1.tgz#6d11a8c2d58405b3db9388ab740106cbfa64c3c9"
   integrity sha512-hx6zWtudh3Arsbl3cXay+JnkvVgCKzCWKv42C9J01N2T2np4h8w5X8u6Tpz5mj38kE3M9FM0Pazx8vKFFMnjLQ==
 
-"@types/node@^12.12.14":
+"@types/node@^12.12.21":
   version "12.12.22"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-12.12.22.tgz#b8d9eae3328b96910a373cf06ac8d3c5abe9c200"
   integrity sha512-r5i93jqbPWGXYXxianGATOxTelkp6ih/U0WVnvaqAvTqM+0U6J3kw6Xk6uq/dWNRkEVw/0SLcO5ORXbVNz4FMQ==
@@ -1856,7 +1856,7 @@ atob-lite@^2.0.0:
   resolved "https://registry.yarnpkg.com/atob-lite/-/atob-lite-2.0.0.tgz#0fef5ad46f1bd7a8502c65727f0367d5ee43d696"
   integrity sha1-D+9a1G8b16hQLGVyfwNn1e5D1pY=
 
-atob@^2.1.1:
+atob@^2.1.2:
   version "2.1.2"
   resolved "https://registry.yarnpkg.com/atob/-/atob-2.1.2.tgz#6d9517eb9e030d2436666651e86bd9f6f13533c9"
   integrity sha512-Wm6ukoaOGJi/73p/cl2GvLjTI5JM1k/O14isD73YML8StrH/7/lRFgmg8nICZgD3bZZvjwCGxtMOD3wWNAu8cg==
@@ -5130,7 +5130,7 @@ java-properties@^1.0.0:
   resolved "https://registry.yarnpkg.com/java-properties/-/java-properties-1.0.2.tgz#ccd1fa73907438a5b5c38982269d0e771fe78211"
   integrity sha512-qjdpeo2yKlYTH7nFdK0vbZWuTCesk4o63v5iVOlhMQPfuIZQfW/HI35SjfhA+4qpg36rnFSvUK5b1m+ckIblQQ==
 
-jose@^1.16.1:
+jose@^1.17.2:
   version "1.17.2"
   resolved "https://registry.yarnpkg.com/jose/-/jose-1.17.2.tgz#46155dfe31c8c6f3a75698978ccf86864afb1f30"
   integrity sha512-HYbLNZACDgH2duIHY21ZYXWCX50V0sHdcuvPMPCiDRbL9ukVSkOTFyJjPGsdieUIooEOHCjCM9wnT60ZrTYcoQ==
@@ -6282,7 +6282,7 @@ nan@^2.12.1:
   resolved "https://registry.yarnpkg.com/nan/-/nan-2.14.0.tgz#7818f722027b2459a86f0295d434d1fc2336c52c"
   integrity sha512-INOFj37C7k3AfaNTtX8RhsTw7qRy7eLET14cROi9+5HAVbbHuIWUHEauBv5qT4Av2tWasiTY1Jw6puUNqRJXQg==
 
-nanoid@^2.1.7:
+nanoid@^2.1.8:
   version "2.1.8"
   resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-2.1.8.tgz#2dbb0224231b246e3b4c819de7bfea6384dabf08"
   integrity sha512-g1z+n5s26w0TGKh7gjn7HCqurNKMZWzH08elXzh/gM/csQHd/UqDV6uxMghQYg9IvqRPm1QpeMk50YMofHvEjQ==
@@ -6797,24 +6797,24 @@ octokit-pagination-methods@^1.1.0:
   resolved "https://registry.yarnpkg.com/octokit-pagination-methods/-/octokit-pagination-methods-1.1.0.tgz#cf472edc9d551055f9ef73f6e42b4dbb4c80bea4"
   integrity sha512-fZ4qZdQ2nxJvtcasX7Ghl+WlWS/d9IgnBIwFZXVNNZUmzpno91SX5bc5vuxiuKoCtK78XxGGNuSCrDC7xYB3OQ==
 
-oidc-provider@^6.17.6:
-  version "6.17.6"
-  resolved "https://registry.yarnpkg.com/oidc-provider/-/oidc-provider-6.17.6.tgz#b198f5c384bab455dd85ea2d3231080d352f9297"
-  integrity sha512-DgKhHVRhL6QJoVr6Pjz0IVGC7YAIm3wY+8GeidDAzQhM0aHkK4+j0+wKlSF2ZUzgQ2SeYlFa6Y+zfMj6FdQ/vg==
+oidc-provider@^6.17.7:
+  version "6.17.7"
+  resolved "https://registry.yarnpkg.com/oidc-provider/-/oidc-provider-6.17.7.tgz#ddc56f77dc235e4cc80fa781be6f07ab8f33b06b"
+  integrity sha512-3sME9QjMK9/i//ltAhgjh/jTqV2rb5kBZngozHLbkucSZ5Ke/R9cfrGGCf4HhMFH1AnoMFCFEmvWT/wYt8CTlg==
   dependencies:
     "@koa/cors" "^3.0.0"
     "@types/koa" "^2.11.0"
-    "@types/node" "^12.12.14"
+    "@types/node" "^12.12.21"
     debug "^4.1.1"
     ejs "^3.0.1"
     got "^9.6.0"
-    jose "^1.16.1"
+    jose "^1.17.2"
     jsesc "^2.5.2"
     koa "^2.11.0"
     koa-compose "^4.1.0"
     lodash "^4.17.15"
     lru-cache "^5.1.1"
-    nanoid "^2.1.7"
+    nanoid "^2.1.8"
     object-hash "^2.0.1"
     oidc-token-hash "^5.0.0"
     raw-body "^2.4.1"
@@ -8397,11 +8397,11 @@ sorted-union-stream@~2.1.3:
     stream-iterate "^1.1.0"
 
 source-map-resolve@^0.5.0:
-  version "0.5.2"
-  resolved "https://registry.yarnpkg.com/source-map-resolve/-/source-map-resolve-0.5.2.tgz#72e2cc34095543e43b2c62b2c4c10d4a9054f259"
-  integrity sha512-MjqsvNwyz1s0k81Goz/9vRBe9SZdB09Bdw+/zYyO+3CuPk6fouTaxscHkgtE8jKvf01kVfl8riHzERQ/kefaSA==
+  version "0.5.3"
+  resolved "https://registry.yarnpkg.com/source-map-resolve/-/source-map-resolve-0.5.3.tgz#190866bece7553e1f8f267a2ee82c606b5509a1a"
+  integrity sha512-Htz+RnsXWk5+P2slx5Jh3Q66vhQj1Cllm0zvnaY98+NFx+Dv2CF/f5O/t8x+KaNdrdIAsruNzoh/KpialbqAnw==
   dependencies:
-    atob "^2.1.1"
+    atob "^2.1.2"
     decode-uri-component "^0.2.0"
     resolve-url "^0.2.1"
     source-map-url "^0.4.0"
