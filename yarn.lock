@@ -1033,10 +1033,10 @@
   dependencies:
     "@kronos-integration/service" "^8.3.14"
 
-"@kronos-integration/service-authenticator@^1.0.14":
-  version "1.0.14"
-  resolved "https://registry.yarnpkg.com/@kronos-integration/service-authenticator/-/service-authenticator-1.0.14.tgz#f0e814958d591d8c25376fbb567fbe5b6c417037"
-  integrity sha512-QsbiHKE8voLo2p2nYSYW/zojP/Iv5/OM24Z6PMyUq2KXTe5tQ5b/5xgjUsQoRLeu8oZOX+Fue0EmtKKq6jFiHQ==
+"@kronos-integration/service-authenticator@^1.0.15":
+  version "1.0.15"
+  resolved "https://registry.yarnpkg.com/@kronos-integration/service-authenticator/-/service-authenticator-1.0.15.tgz#a4a878750369c4cacd180b1b402a7394019f30b4"
+  integrity sha512-xCVvHLCv01jucKkuBw6j6Dr/bRZT6XSUqFxYWRKo8SF5uysaFeYtvNW3cSnF0nXUil3xOsQcADIzRixZHEwnlw==
   dependencies:
     "@kronos-integration/service" "^8.3.14"
     jsonwebtoken "^8.5.1"
@@ -1049,10 +1049,10 @@
     "@kronos-integration/service" "^8.3.14"
     model-attributes "^4.1.3"
 
-"@kronos-integration/service-http@^9.1.2":
-  version "9.1.2"
-  resolved "https://registry.yarnpkg.com/@kronos-integration/service-http/-/service-http-9.1.2.tgz#5bdc4afab82bb128a1a9284bfe336edcfe10bb3b"
-  integrity sha512-IWe2qWjB8H6i6TX9GRf94neiNnJ2SzN1oigJyxXJIFSuzLZ3uf15jXrMCD3wL28dpTbzVNS+5FtfooETixMkKg==
+"@kronos-integration/service-http@^9.2.1":
+  version "9.2.1"
+  resolved "https://registry.yarnpkg.com/@kronos-integration/service-http/-/service-http-9.2.1.tgz#d3c77bee3af48a20cdc63f457fc2a20c79b0d908"
+  integrity sha512-3sODtEWnV5bGP49iPRleI0oFR/awQVvJXIqgXEBLxeBOgdGwzNljvQTZ2D0MsAsIu5G4ZbIC5lQ4SqrxkRiCDg==
   dependencies:
     "@kronos-integration/service" "^8.3.14"
     bufferutil "^4.0.1"
