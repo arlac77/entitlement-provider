@@ -22,6 +22,7 @@ Environment="LOGLEVEL=trace"
 MemoryAccounting=true
 MemoryHigh=150M
 MemoryMax=200M
+OOMPolicy=stop
 
 [Install]
 WantedBy=multi-user.target
