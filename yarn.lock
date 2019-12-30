@@ -1049,10 +1049,10 @@
     "@kronos-integration/service" "^8.3.14"
     model-attributes "^4.1.3"
 
-"@kronos-integration/service-http@^9.2.1":
-  version "9.2.1"
-  resolved "https://registry.yarnpkg.com/@kronos-integration/service-http/-/service-http-9.2.1.tgz#d3c77bee3af48a20cdc63f457fc2a20c79b0d908"
-  integrity sha512-3sODtEWnV5bGP49iPRleI0oFR/awQVvJXIqgXEBLxeBOgdGwzNljvQTZ2D0MsAsIu5G4ZbIC5lQ4SqrxkRiCDg==
+"@kronos-integration/service-http@^10.0.0":
+  version "10.0.0"
+  resolved "https://registry.yarnpkg.com/@kronos-integration/service-http/-/service-http-10.0.0.tgz#103141396c422c4cb7dd176081973a95be699993"
+  integrity sha512-DxQPtWSB/IYJeVDKJxdo2kJqwiyS7aJpFN3IiRvG7Wkxk0RSiPpsFX0gOrR5mj8O72q6OH/fRGQAkLehEHc36g==
   dependencies:
     "@kronos-integration/service" "^8.3.14"
     bufferutil "^4.0.1"
