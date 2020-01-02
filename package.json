@@ -5,12 +5,14 @@
     "access": "public"
   },
   "files": [
-    "bin"
+    "bin",
+    "bin/entitlement-provider-systemd"
   ],
   "module": "src/entitlement-provider.mjs",
   "description": "provide entitlements via OIDC",
   "keywords": [
-    "OIDC"
+    "OIDC",
+    "kronos-integration"
   ],
   "contributors": [
     {
