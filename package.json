@@ -6,6 +6,7 @@
   },
   "files": [
     "bin",
+    "bin/entitlement-provider-systemd",
     "bin/entitlement-provider-systemd"
   ],
   "module": "src/entitlement-provider.mjs",
@@ -21,10 +22,7 @@
     }
   ],
   "license": "BSD-2-Clause",
-  "bin": {
-    "entitlement-provider": "bin/entitlement-provider",
-    "entitlement-provider-systemd": "bin/entitlement-provider-systemd"
-  },
+  "bin": {},
   "scripts": {
     "cover": "c8 -x 'tests/**/*' --temp-directory build/tmp ava && c8 report -r lcov -o build/coverage --temp-directory build/tmp",
     "docs": "documentation readme src/entitlement-provider.mjs --section=API",
