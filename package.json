@@ -45,7 +45,7 @@
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^11.0.1",
-    "@rollup/plugin-node-resolve": "^6.0.0",
+    "@rollup/plugin-node-resolve": "^6.1.0",
     "@semantic-release/exec": "^3.3.8",
     "acorn-class-fields": "https://github.com/arlac77/acorn-class-fields.git",
     "ava": "^2.4.0",
@@ -55,7 +55,7 @@
     "esm": "^3.2.25",
     "got": "^10.0.4",
     "npm-pkgbuild": "^6.11.2",
-    "rollup": "^1.27.14",
+    "rollup": "^1.28.0",
     "rollup-plugin-cleanup": "^3.1.1",
     "rollup-plugin-consts": "^1.0.1",
     "rollup-plugin-executable": "^1.5.2",
@@ -95,29 +95,29 @@
     }
   },
   "pacman": {
-    "arch": [
-      "aarch64",
-      "armv7h",
-      "x86_64"
-    ],
-    "groups": "user admin",
-    "hooks": "pacman/hooks.sh",
-    "backup": "etc/${name}/config.json",
-    "depends": {
-      "systemd": ">=244.1",
-      "nginx-mainline": ">=1.17.7"
-    },
-    "installdir": "/services/${name}",
     "additional-content": [
       "npm-dist",
       "npm-dependencies"
     ],
+    "backup": "etc/${name}/config.json",
     "content": {
       "/usr/lib/tmpfiles.d/${name}.conf": "pacman/tmpfiles.conf",
       "/etc/${name}/config.json": "config/config.json",
       "/etc/nginx/config.d/${name}.conf": "pacman/nginx.conf",
       "/srv/http/.well-known/openid-configuration": "config/openid-configuration"
-    }
+    },
+    "depends": {
+      "systemd": ">=244.1",
+      "nginx-mainline": ">=1.17.7"
+    },
+    "groups": "user admin",
+    "hooks": "pacman/hooks.sh",
+    "installdir": "/services/${name}",
+    "arch": [
+      "aarch64",
+      "armv7h",
+      "x86_64"
+    ]
   },
   "release": {
     "plugins": [
