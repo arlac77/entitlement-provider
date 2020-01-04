@@ -6,6 +6,7 @@
   },
   "files": [
     "bin",
+    "bin/entitlement-provider-systemd",
     "bin/entitlement-provider-systemd"
   ],
   "module": "src/entitlement-provider.mjs",
@@ -43,7 +44,7 @@
     "oidc-provider": "^6.17.7"
   },
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^11.0.0",
+    "@rollup/plugin-commonjs": "^11.0.1",
     "@rollup/plugin-node-resolve": "^6.0.0",
     "@semantic-release/exec": "^3.3.8",
     "acorn-class-fields": "https://github.com/arlac77/acorn-class-fields.git",
