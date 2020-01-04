@@ -6,8 +6,6 @@
   },
   "files": [
     "bin",
-    "bin/entitlement-provider-systemd",
-    "bin/entitlement-provider-systemd",
     "bin/entitlement-provider-systemd"
   ],
   "module": "src/entitlement-provider.mjs",
