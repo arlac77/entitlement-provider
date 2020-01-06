@@ -1,4 +1,17 @@
 {
+  "_ava": {
+    "require": [
+      "esm"
+    ],
+    "extensions": [
+      "mjs"
+    ],
+    "babel": false,
+    "compileEnhancements": false,
+    "files": [
+      "tests/*-test.mjs"
+    ]
+  },
   "name": "entitlement-provider",
   "version": "0.0.0-semantic-release",
   "publishConfig": {
@@ -45,6 +58,7 @@
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^11.0.1",
+    "@rollup/plugin-json": "^4.0.1",
     "@rollup/plugin-node-resolve": "^6.1.0",
     "@semantic-release/exec": "^3.3.8",
     "acorn-class-fields": "https://github.com/arlac77/acorn-class-fields.git",
@@ -54,7 +68,7 @@
     "documentation": "^12.1.4",
     "esm": "^3.2.25",
     "got": "^10.0.4",
-    "npm-pkgbuild": "^6.11.2",
+    "npm-pkgbuild": "^6.11.3",
     "rollup": "^1.28.0",
     "rollup-plugin-cleanup": "^3.1.1",
     "rollup-plugin-consts": "^1.0.1",
