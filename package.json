@@ -57,6 +57,7 @@
     "got": "^10.0.4",
     "npm-pkgbuild": "^6.11.3",
     "rollup": "^1.28.0",
+    "rollup-plugin-babel": "^4.3.1",
     "rollup-plugin-cleanup": "^3.1.1",
     "rollup-plugin-consts": "^1.0.1",
     "rollup-plugin-executable": "^1.5.2",
