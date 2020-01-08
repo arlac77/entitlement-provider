@@ -13,7 +13,8 @@
   "description": "provide entitlements via OIDC",
   "keywords": [
     "OIDC",
-    "kronos-integration"
+    "kronos-integration",
+    "systemd"
   ],
   "contributors": [
     {
@@ -66,7 +67,7 @@
     "@kronos-integration/service-systemd": "^2.2.11"
   },
   "engines": {
-    "node": ">=13.5.0"
+    "node": ">=13.6.0"
   },
   "os": [
     "linux",
