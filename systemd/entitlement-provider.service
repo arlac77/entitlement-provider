@@ -23,6 +23,7 @@ MemoryAccounting=true
 MemoryHigh=150M
 MemoryMax=200M
 OOMPolicy=stop
+CacheDirectory={{name}}
 
 [Install]
 WantedBy=multi-user.target
