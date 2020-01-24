@@ -5,8 +5,6 @@
     "access": "public"
   },
   "files": [
-    "bin",
-    "bin/entitlement-provider-systemd",
     "bin/entitlement-provider-systemd"
   ],
   "module": "src/entitlement-provider.mjs",
@@ -49,7 +47,7 @@
     "@rollup/plugin-node-resolve": "^7.0.0",
     "@semantic-release/exec": "^4.0.0",
     "acorn-class-fields": "https://github.com/arlac77/acorn-class-fields.git",
-    "ava": "3.0.0-beta.1",
+    "ava": "^2.4.0",
     "builtin-modules": "^3.1.0",
     "c8": "^7.0.1",
     "documentation": "^12.1.4",
