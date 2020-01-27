@@ -1,10 +1,11 @@
 node_modules
 build
+.DS_Store
+npm-debug.log
+
 dist
 *.log
 *.dump
-.DS_Store
 .test
 .tmp
-
 bin
