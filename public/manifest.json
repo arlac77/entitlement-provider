@@ -1,0 +1,10 @@
+{
+  "name": "entitlement-provider",
+  "description": "provide entitlements via OIDC",
+  "icons": [
+    {
+      "src": "facicon.ico",
+      "sizes": "16x16"
+    }
+  ]
+}
