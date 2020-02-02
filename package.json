@@ -30,7 +30,8 @@
     "docs": "documentation readme src/entitlement-provider.mjs --section=API",
     "lint": "documentation lint src/entitlement-provider.mjs",
     "prepare": "rollup -c",
-    "test": "ava"
+    "test": "ava",
+    "posttest": ""
   },
   "dependencies": {
     "@kronos-integration/interceptor-decode-json": "^2.1.1",
