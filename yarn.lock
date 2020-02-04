@@ -1043,53 +1043,53 @@
     vary "^1.1.2"
 
 "@kronos-integration/endpoint@^7.5.5":
-  version "7.5.6"
-  resolved "https://registry.yarnpkg.com/@kronos-integration/endpoint/-/endpoint-7.5.6.tgz#6fc8ff7447d4e0d728316557240b2f86d7699e68"
-  integrity sha512-il88Nax0B+eKE3/4HGGxtT1tmibZ+Aj7lB6R+0sOW6+dlbxq+Y3ZRgcWfTQcFBAEEZpfdV7g+orV2LVQmFzaZQ==
+  version "7.5.7"
+  resolved "https://registry.yarnpkg.com/@kronos-integration/endpoint/-/endpoint-7.5.7.tgz#ca6199f65bb8ef6aedae7169ae2fab5ca3cf7d51"
+  integrity sha512-/QMAzF8f+g4ONuFk/F45sArjOpweKk+B9MknEEp7tcgtW66QSBM3xFGzt2+NTpWiU4P0R63XLIMjI+K5EQ/lOQ==
   dependencies:
     "@kronos-integration/interceptor" "^8.1.0"
 
 "@kronos-integration/interceptor-decode-json@^2.1.1":
-  version "2.1.2"
-  resolved "https://registry.yarnpkg.com/@kronos-integration/interceptor-decode-json/-/interceptor-decode-json-2.1.2.tgz#89bf4dad195f818dd02f70c2a05792f8a945521d"
-  integrity sha512-qepkd3N92HPDRUNH5WUsOZELoWcAqHE5i79jEMp96b3REoZ+hLSv48O5uejtENwOa9JMtTvDGdQXj473QfAiAA==
+  version "2.1.3"
+  resolved "https://registry.yarnpkg.com/@kronos-integration/interceptor-decode-json/-/interceptor-decode-json-2.1.3.tgz#39a9a5a42dd11eee942688468e35caf59748be5c"
+  integrity sha512-yZROSCnI6I0qvxh7W3imwkAW9SDr/uhQElh5uRFsI/j6Om8Gz+OuyYxrWjLIaAzZ0SwccfJPchL/nfe7lCKlBQ==
   dependencies:
     "@kronos-integration/interceptor" "^8.1.0"
 
 "@kronos-integration/interceptor@^8.1.0":
-  version "8.1.1"
-  resolved "https://registry.yarnpkg.com/@kronos-integration/interceptor/-/interceptor-8.1.1.tgz#2cd8807c134651e7b9daf6a401304ce2f84130b1"
-  integrity sha512-g5uMaDT+S5VAwYz+NHWiRTNqJK7wpA1krpFMuuqwaJcCJBGpgEGsZSlw/tPcL46xHNLAnzKYOxg9Nrp2Qvii2Q==
+  version "8.1.2"
+  resolved "https://registry.yarnpkg.com/@kronos-integration/interceptor/-/interceptor-8.1.2.tgz#55d9ea5673a4c72a74aaa0a131851d7e3044acda"
+  integrity sha512-uJCfYEtkNo5fl9+/8Hx8GabEnZt2o9uxIQhWfbLVTDIoMO8oPZ2LwMo/fj3DHeJT7XkoEgoSiQNZ/1m/3JLrVA==
   dependencies:
     model-attributes "^4.1.3"
 
-"@kronos-integration/service-admin@^3.0.12":
-  version "3.0.12"
-  resolved "https://registry.yarnpkg.com/@kronos-integration/service-admin/-/service-admin-3.0.12.tgz#8ef0640c3868c11ea69ed4962843f73d3e0e0776"
-  integrity sha512-/G0Mvx8TKn6IYksY6OE6FsOs2uoXHvz+Fy479CLdYo0beF1juDRsH9LAQxeSWb1EISTJqC/9+lEah2zDbu+GTQ==
+"@kronos-integration/service-admin@^3.0.13":
+  version "3.0.13"
+  resolved "https://registry.yarnpkg.com/@kronos-integration/service-admin/-/service-admin-3.0.13.tgz#0b7b6084325a871f1ea581f642a468af9851f4ea"
+  integrity sha512-vx9eKsTQGFFbl5uziWNCfChYHkowKpCSZl2BtQi4nOExZZA19CJ/K0AmRwbhP7cgxLVFbMOi6pUInXqIYQXkgQ==
   dependencies:
     "@kronos-integration/service" "^8.3.14"
 
-"@kronos-integration/service-authenticator@^1.0.16":
-  version "1.0.16"
-  resolved "https://registry.yarnpkg.com/@kronos-integration/service-authenticator/-/service-authenticator-1.0.16.tgz#c3f008c9a82c6089d865779fe4b69402d9be16b5"
-  integrity sha512-NLwuNscuXsB89XFuvryhldy+b1I9YE781Lo9gIpF00e4qwqR1UMgox5UYyRz4Qs42UrRip5cMw0ssl04TOYuNA==
+"@kronos-integration/service-authenticator@^1.0.17":
+  version "1.0.17"
+  resolved "https://registry.yarnpkg.com/@kronos-integration/service-authenticator/-/service-authenticator-1.0.17.tgz#b3c5e4106a5c33a91ca2b2fb5645f294b8dcf0bd"
+  integrity sha512-55PDunKYzmYVeGQ1fh+xHjeLVDpKj6G9BO/+KRXmeDJQdFwE9IgUp30JowLK5OadeXpmj7tP2DMZUDMzU1bf6w==
   dependencies:
     "@kronos-integration/service" "^8.3.14"
     jsonwebtoken "^8.5.1"
 
-"@kronos-integration/service-health-check@^5.0.12":
-  version "5.0.13"
-  resolved "https://registry.yarnpkg.com/@kronos-integration/service-health-check/-/service-health-check-5.0.13.tgz#9aa29118d2e5d194f5a82a1e8394a86607d0f37a"
-  integrity sha512-xVFduEsJJsmHxL6ulQU4DuYZQ8qTUoFqyvWRkwgPYFEVaii5VBllm+j6sBYEW/f3t27UcVbcDazzMjecu8ScaQ==
+"@kronos-integration/service-health-check@^5.0.14":
+  version "5.0.14"
+  resolved "https://registry.yarnpkg.com/@kronos-integration/service-health-check/-/service-health-check-5.0.14.tgz#839f156d3951a5726ebf5d9dbd7db7684337bfec"
+  integrity sha512-qeZMum5LpxT4CEU6BFVY5ppDqD/Qaa5y9F4OmqyCvQeh3lc7ae7pzM2Lo/lBVXhrthb0XmMqUEt8pfq5k16zPQ==
   dependencies:
     "@kronos-integration/service" "^8.3.14"
     model-attributes "^4.1.3"
 
-"@kronos-integration/service-http@^10.0.5":
-  version "10.0.5"
-  resolved "https://registry.yarnpkg.com/@kronos-integration/service-http/-/service-http-10.0.5.tgz#79399a36dbb4202a4f49d5caddedb77d74162871"
-  integrity sha512-qI18d7pafxW/cHMk71KVQC1E0ZVpNJaXnrAX5IRbfWeI82ywgLjWcharK1F9nmnEoWDtwULWp19HlyOR9i0OBQ==
+"@kronos-integration/service-http@^10.0.6":
+  version "10.0.6"
+  resolved "https://registry.yarnpkg.com/@kronos-integration/service-http/-/service-http-10.0.6.tgz#5d8ef41e0080afbd562ad902d519eeb40e3afe8d"
+  integrity sha512-VANQCNafbgj3A0qWj40PtKSKAYte0Bxu4Eil0QpVuXUTYEvmvhUKhZ+Cxnf4tYZvHIcancHR1ZqQpgyt2ymeSg==
   dependencies:
     "@kronos-integration/service" "^8.3.14"
     bufferutil "^4.0.1"
@@ -1099,26 +1099,26 @@
     utf-8-validate "^5.0.2"
     ws "^7.2.1"
 
-"@kronos-integration/service-ldap@^2.1.16":
-  version "2.1.16"
-  resolved "https://registry.yarnpkg.com/@kronos-integration/service-ldap/-/service-ldap-2.1.16.tgz#28c13da99497d9b7d30cc0d9f1957bc280e21103"
-  integrity sha512-NiIsMUMgEhh7Q6WhVUDblaAkLqB+PTTYYLe0N+rjGnG6qlky0lHVEf8TNKZDbzZfj/qvCR4t9Sl15f+BnayegQ==
+"@kronos-integration/service-ldap@^2.1.17":
+  version "2.1.17"
+  resolved "https://registry.yarnpkg.com/@kronos-integration/service-ldap/-/service-ldap-2.1.17.tgz#2a6a25578cb70a3eecd0f03ffac4c05e6a94a144"
+  integrity sha512-eWO9gUbbIiKygwkZh11fCB0OvbShz5jrlhty5tEryLjVieuN0bGNE7/y/hmBV3L9eOASJh22xKYLWM85eFr5ww==
   dependencies:
-    "@kronos-integration/service" "^8.3.15"
+    "@kronos-integration/service" "^8.3.16"
     ldapts "^2.2.0"
 
-"@kronos-integration/service-systemd@^2.2.11":
-  version "2.2.11"
-  resolved "https://registry.yarnpkg.com/@kronos-integration/service-systemd/-/service-systemd-2.2.11.tgz#2b1ebd807644eed0c93a56e9229b941a922699fe"
-  integrity sha512-sXSzQ9YmFpgd1TWWKWlcT7zgp8u0RGpfqrFqtO1K6QncKU3xaUTHRmGXCHE1XC/ap20YPp2lPvbXgwXWKuukMA==
+"@kronos-integration/service-systemd@^2.2.12":
+  version "2.2.12"
+  resolved "https://registry.yarnpkg.com/@kronos-integration/service-systemd/-/service-systemd-2.2.12.tgz#278f473d354dba53a86fddef7c4cae39ef096b8a"
+  integrity sha512-zJOENoaXtzc1KNyvwFS1WYLg1lroVyKWeH+At/kGQlMRpMWznIv2nNHPgzkcz1dSyHOxdzAGCjt0axh7wquupg==
   dependencies:
-    "@kronos-integration/service" "^8.3.14"
-    config-expander "^11.0.7"
+    "@kronos-integration/service" "^8.3.16"
+    config-expander "^11.0.9"
 
-"@kronos-integration/service@^8.3.14", "@kronos-integration/service@^8.3.15":
-  version "8.3.15"
-  resolved "https://registry.yarnpkg.com/@kronos-integration/service/-/service-8.3.15.tgz#4cf42a5bd5dd47ad0a06d3e6464c57403cf48700"
-  integrity sha512-qfm+1bfRtvgn4fVKd5tUpI+5DzDLCeAYxLgXZlHIp3sS7W82e5uPUnArbdR1BKPocYAuXxeUFuJBw2yqT7Li4Q==
+"@kronos-integration/service@^8.3.14", "@kronos-integration/service@^8.3.16":
+  version "8.3.16"
+  resolved "https://registry.yarnpkg.com/@kronos-integration/service/-/service-8.3.16.tgz#a6fff8fcaea901c2d24db2aba00bed6412ce7099"
+  integrity sha512-mtPoenZBFwKHRha9EoGlwPuEgwxKcFx7YVDc5bu9zgyR0agJrOA/psEpRmd2L6NA/FHQXOmzY6tFdl5hEorT8w==
   dependencies:
     "@kronos-integration/endpoint" "^7.5.5"
     loglevel-mixin "^5.0.3"
@@ -1174,10 +1174,10 @@
   resolved "https://registry.yarnpkg.com/@octokit/plugin-request-log/-/plugin-request-log-1.0.0.tgz#eef87a431300f6148c39a7f75f8cfeb218b2547e"
   integrity sha512-ywoxP68aOT3zHCLgWZgwUJatiENeHE7xJzYjfz8WI0goynp96wETBF+d95b8g/uL4QmS6owPVlaxiz3wyMAzcw==
 
-"@octokit/plugin-rest-endpoint-methods@2.2.0":
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/@octokit/plugin-rest-endpoint-methods/-/plugin-rest-endpoint-methods-2.2.0.tgz#17778b3b79f6dd978d8854ad81afeb239fae9da2"
-  integrity sha512-/Es7P4roLJls+4JaUUouZ25dqvXdrLJ80vvRoZzzR0EBCTlaU2ESRjXgH50mUpmR1MKPwJS3Ew5iFj3U3Q8UfQ==
+"@octokit/plugin-rest-endpoint-methods@2.4.0":
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/@octokit/plugin-rest-endpoint-methods/-/plugin-rest-endpoint-methods-2.4.0.tgz#3288ecf5481f68c494dd0602fc15407a59faf61e"
+  integrity sha512-EZi/AWhtkdfAYi01obpX0DF7U6b1VRr30QNQ5xSFPITMdLSfhcBqjamE3F+sKcxPbD7eZuMHu3Qkk2V+JGxBDQ==
   dependencies:
     "@octokit/types" "^2.0.1"
     deprecation "^2.3.1"
@@ -1205,15 +1205,15 @@
     once "^1.4.0"
     universal-user-agent "^4.0.0"
 
-"@octokit/rest@^16.27.0":
-  version "16.41.1"
-  resolved "https://registry.yarnpkg.com/@octokit/rest/-/rest-16.41.1.tgz#885609acbc2d2118eaadf017f92ca503d352a84b"
-  integrity sha512-C97cb2cwxakAxZ+5oIAhmd9a1lqJ48n9TN3ooRuuifRMVQZGJCIFsb7uQV76YjDsB1agjhhDokAOSKq5F2+HYw==
+"@octokit/rest@^16.43.0":
+  version "16.43.1"
+  resolved "https://registry.yarnpkg.com/@octokit/rest/-/rest-16.43.1.tgz#3b11e7d1b1ac2bbeeb23b08a17df0b20947eda6b"
+  integrity sha512-gfFKwRT/wFxq5qlNjnW2dh+qh74XgTQ2B179UX5K1HYCluioWj8Ndbgqw2PVqa1NnVJkGHp2ovMpVn/DImlmkw==
   dependencies:
     "@octokit/auth-token" "^2.4.0"
     "@octokit/plugin-paginate-rest" "^1.1.1"
     "@octokit/plugin-request-log" "^1.0.0"
-    "@octokit/plugin-rest-endpoint-methods" "2.2.0"
+    "@octokit/plugin-rest-endpoint-methods" "2.4.0"
     "@octokit/request" "^5.2.0"
     "@octokit/request-error" "^1.0.2"
     atob-lite "^2.0.0"
@@ -1245,10 +1245,10 @@
     magic-string "^0.25.2"
     resolve "^1.11.0"
 
-"@rollup/plugin-node-resolve@^7.1.0":
-  version "7.1.0"
-  resolved "https://registry.yarnpkg.com/@rollup/plugin-node-resolve/-/plugin-node-resolve-7.1.0.tgz#94ed832a0444f5e8c529526303c83f8283e4cbc5"
-  integrity sha512-pN3fQsTYuA/guTDCyAthMHWqupoGVSO4bgUFVK8ulr/zmNY9bY/xewNO2ptHJYZY1FW3KkblF+I4a4MWEBYJQA==
+"@rollup/plugin-node-resolve@^7.1.1":
+  version "7.1.1"
+  resolved "https://registry.yarnpkg.com/@rollup/plugin-node-resolve/-/plugin-node-resolve-7.1.1.tgz#8c6e59c4b28baf9d223028d0e450e06a485bb2b7"
+  integrity sha512-14ddhD7TnemeHE97a4rLOhobfYvUVcaYuqTnL8Ti7Jxi9V9Jr5LY7Gko4HZ5k4h4vqQM0gBQt6tsp9xXW94WPA==
   dependencies:
     "@rollup/pluginutils" "^3.0.6"
     "@types/resolve" "0.0.8"
@@ -1256,7 +1256,7 @@
     is-module "^1.0.0"
     resolve "^1.14.2"
 
-"@rollup/pluginutils@^3.0.0", "@rollup/pluginutils@^3.0.6":
+"@rollup/pluginutils@^3.0.0", "@rollup/pluginutils@^3.0.6", "@rollup/pluginutils@^3.0.8":
   version "3.0.8"
   resolved "https://registry.yarnpkg.com/@rollup/pluginutils/-/pluginutils-3.0.8.tgz#4e94d128d94b90699e517ef045422960d18c8fde"
   integrity sha512-rYGeAc4sxcZ+kPG/Tw4/fwJODC3IXHYDH4qusdN/b6aLw5LPUbzpecYbEJh4sVQGPFJxd2dBU4kc1H3oy9/bnw==
@@ -1294,11 +1294,11 @@
     parse-json "^5.0.0"
 
 "@semantic-release/github@^7.0.0":
-  version "7.0.1"
-  resolved "https://registry.yarnpkg.com/@semantic-release/github/-/github-7.0.1.tgz#16fdd37c9f65e3e3801d0d15a0aab1cf08ecb608"
-  integrity sha512-V3PWdsUL1h69BT6QCBVq1Eh7n2g/EfBVAeEx8agc4tEFIKzpHhhaUrrsLltZoZvgPoPZTCxUxSPbkzhAWKOGFw==
+  version "7.0.2"
+  resolved "https://registry.yarnpkg.com/@semantic-release/github/-/github-7.0.2.tgz#5f036bc66bf27019b03ee1f04722c3dbfa4155da"
+  integrity sha512-WD9cIsBxKV8U/zisBxp/YZRYmU9TBs/GNlnE1/3Levs5Kyeb5/IwOKw96LP4HY92xudsKPhBCkpmnGwn6sELGg==
   dependencies:
-    "@octokit/rest" "^16.27.0"
+    "@octokit/rest" "^16.43.0"
     "@semantic-release/error" "^2.2.0"
     aggregate-error "^3.0.0"
     bottleneck "^2.18.1"
@@ -1368,11 +1368,11 @@
     defer-to-connect "^1.0.1"
 
 "@szmarczak/http-timer@^4.0.0":
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/@szmarczak/http-timer/-/http-timer-4.0.0.tgz#309789ccb7842ff1e41848cf43da587f78068836"
-  integrity sha512-3yoXv8OtGr/r3R5gaWWNQ3VUoQ5G3Gmo8DXX95V14ZVvE2b7Pj6Ide9uIDON8ym4D/ItyfL9ejohYUPqOyvRXw==
+  version "4.0.5"
+  resolved "https://registry.yarnpkg.com/@szmarczak/http-timer/-/http-timer-4.0.5.tgz#bfbd50211e9dfa51ba07da58a14cdfd333205152"
+  integrity sha512-PyRA9sm1Yayuj5OIoJ1hGt2YISX45w9WcFbh6ddT0Z/0yaFxOtGLInr4jUfU1EAFVs0Yfyfev4RNwBlUaHdlDQ==
   dependencies:
-    defer-to-connect "^1.1.1"
+    defer-to-connect "^2.0.0"
 
 "@types/accepts@*":
   version "1.3.5"
@@ -2434,9 +2434,9 @@ camelcase@^5.0.0, camelcase@^5.3.1:
   integrity sha512-L28STB170nwWS63UjtlEOE3dldQApaJXZkOI1uMFfzf3rRuPegHaHesyee+YxQ+W6SvRDQV6UrdOdRiR153wJg==
 
 caniuse-lite@^1.0.30001023:
-  version "1.0.30001023"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001023.tgz#b82155827f3f5009077bdd2df3d8968bcbcc6fc4"
-  integrity sha512-C5TDMiYG11EOhVOA62W1p3UsJ2z4DsHtMBQtjzp3ZsUglcQn62WOUgW0y795c7A5uZ+GCEIvzkMatLIlAsbNTA==
+  version "1.0.30001025"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001025.tgz#30336a8aca7f98618eb3cf38e35184e13d4e5fe6"
+  integrity sha512-SKyFdHYfXUZf5V85+PJgLYyit27q4wgvZuf8QTOk1osbypcROihMBlx9GRar2/pIcKH2r4OehdlBr9x6PXetAQ==
 
 capture-stack-trace@^1.0.0:
   version "1.0.1"
@@ -2802,9 +2802,9 @@ comma-separated-tokens@^1.0.1:
   integrity sha512-GHuDRO12Sypu2cV70d1dkA2EUmXHgntrzbpvOB+Qy+49ypNfGgFQIC2fhhXbnyrJRynDCAARsT7Ou0M6hirpfw==
 
 commander@^4.1.0:
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/commander/-/commander-4.1.0.tgz#545983a0603fe425bc672d66c9e3c89c42121a83"
-  integrity sha512-NIQrwvv9V39FHgGFm36+U9SMQzbiHvU79k+iADraJTpmrFFfx7Ds0IvDoAdZsDrknlkRk14OYoWXb57uTh7/sw==
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/commander/-/commander-4.1.1.tgz#9fd602bd936294e9e9ef46a3f4d6964044b18068"
+  integrity sha512-NOKm8xhkzAjzFx8B2v5OAHT+u5pRQc2UCa2Vq9jYL/31o2wi9mxBA7LIFs3sV5VSC49z6pEhfbMULvShKj26WA==
 
 commander@~2.20.3:
   version "2.20.3"
@@ -2878,7 +2878,7 @@ config-chain@^1.1.12:
     ini "^1.3.4"
     proto-list "~1.2.1"
 
-config-expander@^11.0.7:
+config-expander@^11.0.9:
   version "11.0.9"
   resolved "https://registry.yarnpkg.com/config-expander/-/config-expander-11.0.9.tgz#65ccd4ec46988da2a34ac621c26cc7f6cb4afbe9"
   integrity sha512-3SqIWgeOYREKI4/gLdL7L5BAEm9MAqUORt30toHdU3hgK+2AJTQNsa+KzydvPeqsGXp8O1HNJKBvre0h5Kcyuw==
@@ -3214,10 +3214,15 @@ defaults@^1.0.3:
   dependencies:
     clone "^1.0.2"
 
-defer-to-connect@^1.0.1, defer-to-connect@^1.1.1:
+defer-to-connect@^1.0.1:
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/defer-to-connect/-/defer-to-connect-1.1.3.tgz#331ae050c08dcf789f8c83a7b81f0ed94f4ac591"
   integrity sha512-0ISdNousHvZT2EiFlZeZAHBUvSxmKswVCEf8hW7KWgG4a8MVEu/3Vb6uWYozkjylyCxe0JBIiRB1jV45S70WVQ==
+
+defer-to-connect@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/defer-to-connect/-/defer-to-connect-2.0.0.tgz#83d6b199db041593ac84d781b5222308ccf4c2c1"
+  integrity sha512-bYL2d05vOSf1JEZNx5vSAtPuBMkX8K9EUutg7zlKvTqKXHt7RhWJFbmd7qakVuf13i+IkGmp6FwSsONOf6VYIg==
 
 define-properties@^1.1.2, define-properties@^1.1.3:
   version "1.1.3"
@@ -3503,9 +3508,9 @@ ejs@^3.0.1:
   integrity sha512-cuIMtJwxvzumSAkqaaoGY/L6Fc/t6YvoP9/VIaK0V/CyqKLEQ8sqODmYfy/cjXEdZ9+OOL8TecbJu+1RsofGDw==
 
 electron-to-chromium@^1.3.341:
-  version "1.3.344"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.344.tgz#f1397a633c35e726730c24be1084cd25c3ee8148"
-  integrity sha512-tvbx2Wl8WBR+ym3u492D0L6/jH+8NoQXqe46+QhbWH3voVPauGuZYeb1QAXYoOAWuiP2dbSvlBx0kQ1F3hu/Mw==
+  version "1.3.345"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.345.tgz#2569d0d54a64ef0f32a4b7e8c80afa5fe57c5d98"
+  integrity sha512-f8nx53+Z9Y+SPWGg3YdHrbYYfIJAtbUjpFfW4X1RwTZ94iUG7geg9tV8HqzAXX7XTNgyWgAFvce4yce8ZKxKmg==
 
 emittery@^0.4.1:
   version "0.4.1"
@@ -5274,9 +5279,9 @@ java-properties@^1.0.0:
   integrity sha512-qjdpeo2yKlYTH7nFdK0vbZWuTCesk4o63v5iVOlhMQPfuIZQfW/HI35SjfhA+4qpg36rnFSvUK5b1m+ckIblQQ==
 
 jose@^1.22.0:
-  version "1.22.0"
-  resolved "https://registry.yarnpkg.com/jose/-/jose-1.22.0.tgz#8a97c20f33125d7f839a36581b1aedf33b5969f2"
-  integrity sha512-9477X7qh6rZIvFRrf7z1jow6VWlgPIFrnKQO8vQr5NHVkbD7S7OwpF/jo8VEl1waxa9W7vRIXJq6eY+1hoYnfw==
+  version "1.22.1"
+  resolved "https://registry.yarnpkg.com/jose/-/jose-1.22.1.tgz#c8681ce92cf6dbe768b3e24f86049b652e3ca680"
+  integrity sha512-0TV4InJSlSFNXM3a9q3mwvk+hsp03G2/rHbxhR82wV1HbtJXt+5s0dazoYyfsNhLGDfxhN1htw8I0rBLLmtfLA==
   dependencies:
     asn1.js "^5.3.0"
 
@@ -6494,9 +6499,9 @@ nanomatch@^1.2.9:
     to-regex "^3.0.1"
 
 needle@^2.2.1:
-  version "2.4.0"
-  resolved "https://registry.yarnpkg.com/needle/-/needle-2.4.0.tgz#6833e74975c444642590e15a750288c5f939b57c"
-  integrity sha512-4Hnwzr3mi5L97hMYeNl8wRW/Onhy4nUKR/lVemJ8gJedxxUyBLm9kkrDColJvoSfwi0jCNhD+xCdOtiGDQiRZg==
+  version "2.3.2"
+  resolved "https://registry.yarnpkg.com/needle/-/needle-2.3.2.tgz#3342dea100b7160960a450dc8c22160ac712a528"
+  integrity sha512-DUzITvPVDUy6vczKKYTnWc/pBZ0EnjMJnQ3y+Jo5zfKFimJs7S3HFCxCRZYB9FUZcrzUQr3WsmvZgddMEIZv6w==
   dependencies:
     debug "^3.2.6"
     iconv-lite "^0.4.4"
@@ -6993,9 +6998,9 @@ octokit-pagination-methods@^1.1.0:
   integrity sha512-fZ4qZdQ2nxJvtcasX7Ghl+WlWS/d9IgnBIwFZXVNNZUmzpno91SX5bc5vuxiuKoCtK78XxGGNuSCrDC7xYB3OQ==
 
 oidc-provider@^6.17.7:
-  version "6.20.0"
-  resolved "https://registry.yarnpkg.com/oidc-provider/-/oidc-provider-6.20.0.tgz#a885df2dc25aac35d9ffccdc924d65262a16c0fd"
-  integrity sha512-D9PcJGLJ2yQ5f7Yc72N78f0IkKlU5qm1JE02ItXetvZDK4ZZLD8lBKh6yCewDKywrGtWWsIGEO7GRIXNM555Ng==
+  version "6.20.1"
+  resolved "https://registry.yarnpkg.com/oidc-provider/-/oidc-provider-6.20.1.tgz#f8554d5f5f872f2515b43d7718ccca84e2f1161b"
+  integrity sha512-ehoYWBIL+kmyej24+YI8xEJl4PnUzrHp6k8UMOwX2CpRDN03D0yI2It7YcVtzYSJAYrEL8QDRhpasGGDLZOcZA==
   dependencies:
     "@koa/cors" "^3.0.0"
     "@types/koa" "^2.11.0"
@@ -8345,12 +8350,12 @@ rollup-plugin-executable@^1.5.2:
   dependencies:
     "@babel/runtime" "^7.7.6"
 
-rollup-plugin-native@^1.2.7:
-  version "1.2.7"
-  resolved "https://registry.yarnpkg.com/rollup-plugin-native/-/rollup-plugin-native-1.2.7.tgz#ea1e0c1ad4fc3a6ce4f0cb766d4b9211e2dc5a73"
-  integrity sha512-vqtI4FMoKSmRXfEkyobDbkHY1cI5enlPGptxW8N/McMZ1rx/Q7XqS4pcjkm2dLyieBsywQpw39RGJvRV8TQMSg==
+rollup-plugin-native@^1.2.8:
+  version "1.2.8"
+  resolved "https://registry.yarnpkg.com/rollup-plugin-native/-/rollup-plugin-native-1.2.8.tgz#5fa3ce2962b3ebf83a11d61c1cebc1b630a23e54"
+  integrity sha512-RBP/0RpG5jd1zmpe3IJs87g3MaiPIEvyle7FyXcFAWPORAiia6xLPmuGSMw6vBgq8krlyEV6HSeBMxLLTfmMSw==
   dependencies:
-    "@rollup/pluginutils" "^3.0.6"
+    "@rollup/pluginutils" "^3.0.8"
     read-pkg-up "^7.0.1"
 
 rollup-pluginutils@^2.3.3:
@@ -9341,9 +9346,9 @@ typedarray@^0.0.6, typedarray@~0.0.5:
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
 
 uglify-js@^3.1.4:
-  version "3.7.6"
-  resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-3.7.6.tgz#0783daa867d4bc962a37cc92f67f6e3238c47485"
-  integrity sha512-yYqjArOYSxvqeeiYH2VGjZOqq6SVmhxzaPjJC1W2F9e+bqvFL9QXQ2osQuKUFjM2hGjKG2YclQnRKWQSt/nOTQ==
+  version "3.7.7"
+  resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-3.7.7.tgz#21e52c7dccda80a53bf7cde69628a7e511aec9c9"
+  integrity sha512-FeSU+hi7ULYy6mn8PKio/tXsdSXN35lm4KgV2asx00kzrLU9Pi3oAslcJT70Jdj7PHX29gGUPOT6+lXGBbemhA==
   dependencies:
     commander "~2.20.3"
     source-map "~0.6.1"
