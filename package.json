@@ -30,7 +30,7 @@
     "docs": "documentation readme src/entitlement-provider.mjs --section=API",
     "lint": "documentation lint src/entitlement-provider.mjs",
     "prepare": "rollup -c",
-    "test": "ava --timeout 2m"
+    "test": "ava --node-arguments '--experimental-modules' --timeout 2m"
   },
   "dependencies": {
     "@kronos-integration/interceptor-decode-json": "^2.1.1",
