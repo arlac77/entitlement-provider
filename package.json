@@ -26,11 +26,11 @@
     "entitlement-provider-systemd": "bin/entitlement-provider-systemd"
   },
   "scripts": {
+    "prepare": "rollup -c",
+    "test": "ava --node-arguments '--experimental-modules' --timeout 2m",
     "cover": "c8 -x 'tests/**/*' --temp-directory build/tmp ava --timeout 2m && c8 report -r lcov -o build/coverage --temp-directory build/tmp",
     "docs": "documentation readme src/entitlement-provider.mjs --section=API",
-    "lint": "documentation lint src/entitlement-provider.mjs",
-    "prepare": "rollup -c",
-    "test": "ava --node-arguments '--experimental-modules' --timeout 2m"
+    "lint": "documentation lint src/entitlement-provider.mjs"
   },
   "dependencies": {
     "@kronos-integration/interceptor-decode-json": "^2.1.1",
