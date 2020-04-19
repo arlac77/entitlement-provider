@@ -108,7 +108,8 @@
       "/usr/lib/tmpfiles.d/${name}.conf": "pacman/tmpfiles.conf",
       "/etc/${name}/config.json": "config/config.json",
       "/etc/nginx/config.d/${name}.conf": "pacman/nginx.conf",
-      "/srv/http/.well-known/openid-configuration": "config/openid-configuration"
+      "/srv/http/.well-known/openid-configuration": "config/openid-configuration",
+      "/usr/lib/sysusers.d/${name}.conf": "pacman/sysusers.conf"
     },
     "depends": {
       "systemd": ">=244.1",
@@ -116,10 +117,7 @@
     },
     "groups": "user admin",
     "hooks": "pacman/hooks.sh",
-    "installdir": "/services/${name}",
-    "dependes": {
-      "nginx-mainline": ">=1.17.9"
-    }
+    "installdir": "/services/${name}"
   },
   "release": {
     "plugins": [
