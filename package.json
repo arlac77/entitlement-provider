@@ -4,9 +4,6 @@
   "publishConfig": {
     "access": "public"
   },
-  "files": [
-    "bin/entitlement-provider-systemd"
-  ],
   "module": "src/entitlement-provider.mjs",
   "description": "provide entitlements via OIDC",
   "keywords": [
