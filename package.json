@@ -27,9 +27,7 @@
   },
   "scripts": {
     "test": "ava --timeout 2m",
-    "cover": "c8 -x 'tests/**/*' --temp-directory build/tmp ava --timeout 2m && c8 report -r lcov -o build/coverage --temp-directory build/tmp",
-    "docs": "documentation readme src/entitlement-provider.mjs --section=API",
-    "lint": "documentation lint src/entitlement-provider.mjs"
+    "cover": "c8 -x 'tests/**/*' --temp-directory build/tmp ava --timeout 2m && c8 report -r lcov -o build/coverage --temp-directory build/tmp"
   },
   "dependencies": {
     "@kronos-integration/interceptor-decode-json": "^2.1.6",
