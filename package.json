@@ -22,11 +22,10 @@
   ],
   "license": "BSD-2-Clause",
   "bin": {
-    "entitlement-provider": "bin/entitlement-provider",
-    "entitlement-provider-systemd": "bin/entitlement-provider-systemd"
+    "entitlement-provider": "src/entitlement-provider-cli.mjs",
+    "entitlement-provider-systemd": "bin/entitlement-provider-systemd-cli.mjs"
   },
   "scripts": {
-    "prepare": "rollup -c",
     "test": "ava --timeout 2m",
     "cover": "c8 -x 'tests/**/*' --temp-directory build/tmp ava --timeout 2m && c8 report -r lcov -o build/coverage --temp-directory build/tmp",
     "docs": "documentation readme src/entitlement-provider.mjs --section=API",
@@ -62,7 +61,7 @@
     "semantic-release": "^17.0.6"
   },
   "optionalDependencies": {
-    "@kronos-integration/service-systemd": "^2.2.13"
+    "@kronos-integration/service-systemd": "^2.3.0"
   },
   "engines": {
     "node": ">=13.13.0"
@@ -117,7 +116,8 @@
     },
     "groups": "user admin",
     "hooks": "pacman/hooks.sh",
-    "installdir": "/services/${name}"
+    "installdir": "/services/${name}",
+    "group": "services"
   },
   "release": {
     "plugins": [
