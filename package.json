@@ -46,7 +46,7 @@
     "ava": "^3.7.1",
     "c8": "^7.1.0",
     "documentation": "^12.3.0",
-    "got": "^10.7.0",
+    "got": "^11.0.1",
     "npm-pkgbuild": "^6.11.9",
     "rollup": "^2.6.1",
     "semantic-release": "^17.0.6"
