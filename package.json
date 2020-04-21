@@ -46,7 +46,7 @@
     "got": "^11.0.1",
     "npm-pkgbuild": "^6.11.16",
     "rollup": "^2.6.1",
-    "semantic-release": "^17.0.6"
+    "semantic-release": "^17.0.7"
   },
   "optionalDependencies": {
     "@kronos-integration/service-systemd": "^2.3.0"
