@@ -20,8 +20,8 @@ NotifyAccess=all
 FileDescriptorStoreMax=5
 Environment="LOGLEVEL=trace"
 MemoryAccounting=true
-MemoryHigh=150M
-MemoryMax=200M
+MemoryHigh=50M
+MemoryMax=100M
 OOMPolicy=stop
 CacheDirectory={{name}}
 PrivateDevices=true
