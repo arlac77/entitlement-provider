@@ -16,9 +16,11 @@ OOMPolicy=stop
 User={{name}}
 Group={{name}}
 SupplementaryGroups=http
+CPUWeight=50
 CacheDirectory={{name}}
 ConfigurationDirectory={{name}}
 Environment="LOGLEVEL=trace"
+IOWeight=50
 MemoryAccounting=true
 MemoryHigh=50M
 MemoryMax=100M
