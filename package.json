@@ -20,7 +20,7 @@
   "license": "BSD-2-Clause",
   "bin": {
     "entitlement-provider": "src/entitlement-provider-cli.mjs",
-    "entitlement-provider-systemd": "bin/entitlement-provider-systemd-cli.mjs"
+    "entitlement-provider-systemd": "src/entitlement-provider-systemd-cli.mjs"
   },
   "scripts": {
     "test": "ava --timeout 2m",
