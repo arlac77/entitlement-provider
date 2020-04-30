@@ -44,7 +44,7 @@
     "c8": "^7.1.0",
     "documentation": "^12.3.0",
     "got": "11.0.2",
-    "npm-pkgbuild": "^6.11.17",
+    "npm-pkgbuild": "^6.11.18",
     "rollup": "2.7.3",
     "semantic-release": "^17.0.7"
   },
