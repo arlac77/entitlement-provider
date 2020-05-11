@@ -45,7 +45,6 @@
     "documentation": "^13.0.0",
     "got": "11.1.2",
     "npm-pkgbuild": "^6.11.19",
-    "rollup": "2.9.0",
     "semantic-release": "^17.0.7"
   },
   "optionalDependencies": {
