@@ -7,6 +7,7 @@ Wants=network-online.target
 Type=notify
 ExecStart=/usr/bin/node --title {{name}} {{installdir}}/src/{{name}}-systemd-cli.mjs
 ExecReload=/bin/kill -HUP $MAINPID
+Environment="LOGLEVEL=trace"
 RestartSec=10
 TimeoutStartSec=20
 TimeoutStopSec=25
@@ -30,7 +31,6 @@ ProtectKernelTunables=true
 ProtectControlGroups=true
 RestrictSUIDSGID=true
 CPUWeight=50
-Environment="LOGLEVEL=trace"
 IOWeight=50
 MemoryAccounting=true
 MemoryHigh=50M
