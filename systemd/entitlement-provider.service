@@ -35,6 +35,7 @@ IOWeight=50
 MemoryAccounting=true
 MemoryHigh=50M
 MemoryMax=100M
+StandardError=journal
 StandardOutput=syslog
 
 [Install]
