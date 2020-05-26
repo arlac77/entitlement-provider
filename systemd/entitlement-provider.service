@@ -29,6 +29,7 @@ PrivateDevices=true
 ProtectClock=true
 ProtectKernelTunables=true
 ProtectControlGroups=true
+LockPersonality=true
 RestrictSUIDSGID=true
 CPUWeight=50
 IOWeight=50
@@ -37,6 +38,7 @@ MemoryHigh=50M
 MemoryMax=100M
 StandardError=journal
 StandardOutput=syslog
+SystemCallErrorNumber=EPERM
 
 [Install]
 WantedBy=multi-user.target
