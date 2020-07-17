@@ -42,7 +42,7 @@
     "ava": "^3.10.1",
     "c8": "^7.1.0",
     "documentation": "^13.0.0",
-    "got": "11.5.0",
+    "got": "11.5.1",
     "npm-pkgbuild": "^6.12.1",
     "semantic-release": "^17.1.1"
   },
