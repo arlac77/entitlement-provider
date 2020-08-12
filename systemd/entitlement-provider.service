@@ -5,11 +5,11 @@ Wants=network-online.target
 
 [Service]
 Type=notify
-ExecStart=/usr/bin/node --trace-uncaught --trace-warnings --title {{name}} {{installdir}}/src/{{name}}-cli.mjs
+ExecStart=/usr/bin/node --unhandled-rejections=strict --trace-uncaught --trace-warnings --title {{name}} {{installdir}}/src/{{name}}-cli.mjs
 ExecReload=/bin/kill -HUP $MAINPID
-Environment="LOGLEVEL=trace"
-RestartSec=10
-TimeoutStartSec=20
+RestartSec=40
+Restart=on-failure
+TimeoutStartSec=25
 TimeoutStopSec=25
 NotifyAccess=all
 FileDescriptorStoreMax=5
@@ -20,11 +20,11 @@ SupplementaryGroups=http
 NoNewPrivileges=true
 ProtectSystem=full
 ProtectHome=true
-RuntimeDirectory={{name}}
+RuntimeDirectory={{name}}/http
 StateDirectory={{name}}
 CacheDirectory={{name}}
 ConfigurationDirectory={{name}}
-RuntimeDirectoryMode=775
+RuntimeDirectoryMode=755
 RuntimeDirectoryPreserve=yes
 PrivateTmp=true
 PrivateDevices=true
@@ -37,11 +37,11 @@ ProtectKernelLogs=true
 ProtectControlGroups=true
 LockPersonality=true
 RestrictSUIDSGID=true
-CPUWeight=50
-IOWeight=50
+CPUWeight=10
+IOWeight=10
 MemoryAccounting=true
-MemoryHigh=50M
-MemoryMax=100M
+MemoryHigh=40M
+MemoryMax=70M
 SystemCallErrorNumber=EPERM
 
 [Install]
