@@ -105,7 +105,9 @@
         "units": {
           "${name}": "systemd/${name}*"
         }
-      }
+      },
+      "npm-dist": {},
+      "npm-dependencies": {}
     }
   },
   "release": {
