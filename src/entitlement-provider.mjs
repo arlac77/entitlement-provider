@@ -48,10 +48,6 @@ export default async function setup(sp) {
           ...WS,
           connected: "service(health).memory"
         },
-        "/state": {
-          ...WS,
-          connected: "service(health).state"
-        },
         "/authenticate": { ...POST, connected: "service(auth).access_token" },
         "/services": { ...GET, connected: "service(admin).services" },
         "/entitlements": { ...GET, connected: "service(ldap).search" }
