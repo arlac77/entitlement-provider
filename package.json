@@ -33,7 +33,7 @@
     "@kronos-integration/service-health-check": "^5.0.49",
     "@kronos-integration/service-http": "^10.2.9",
     "@kronos-integration/service-ldap": "^2.1.54",
-    "oidc-provider": "6.29.3"
+    "oidc-provider": "6.29.4"
   },
   "devDependencies": {
     "@semantic-release/commit-analyzer": "^8.0.1",
