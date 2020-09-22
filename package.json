@@ -92,7 +92,7 @@
       "/usr/lib/sysusers.d/${name}.conf": "pacman/sysusers.conf"
     },
     "depends": {
-      "systemd": ">=246.5",
+      "systemd": ">=246.6",
       "nginx-mainline": ">=1.19.2"
     },
     "groups": "user admin",
