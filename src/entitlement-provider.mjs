@@ -15,6 +15,7 @@ import {
 } from "@kronos-integration/service-http";
 
 export default async function setup(sp) {
+  const bodyParamInterceptors = [new CTXBodyParamInterceptor()];
   const GETInterceptors = [new CTXJWTVerifyInterceptor(), new CTXInterceptor()];
   const GET = {
     interceptors: GETInterceptors
@@ -22,7 +23,12 @@ export default async function setup(sp) {
 
   const POST = {
     method: "POST",
-    interceptors: [new CTXBodyParamInterceptor()]
+    interceptors: bodyParamInterceptors
+  };
+  
+  const PATCH = {
+    method: "PATCH",
+    interceptors: bodyParamInterceptors
   };
 
   const WS = {
@@ -51,6 +57,7 @@ export default async function setup(sp) {
         "/services": { ...WS, connected: "service(admin).services" },
 
         "/authenticate": { ...POST, connected: "service(auth).access_token" },
+        "/password": { ...PATCH, connected: "service(auth).change_password" },
         "/entitlements": { ...GET, connected: "service(ldap).search" }
       }
     },
