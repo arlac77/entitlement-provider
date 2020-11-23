@@ -14,6 +14,8 @@ import {
   CTXBodyParamInterceptor
 } from "@kronos-integration/service-http";
 
+import { LDAPQueryInterceptor } from "./ldap-query-interceptor.mjs";
+
 export default async function setup(sp) {
   const bodyParamInterceptors = [new CTXBodyParamInterceptor()];
   const GETInterceptors = [new CTXJWTVerifyInterceptor(), new CTXInterceptor()];
@@ -25,7 +27,7 @@ export default async function setup(sp) {
     method: "POST",
     interceptors: bodyParamInterceptors
   };
-  
+
   const PATCH = {
     method: "PATCH",
     interceptors: bodyParamInterceptors
@@ -34,7 +36,7 @@ export default async function setup(sp) {
   const WS = {
     ws: true,
     interceptors: [new DecodeJSONInterceptor()],
-    receivingInterceptors :[new EncodeJSONInterceptor()]
+    receivingInterceptors: [new EncodeJSONInterceptor()]
   };
 
   await sp.declareServices({
@@ -58,7 +60,11 @@ export default async function setup(sp) {
 
         "/authenticate": { ...POST, connected: "service(auth).access_token" },
         "/password": { ...PATCH, connected: "service(auth).change_password" },
-        "/entitlements": { ...GET, connected: "service(ldap).search" }
+        "/entitlements": {
+          ...GET,
+          interceptors: [...GETInterceptors, LDAPQueryInterceptor],
+          connected: "service(ldap).search"
+        }
       }
     },
     auth: {
