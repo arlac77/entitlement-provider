@@ -2,7 +2,7 @@ import { Interceptor } from "@kronos-integration/interceptor";
 import { mergeAttributes, createAttributes } from "model-attributes";
 
 /**
- * Extracts params from request body
+ * Map params into ldap queries. 
  */
 export class LDAPQueryInterceptor extends Interceptor {
   /**

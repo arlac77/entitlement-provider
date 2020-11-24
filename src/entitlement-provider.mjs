@@ -69,8 +69,7 @@ export default async function setup(sp) {
               query: {
                 base: "ou=groups,dc=mf,dc=de",
                 attributes: ["cn"],
-                filter:
-                  "(objectclass=groupOfUniqueNames)"
+                filter: "(objectclass=groupOfUniqueNames)"
               }
             })
           ],
