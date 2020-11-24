@@ -19,7 +19,7 @@
   ],
   "license": "BSD-2-Clause",
   "bin": {
-    "entitlement-provider": "./src/entitlement-provider-cli.mjs"
+    "entitlement-provider": "src/entitlement-provider-cli.mjs"
   },
   "scripts": {
     "test": "npm run test:ava",
@@ -34,6 +34,8 @@
     "@kronos-integration/service-health-check": "^5.0.64",
     "@kronos-integration/service-http": "^10.2.29",
     "@kronos-integration/service-ldap": "^2.2.0",
+    "@kronos-integration/service-systemd": "^2.4.2",
+    "model-attributes": "^4.1.7",
     "oidc-provider": "6.29.7"
   },
   "devDependencies": {
