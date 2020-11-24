@@ -60,9 +60,48 @@ export default async function setup(sp) {
 
         "/authenticate": { ...POST, connected: "service(auth).access_token" },
         "/password": { ...PATCH, connected: "service(auth).change_password" },
-        "/entitlements": {
+
+        "/entitlement": {
           ...GET,
-          interceptors: [...GETInterceptors, LDAPQueryInterceptor],
+          interceptors: [
+            ...GETInterceptors,
+            new LDAPQueryInterceptor({
+              query: {
+                base: "ou=groups,dc=mf,dc=de",
+                attributes: ["cn"],
+                filter:
+                  "(objectclass=groupOfUniqueNames)"
+              }
+            })
+          ],
+          connected: "service(ldap).search"
+        },
+
+        "/user": {
+          ...GET,
+          interceptors: [
+            ...GETInterceptors,
+            new LDAPQueryInterceptor({
+              query: {
+                base: "ou=accounts,dc=mf,dc=de"
+              }
+            })
+          ],
+          connected: "service(ldap).search"
+        },
+        "/user/:user/entitlements": {
+          ...GET,
+          interceptors: [
+            ...GETInterceptors,
+            new LDAPQueryInterceptor({
+              query: {
+                base: "ou=groups,dc=mf,dc=de",
+                attributes: ["cn"],
+                filter:
+                  "(&(objectclass=groupOfUniqueNames)(uniqueMember=uid={{user}},ou=accounts,dc=mf,dc=de))"
+              }
+            })
+          ],
           connected: "service(ldap).search"
         }
       }

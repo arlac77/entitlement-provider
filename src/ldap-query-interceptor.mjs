@@ -11,12 +11,32 @@ export class LDAPQueryInterceptor extends Interceptor {
     return "ldap-query";
   }
 
+  static get configurationAttributes() {
+    return mergeAttributes(
+      createAttributes({
+        query: {
+          description: "query template",
+          default: {},
+          type: "object"
+        }
+      }),
+      Interceptor.configurationAttributes
+    );
+  }
+
   async receive(endpoint, next, ctx, params) {
-    return next({
-      base: "ou=groups,dc=mf,dc=de",
-      attribute: "cn",
-      filter:
-        "(&(objectclass=groupOfUniqueNames)(uniqueMember=uid=markus,ou=accounts,dc=mf,dc=de))"
-    });
+    function expand(str) {
+      return str.replace(/\{\{(\w+)\}\}/, (match, g1) =>
+        params[g1] ? params[g1] : g1
+      );
+    }
+
+    const query = Object.fromEntries(
+      Object.entries(this.query).map(([k, v]) => [k, expand(v)])
+    );
+
+    console.log(query, params);
+
+    return next(query);
   }
 }
