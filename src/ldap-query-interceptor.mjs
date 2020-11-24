@@ -2,7 +2,7 @@ import { Interceptor } from "@kronos-integration/interceptor";
 import { mergeAttributes, createAttributes } from "model-attributes";
 
 /**
- * Map params into ldap queries. 
+ * Map params into ldap queries.
  */
 export class LDAPQueryInterceptor extends Interceptor {
   /**
@@ -29,9 +29,11 @@ export class LDAPQueryInterceptor extends Interceptor {
     console.log("RECEIVE", params);
 
     function expand(str) {
-      return str.replace(/\{\{(\w+)\}\}/, (match, g1) =>
-        params[g1] ? params[g1] : g1
-      );
+      return typeof str === "string"
+        ? str.replace(/\{\{(\w+)\}\}/, (match, g1) =>
+            params[g1] ? params[g1] : g1
+          )
+        : str;
     }
 
     const query = Object.fromEntries(
