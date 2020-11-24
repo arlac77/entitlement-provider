@@ -12,6 +12,7 @@ pre_upgrade() {
 
 post_upgrade() {
 	systemctl daemon-reload
+	systemctl restart {{name}}.socket
 }
 
 pre_remove() {
