@@ -14,16 +14,15 @@ test.before(async t => {
   await setup(t.context.sp);
 
   try {
-  const response = await got.post(`http://localhost:${port}/authenticate`, {
-    json: {
-      username: "user1",
-      password: "secret"
-    }
-  });
+    const response = await got.post(`http://localhost:${port}/authenticate`, {
+      json: {
+        username: "user1",
+        password: "secret"
+      }
+    });
 
-  t.context.token = response.body.access_token;
-}
-catch(x) {}
+    t.context.token = response.body.access_token;
+  } catch (x) {}
 });
 
 test.after.always(async t => {
@@ -31,7 +30,7 @@ test.after.always(async t => {
 });
 
 test("startup", async t => {
-  t.is(t.context.sp.state,"running");
+  t.is(t.context.sp.state, "running");
 });
 
 test.skip("logs", async t => {
