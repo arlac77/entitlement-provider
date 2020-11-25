@@ -1,5 +1,5 @@
 import ServiceHealthCheck from "@kronos-integration/service-health-check";
-import ServiceLDAP from "@kronos-integration/service-ldap";
+import { ServiceLDAP, LDAPQueryInterceptor }  from "@kronos-integration/service-ldap";
 import ServiceAuthenticator from "@kronos-integration/service-authenticator";
 import ServiceAdmin from "@kronos-integration/service-admin";
 import {
@@ -13,8 +13,6 @@ import {
   CTXJWTVerifyInterceptor,
   CTXBodyParamInterceptor
 } from "@kronos-integration/service-http";
-
-import { LDAPQueryInterceptor } from "./ldap-query-interceptor.mjs";
 
 export default async function setup(sp) {
   const bodyParamInterceptors = [new CTXBodyParamInterceptor()];
