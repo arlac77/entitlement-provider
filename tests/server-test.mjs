@@ -1,17 +1,19 @@
 import test from "ava";
 import got from "got";
 import { StandaloneServiceProvider } from "@kronos-integration/service";
-//import { setup } from "../src/entitlement-provider.mjs";
+import setup from "../src/entitlement-provider.mjs";
 
 let port = 3149;
 
 test.before(async t => {
   port++;
 
-  await setup(new StandaloneServiceProvider());
-
+  t.context.sp = new StandaloneServiceProvider();
   t.context.port = port;
 
+  await setup(t.context.sp);
+
+  try {
   const response = await got.post(`http://localhost:${port}/authenticate`, {
     json: {
       username: "user1",
@@ -20,10 +22,16 @@ test.before(async t => {
   });
 
   t.context.token = response.body.access_token;
+}
+catch(x) {}
 });
 
 test.after.always(async t => {
   // t.context.server.close();
+});
+
+test("startup", async t => {
+  t.is(t.context.sp.state,"running");
 });
 
 test.skip("logs", async t => {
