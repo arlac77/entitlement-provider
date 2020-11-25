@@ -26,8 +26,6 @@ export class LDAPQueryInterceptor extends Interceptor {
   }
 
   async receive(endpoint, next, params) {
-    console.log("RECEIVE", params);
-
     function expand(str) {
       return typeof str === "string"
         ? str.replace(/\{\{(\w+)\}\}/, (match, g1) =>
