@@ -66,7 +66,7 @@ export default async function setup(sp) {
             new LDAPQueryInterceptor({
               query: {
                 base: "ou=groups,dc=mf,dc=de",
-                scope: "sub",
+                scope: "children",
                 attributes: ["cn"],
                 filter: "(objectclass=groupOfUniqueNames)"
               }
@@ -82,7 +82,7 @@ export default async function setup(sp) {
             new LDAPQueryInterceptor({
               query: {
                 base: "ou=accounts,dc=mf,dc=de",
-                scope: "sub"
+                scope: "children"
               }
             })
           ],
