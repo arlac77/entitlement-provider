@@ -1,7 +1,7 @@
 import ServiceHealthCheck from "@kronos-integration/service-health-check";
 import {
   ServiceLDAP,
-  LDAPQueryInterceptor
+  LDAPTemplateInterceptor
 } from "@kronos-integration/service-ldap";
 import ServiceAuthenticator from "@kronos-integration/service-authenticator";
 import ServiceAdmin from "@kronos-integration/service-admin";
@@ -59,14 +59,19 @@ export default async function setup(sp) {
           method: "PATCH",
           interceptors: [
             ...bodyParamInterceptors,
-            new LDAPQueryInterceptor({
-              query: {
+            new LDAPTemplateInterceptor({
+              template: {
                 bindDN: "uid={{user}},ou=accounts,dc=mf,dc=de",
                 password: "{{password}}",
                 dn: "uid={{user}},ou=accounts,dc=mf,dc=de",
-                changetype: "modify",
-                replace: "userPassword",
-                userPassword: "{{new_password}}"
+                changes: [
+                  {
+                    operation: "replace",
+                    values: {
+                      userPassword: "{{new_password}}"
+                    }
+                  }
+                ]
               }
             })
           ],
@@ -77,8 +82,8 @@ export default async function setup(sp) {
           ...GET,
           interceptors: [
             ...GETInterceptors,
-            new LDAPQueryInterceptor({
-              query: {
+            new LDAPTemplateInterceptor({
+              template: {
                 base: "ou=groups,dc=mf,dc=de",
                 scope: "children",
                 attributes: ["cn"],
@@ -93,8 +98,8 @@ export default async function setup(sp) {
           ...GET,
           interceptors: [
             ...GETInterceptors,
-            new LDAPQueryInterceptor({
-              query: {
+            new LDAPTemplateInterceptor({
+              template: {
                 base: "ou=accounts,dc=mf,dc=de",
                 scope: "children"
               }
@@ -106,8 +111,8 @@ export default async function setup(sp) {
           ...GET,
           interceptors: [
             ...GETInterceptors,
-            new LDAPQueryInterceptor({
-              query: {
+            new LDAPTemplateInterceptor({
+              template: {
                 base: "ou=groups,dc=mf,dc=de",
                 scope: "sub",
                 attributes: ["cn"],
@@ -124,7 +129,7 @@ export default async function setup(sp) {
       type: ServiceAuthenticator,
       autostart: true,
       endpoints: {
-        "ldap.authenticate": "service(ldap).authenticate" 
+        "ldap.authenticate": "service(ldap).authenticate"
       }
     },
     ldap: {
