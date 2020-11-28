@@ -1,5 +1,8 @@
 import ServiceHealthCheck from "@kronos-integration/service-health-check";
-import { ServiceLDAP, LDAPQueryInterceptor }  from "@kronos-integration/service-ldap";
+import {
+  ServiceLDAP,
+  LDAPQueryInterceptor
+} from "@kronos-integration/service-ldap";
 import ServiceAuthenticator from "@kronos-integration/service-authenticator";
 import ServiceAdmin from "@kronos-integration/service-admin";
 import {
@@ -23,11 +26,6 @@ export default async function setup(sp) {
 
   const POST = {
     method: "POST",
-    interceptors: bodyParamInterceptors
-  };
-
-  const PATCH = {
-    method: "PATCH",
     interceptors: bodyParamInterceptors
   };
 
@@ -57,7 +55,23 @@ export default async function setup(sp) {
         "/services": { ...WS, connected: "service(admin).services" },
 
         "/authenticate": { ...POST, connected: "service(auth).access_token" },
-        "/password": { ...PATCH, connected: "service(auth).change_password" },
+        "/password": {
+          method: "PATCH",
+          interceptors: [
+            ...bodyParamInterceptors,
+            new LDAPQueryInterceptor({
+              query: {
+                bindDN: "uid={{user}},ou=accounts,dc=mf,dc=de",
+                password: "{{password}}",
+                dn: "uid={{user}},ou=accounts,dc=mf,dc=de",
+                changetype: "modify",
+                replace: "userPassword",
+                userPassword: "{{new_password}}"
+              }
+            })
+          ],
+          connected: "service(ldap).modify"
+        },
 
         "/entitlement": {
           ...GET,
@@ -110,8 +124,7 @@ export default async function setup(sp) {
       type: ServiceAuthenticator,
       autostart: true,
       endpoints: {
-        "ldap.authenticate": "service(ldap).authenticate",
-        "ldap.change_password": "service(ldap).change_password"
+        "ldap.authenticate": "service(ldap).authenticate" 
       }
     },
     ldap: {
