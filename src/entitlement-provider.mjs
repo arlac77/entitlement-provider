@@ -61,8 +61,10 @@ export default async function setup(sp) {
             ...bodyParamInterceptors,
             new LDAPTemplateInterceptor({
               template: {
-                bindDN: "uid={{user}},ou=accounts,dc=mf,dc=de",
-                password: "{{password}}",
+                bind: {
+                  dn: "uid={{user}},ou=accounts,dc=mf,dc=de",
+                  password: "{{password}}"
+                },
                 dn: "uid={{user}},ou=accounts,dc=mf,dc=de",
                 changes: [
                   {
