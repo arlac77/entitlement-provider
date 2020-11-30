@@ -1,0 +1,27 @@
+{
+  "name": "http-post-demo",
+  "type": "kronos-flow",
+  "description": "http post demo",
+  "logLevel":"trace",
+  "steps": {
+    "web": {
+      "type": "kronos-http-routing",
+      "listener": "koa-admin",
+      "endpoints": {
+        "in": {
+          "serviceName" : "myService",
+          "path": "/in",
+          "method": "PUT",
+          "target": "write-file/in",
+          "interceptors": [{
+          "type" : "koa-request"
+          }]
+        }
+      }
+    },
+    "write-file": {
+      "type": "kronos-file",
+      "fileName": "/tmp/aFile"
+    }
+  }
+}
