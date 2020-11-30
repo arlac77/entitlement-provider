@@ -66,12 +66,9 @@ export default async function setup(sp) {
                   password: "{{password}}"
                 },
                 dn: "uid={{user}},ou=accounts,dc=mf,dc=de",
-                changes: [
+                replace: [
                   {
-                    operation: "replace",
-                    values: {
-                      userPassword: "{{new_password}}"
-                    }
+                    userPassword: "{{new_password}}"
                   }
                 ]
               }
