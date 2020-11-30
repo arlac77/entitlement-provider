@@ -91,7 +91,6 @@ export default async function setup(sp) {
           ],
           connected: "service(ldap).search"
         },
-
         "/user": {
           ...GET,
           interceptors: [
@@ -105,6 +104,59 @@ export default async function setup(sp) {
           ],
           connected: "service(ldap).search"
         },
+        "/user": {
+          method: "PUT",
+          interceptors: [
+            ...bodyParamInterceptors,
+            new LDAPTemplateInterceptor({
+              template: {
+                dn: "uid={{user}},ou=accounts,dc=mf,dc=de",
+                entry: {
+                  objectClass: [
+                    "inetOrgPerson",
+                    "organizationalPerson",
+                    "person",
+                    "top"
+                  ],
+                  cn: "{{user}}",
+                  sn: "{{user}}",
+                  userPassword: "{{password}}"
+                }
+              }
+            })
+          ],
+          connected: "service(ldap).add"
+        },
+        "/user/:user": {
+          method: "POST",
+          interceptors: [
+            ...GETInterceptors,
+            new LDAPTemplateInterceptor({
+              template: {
+                bind: {
+                  dn: "uid={{user}},ou=accounts,dc=mf,dc=de",
+                  password: "{{password}}"
+                },
+                dn: "uid={{user}},ou=accounts,dc=mf,dc=de",
+                replace: {}
+              }
+            })
+          ],
+          connected: "service(ldap).modify"
+        },
+        "/user/:user": {
+          method: "DEL",
+          interceptors: [
+            ...GETInterceptors,
+            new LDAPTemplateInterceptor({
+              template: {
+                dn: "uid={{user}},ou=accounts,dc=mf,dc=de"
+              }
+            })
+          ],
+          connected: "service(ldap).del"
+        },
+
         "/user/:user/entitlements": {
           ...GET,
           interceptors: [
