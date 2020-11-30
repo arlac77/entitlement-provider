@@ -34,6 +34,7 @@
     "@kronos-integration/service-health-check": "^5.0.67",
     "@kronos-integration/service-http": "^10.4.5",
     "@kronos-integration/service-ldap": "^3.0.5",
+    "@kronos-integration/service-smtp": "^1.0.0",
     "@kronos-integration/service-systemd": "^2.4.2",
     "model-attributes": "^4.1.7",
     "oidc-provider": "6.29.7"

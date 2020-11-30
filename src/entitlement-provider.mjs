@@ -1,4 +1,5 @@
 import ServiceHealthCheck from "@kronos-integration/service-health-check";
+import ServiceSMTP from "@kronos-integration/service-smtp";
 import {
   ServiceLDAP,
   LDAPTemplateInterceptor
@@ -138,6 +139,9 @@ export default async function setup(sp) {
     admin: {
       type: ServiceAdmin,
       autostart: true
+    },
+    smtp: {
+      type: ServiceSMTP
     }
   });
 
