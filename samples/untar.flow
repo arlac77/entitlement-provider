@@ -1,0 +1,38 @@
+{
+  "name": "untar-demo",
+  "type": "kronos-flow",
+  "description": "http post demo",
+  "steps": {
+    "stdin": {
+      "type": "kronos-stdin",
+      "endpoints": {
+        "out": {
+          "target": "untar/in"
+        }
+      }
+    },
+    "untar": {
+      "type": "kronos-untar",
+      "endpoints": {
+        "in": {
+          "interceptors": [
+            {
+              "type": "timeout",
+              "timeout": 2000
+            },
+            {
+              "type": "request-limit",
+              "limit": 10
+            }
+          ]
+        },
+        "out": {
+          "target": "stdout/in"
+        }
+      }
+    },
+    "stdout": {
+      "type": "kronos-stdout"
+    }
+  }
+}
