@@ -56,25 +56,6 @@ export default async function setup(sp) {
         "/services": { ...WS, connected: "service(admin).services" },
 
         "/authenticate": { ...POST, connected: "service(auth).access_token" },
-        "/password": {
-          method: "PATCH",
-          interceptors: [
-            ...bodyParamInterceptors,
-            new LDAPTemplateInterceptor({
-              template: {
-                bind: {
-                  dn: "uid={{user}},ou=accounts,dc=mf,dc=de",
-                  password: "{{password}}"
-                },
-                dn: "uid={{user}},ou=accounts,dc=mf,dc=de",
-                replace: {
-                  userPassword: "{{new_password}}"
-                }
-              }
-            })
-          ],
-          connected: "service(ldap).modify"
-        },
 
         "/entitlement": {
           ...GET,
@@ -103,6 +84,25 @@ export default async function setup(sp) {
             })
           ],
           connected: "service(ldap).search"
+        },
+        "/user/password": {
+          method: "PATCH",
+          interceptors: [
+            ...bodyParamInterceptors,
+            new LDAPTemplateInterceptor({
+              template: {
+                bind: {
+                  dn: "uid={{user}},ou=accounts,dc=mf,dc=de",
+                  password: "{{password}}"
+                },
+                dn: "uid={{user}},ou=accounts,dc=mf,dc=de",
+                replace: {
+                  userPassword: "{{new_password}}"
+                }
+              }
+            })
+          ],
+          connected: "service(ldap).modify"
         },
         "/user": {
           method: "PUT",
