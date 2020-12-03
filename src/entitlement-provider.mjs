@@ -1,15 +1,13 @@
 import ServiceHealthCheck from "@kronos-integration/service-health-check";
 import ServiceSMTP from "@kronos-integration/service-smtp";
-import {
-  ServiceLDAP,
-  LDAPTemplateInterceptor
-} from "@kronos-integration/service-ldap";
+import { ServiceLDAP } from "@kronos-integration/service-ldap";
 import ServiceAuthenticator from "@kronos-integration/service-authenticator";
 import ServiceAdmin from "@kronos-integration/service-admin";
 import {
   DecodeJSONInterceptor,
   EncodeJSONInterceptor
 } from "@kronos-integration/interceptor-decode-json";
+import { TemplateInterceptor } from "@kronos-integration/interceptor";
 
 import {
   ServiceHTTP,
@@ -61,8 +59,8 @@ export default async function setup(sp) {
           ...GET,
           interceptors: [
             ...GETInterceptors,
-            new LDAPTemplateInterceptor({
-              template: {
+            new TemplateInterceptor({
+              request: {
                 base: "ou=groups,dc=mf,dc=de",
                 scope: "children",
                 attributes: ["cn"],
@@ -76,8 +74,8 @@ export default async function setup(sp) {
           ...GET,
           interceptors: [
             ...GETInterceptors,
-            new LDAPTemplateInterceptor({
-              template: {
+            new TemplateInterceptor({
+              request: {
                 base: "ou=accounts,dc=mf,dc=de",
                 scope: "children"
               }
@@ -89,8 +87,8 @@ export default async function setup(sp) {
           method: "PATCH",
           interceptors: [
             ...bodyParamInterceptors,
-            new LDAPTemplateInterceptor({
-              template: {
+            new TemplateInterceptor({
+              request: {
                 bind: {
                   dn: "uid={{user}},ou=accounts,dc=mf,dc=de",
                   password: "{{password}}"
@@ -108,8 +106,8 @@ export default async function setup(sp) {
           method: "PUT",
           interceptors: [
             ...bodyParamInterceptors,
-            new LDAPTemplateInterceptor({
-              template: {
+            new TemplateInterceptor({
+              request: {
                 dn: "uid={{user}},ou=accounts,dc=mf,dc=de",
                 entry: {
                   objectClass: [
@@ -131,8 +129,8 @@ export default async function setup(sp) {
           method: "POST",
           interceptors: [
             ...GETInterceptors,
-            new LDAPTemplateInterceptor({
-              template: {
+            new TemplateInterceptor({
+              request: {
                 bind: {
                   dn: "uid={{user}},ou=accounts,dc=mf,dc=de",
                   password: "{{password}}"
@@ -148,8 +146,8 @@ export default async function setup(sp) {
           method: "DEL",
           interceptors: [
             ...GETInterceptors,
-            new LDAPTemplateInterceptor({
-              template: {
+            new TemplateInterceptor({
+              request: {
                 dn: "uid={{user}},ou=accounts,dc=mf,dc=de"
               }
             })
@@ -161,8 +159,8 @@ export default async function setup(sp) {
           ...GET,
           interceptors: [
             ...GETInterceptors,
-            new LDAPTemplateInterceptor({
-              template: {
+            new TemplateInterceptor({
+              request: {
                 base: "ou=groups,dc=mf,dc=de",
                 scope: "sub",
                 attributes: ["cn"],
