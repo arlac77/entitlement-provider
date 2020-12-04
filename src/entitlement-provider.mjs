@@ -83,27 +83,7 @@ export default async function setup(sp) {
           ],
           connected: "service(ldap).search"
         },
-        "/user/password": {
-          method: "PATCH",
-          interceptors: [
-            ...bodyParamInterceptors,
-            new TemplateInterceptor({
-              request: {
-                bind: {
-                  dn: "uid={{user}},ou=accounts,dc=mf,dc=de",
-                  password: "{{password}}"
-                },
-                dn: "uid={{user}},ou=accounts,dc=mf,dc=de",
-                replace: {
-                  userPassword: "{{new_password}}"
-                }
-              }
-            })
-          ],
-          connected: "service(ldap).modify"
-        },
-        "/user": {
-          method: "PUT",
+        "PUT:/user": {
           interceptors: [
             ...bodyParamInterceptors,
             new TemplateInterceptor({
@@ -125,8 +105,25 @@ export default async function setup(sp) {
           ],
           connected: "service(ldap).add"
         },
-        "/user/:user": {
-          method: "POST",
+        "PATCH:/user/password": {
+          interceptors: [
+            ...bodyParamInterceptors,
+            new TemplateInterceptor({
+              request: {
+                bind: {
+                  dn: "uid={{user}},ou=accounts,dc=mf,dc=de",
+                  password: "{{password}}"
+                },
+                dn: "uid={{user}},ou=accounts,dc=mf,dc=de",
+                replace: {
+                  userPassword: "{{new_password}}"
+                }
+              }
+            })
+          ],
+          connected: "service(ldap).modify"
+        },
+        "POST:/user/:user": {
           interceptors: [
             ...GETInterceptors,
             new TemplateInterceptor({
@@ -142,8 +139,7 @@ export default async function setup(sp) {
           ],
           connected: "service(ldap).modify"
         },
-        "/user/:user": {
-          method: "DEL",
+        "DELETE:/user/:user": {
           interceptors: [
             ...GETInterceptors,
             new TemplateInterceptor({

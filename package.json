@@ -32,7 +32,7 @@
     "@kronos-integration/service-admin": "^3.1.39",
     "@kronos-integration/service-authenticator": "^1.4.5",
     "@kronos-integration/service-health-check": "^5.0.70",
-    "@kronos-integration/service-http": "^10.4.9",
+    "@kronos-integration/service-http": "^10.5.0",
     "@kronos-integration/service-ldap": "^4.0.0",
     "@kronos-integration/service-smtp": "^1.0.0",
     "@kronos-integration/service-systemd": "^2.4.2",
