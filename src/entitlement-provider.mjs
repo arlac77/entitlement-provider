@@ -51,7 +51,9 @@ export default async function setup(sp) {
           ...WS,
           connected: "service(health).memory"
         },
-        "/services": { ...WS, connected: "service(admin).services" },
+        "/admin/services": { ...WS, connected: "service(admin).services" },
+        "/admin/requests": { ...WS, connected: "service(admin).requests" },
+        "/admin/command": { ...POST, connected: "service(admin).command" },
 
         "/authenticate": { ...POST, connected: "service(auth).access_token" },
 
