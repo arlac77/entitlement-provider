@@ -79,7 +79,8 @@ export default async function setup(sp) {
             new TemplateInterceptor({
               request: {
                 base: "ou=accounts,dc=mf,dc=de",
-                scope: "children"
+                scope: "children",
+                filter: "(objectclass=posixAccount)"
               }
             })
             ,new LiveProbeInterceptor()
