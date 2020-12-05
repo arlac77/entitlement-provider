@@ -2,7 +2,7 @@ import ServiceHealthCheck from "@kronos-integration/service-health-check";
 import ServiceSMTP from "@kronos-integration/service-smtp";
 import { ServiceLDAP } from "@kronos-integration/service-ldap";
 import ServiceAuthenticator from "@kronos-integration/service-authenticator";
-import ServiceAdmin from "@kronos-integration/service-admin";
+import { ServiceAdmin, LiveProbeInterceptor } from "@kronos-integration/service-admin";
 import {
   DecodeJSONInterceptor,
   EncodeJSONInterceptor
@@ -82,6 +82,7 @@ export default async function setup(sp) {
                 scope: "children"
               }
             })
+            ,new LiveProbeInterceptor()
           ],
           connected: "service(ldap).search"
         },
