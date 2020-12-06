@@ -36,8 +36,7 @@
     "@kronos-integration/service-ldap": "^4.0.1",
     "@kronos-integration/service-smtp": "^1.0.4",
     "@kronos-integration/service-systemd": "^2.4.2",
-    "model-attributes": "^4.1.7",
-    "oidc-provider": "6.29.8"
+    "model-attributes": "^4.1.7"
   },
   "devDependencies": {
     "@semantic-release/commit-analyzer": "^8.0.1",
