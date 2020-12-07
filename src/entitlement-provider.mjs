@@ -92,6 +92,9 @@ export default async function setup(sp) {
         },
         "PUT:/user": {
           interceptors: [
+            new CTXJWTVerifyInterceptor({
+              requiredEntitlements: ["entitlement-provider.user.add"]
+            }),
             ...bodyParamInterceptors,
             new TemplateInterceptor({
               request: {
@@ -130,9 +133,12 @@ export default async function setup(sp) {
           ],
           connected: "service(ldap).modify"
         },
-        "POST:/user/:user": {
+        "PATCH:/user/:user": {
           interceptors: [
-            ...GETInterceptors,
+            new CTXJWTVerifyInterceptor({
+              requiredEntitlements: ["entitlement-provider.user.modify"]
+            }),
+            ...bodyParamInterceptors,
             new TemplateInterceptor({
               request: {
                 bind: {
