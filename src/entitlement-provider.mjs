@@ -11,6 +11,7 @@ import {
   EncodeJSONInterceptor
 } from "@kronos-integration/interceptor-decode-json";
 import { TemplateInterceptor } from "@kronos-integration/interceptor";
+import { EncodeRequestInterceptor } from "./encode-request-interceptor.mjs";
 
 import {
   ServiceHTTP,
@@ -55,7 +56,12 @@ export default async function setup(sp) {
           connected: "service(health).memory"
         },
         "/admin/services": { ...WS, connected: "service(admin).services" },
-        "/admin/requests": { ...WS, connected: "service(admin).requests" },
+        "/admin/requests": {
+          ws: true,
+          interceptors: [new DecodeJSONInterceptor()],
+          receivingInterceptors: [new EncodeRequestInterceptor()],
+          connected: "service(admin).requests"
+        },
         "/admin/command": { ...POST, connected: "service(admin).command" },
 
         "/authenticate": { ...POST, connected: "service(auth).access_token" },
