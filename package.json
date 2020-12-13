@@ -4,7 +4,6 @@
   "publishConfig": {
     "access": "public"
   },
-  "module": "src/entitlement-provider.mjs",
   "description": "provide entitlements via OIDC",
   "keywords": [
     "OIDC",
