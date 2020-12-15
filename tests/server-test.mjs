@@ -1,7 +1,7 @@
 import test from "ava";
 import got from "got";
 import { StandaloneServiceProvider } from "@kronos-integration/service";
-import setup from "../src/entitlement-provider.mjs";
+import initialize from "../src/initialize.mjs";
 
 let port = 3149;
 
@@ -11,7 +11,7 @@ test.before(async t => {
   t.context.sp = new StandaloneServiceProvider();
   t.context.port = port;
 
-  await setup(t.context.sp);
+  await initialize(t.context.sp);
 
   try {
     const response = await got.post(`http://localhost:${port}/authenticate`, {

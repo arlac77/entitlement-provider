@@ -1,6 +1,6 @@
 import { readFileSync } from "fs";
 import { join } from "path";
-import setup from "./entitlement-provider.mjs";
+import initialize from "./initialize.mjs";
 import { StandaloneServiceProvider } from "@kronos-integration/service";
 
 const args = process.argv.slice(2);
@@ -31,17 +31,17 @@ usage:
     break;
 }
 
-initialize();
+initializeServiceProvider();
+
+const opt = { encoding: "utf8" };
 
 function info() {
   return JSON.parse(
-    readFileSync(new URL("../package.json", import.meta.url).pathname, {
-      encoding: "utf8"
-    })
+    readFileSync(new URL("../package.json", import.meta.url).pathname, opt)
   );
 }
 
-async function initialize() {
+async function initializeServiceProvider() {
   try {
     let serviceProvider;
     try {
@@ -50,12 +50,12 @@ async function initialize() {
     } catch (e) {
       serviceProvider = new StandaloneServiceProvider(
         JSON.parse(
-          readFileSync(join(args[1], "config.json"), { encoding: "utf8" })
+          readFileSync(join(args[1], "config.json"), opt)
         )
       );
     }
 
-    await setup(serviceProvider);
+    await initialize(serviceProvider);
   } catch (error) {
     console.error(error);
   }
