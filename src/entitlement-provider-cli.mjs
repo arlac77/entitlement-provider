@@ -4,6 +4,7 @@ import initialize from "./initialize.mjs";
 import { StandaloneServiceProvider } from "@kronos-integration/service";
 
 const args = process.argv.slice(2);
+const opt = { encoding: "utf8" };
 
 switch (args[0]) {
   case "--version":
@@ -33,7 +34,6 @@ usage:
 
 initializeServiceProvider();
 
-const opt = { encoding: "utf8" };
 
 function info() {
   return JSON.parse(
