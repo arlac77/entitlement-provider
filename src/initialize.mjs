@@ -1,6 +1,6 @@
-import ServiceHealthCheck from "@kronos-integration/service-health-check";
+import ServiceHealth from "@kronos-integration/service-health";
 import ServiceSMTP from "@kronos-integration/service-smtp";
-import { ServiceLDAP } from "@kronos-integration/service-ldap";
+import ServiceLDAP from "@kronos-integration/service-ldap";
 import ServiceAuthenticator from "@kronos-integration/service-authenticator";
 import {
   ServiceAdmin,
@@ -26,8 +26,16 @@ export default async function initialize(sp) {
     ServiceLDAP,
     ServiceSMTP,
     ServiceAuthenticator,
-    ServiceHealthCheck,
-    ServiceAdmin
+    ServiceHealth,
+    ServiceAdmin,
+    TemplateInterceptor,
+    DecodeJSONInterceptor,
+    EncodeJSONInterceptor,
+    CTXBodyParamInterceptor,
+    CTXJWTVerifyInterceptor,
+    CTXInterceptor,
+    EncodeRequestInterceptor,
+    LiveProbeInterceptor
   ]);
 
   const bodyParamInterceptors = [new CTXBodyParamInterceptor()];
@@ -206,12 +214,11 @@ export default async function initialize(sp) {
       }
     },
     ldap: {},
-    "health-check": {},
+    health: {},
     admin: {
       autostart: true
     },
     smtp: {}
   });
-
   await sp.start();
 }

@@ -8,10 +8,19 @@ let port = 3149;
 test.before(async t => {
   port++;
 
-  t.context.sp = new StandaloneServiceProvider();
+  const config = {
+    http: {
+      logLevel: "trace",
+      listen: { port /*, url: `http://localhost:${port}`*/ }
+    }
+  };
+
+  const sp = new StandaloneServiceProvider(config);
+  sp.logLevel = "trace";
+  t.context.sp = sp;
   t.context.port = port;
 
-  await initialize(t.context.sp);
+  await initialize(sp);
 
   try {
     const response = await got.post(`http://localhost:${port}/authenticate`, {
@@ -22,12 +31,12 @@ test.before(async t => {
     });
 
     t.context.token = response.body.access_token;
-  } catch(e) {
+  } catch (e) {
     console.error(e);
   }
 });
 
-test.after.always(t => t.context.sp.stop());
+//test.after(t => t.context.sp.stop());
 
 test("startup", async t => {
   t.is(t.context.sp.state, "running");
