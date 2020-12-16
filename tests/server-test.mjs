@@ -22,12 +22,10 @@ test.before(async t => {
     });
 
     t.context.token = response.body.access_token;
-  } catch (x) {}
+  } catch {}
 });
 
-test.after.always(async t => {
-  // t.context.server.close();
-});
+test.after.always(t => t.context.sp.stop());
 
 test("startup", async t => {
   t.is(t.context.sp.state, "running");
