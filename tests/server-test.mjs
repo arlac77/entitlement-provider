@@ -22,7 +22,9 @@ test.before(async t => {
     });
 
     t.context.token = response.body.access_token;
-  } catch {}
+  } catch(e) {
+    console.error(e);
+  }
 });
 
 test.after.always(t => t.context.sp.stop());

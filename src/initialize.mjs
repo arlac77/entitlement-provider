@@ -20,7 +20,16 @@ import {
   CTXBodyParamInterceptor
 } from "@kronos-integration/service-http";
 
-export default async function setup(sp) {
+export default async function initialize(sp) {
+  sp.registerFactories([
+    ServiceHTTP,
+    ServiceLDAP,
+    ServiceSMTP,
+    ServiceAuthenticator,
+    ServiceHealthCheck,
+    ServiceAdmin
+  ]);
+
   const bodyParamInterceptors = [new CTXBodyParamInterceptor()];
   const GETInterceptors = [new CTXJWTVerifyInterceptor(), new CTXInterceptor()];
   const GET = {
@@ -40,7 +49,6 @@ export default async function setup(sp) {
 
   await sp.declareServices({
     http: {
-      type: ServiceHTTP,
       autostart: true,
       endpoints: {
         "/state/uptime": {
@@ -64,7 +72,10 @@ export default async function setup(sp) {
         },
         "/admin/command": { ...POST, connected: "service(admin).command" },
 
-        "/authenticate": { ...POST, connected: "service(auth).access_token" },
+        "/authenticate": {
+          ...POST,
+          connected: "service(authenticator).access_token"
+        },
 
         "/entitlement": {
           ...GET,
@@ -188,26 +199,18 @@ export default async function setup(sp) {
         }
       }
     },
-    auth: {
-      type: ServiceAuthenticator,
+    authenticator: {
       autostart: true,
       endpoints: {
         "ldap.authenticate": "service(ldap).authenticate"
       }
     },
-    ldap: {
-      type: ServiceLDAP
-    },
-    health: {
-      type: ServiceHealthCheck
-    },
+    ldap: {},
+    "health-check": {},
     admin: {
-      type: ServiceAdmin,
       autostart: true
     },
-    smtp: {
-      type: ServiceSMTP
-    }
+    smtp: {}
   });
 
   await sp.start();
