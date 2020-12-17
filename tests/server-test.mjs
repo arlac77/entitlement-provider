@@ -11,7 +11,7 @@ test.before(async t => {
   const config = {
     http: {
       logLevel: "trace",
-      listen: { port }
+      listen: { socket: port }
     }
   };
 
@@ -36,7 +36,7 @@ test.before(async t => {
   }
 });
 
-//test.after(t => t.context.sp.stop());
+test.after(t => t.context.sp.stop());
 
 test("startup", async t => {
   t.is(t.context.sp.state, "running");
