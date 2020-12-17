@@ -11,7 +11,7 @@ test.before(async t => {
   const config = {
     http: {
       logLevel: "trace",
-      listen: { port /*, url: `http://localhost:${port}`*/ }
+      listen: { port }
     }
   };
 
