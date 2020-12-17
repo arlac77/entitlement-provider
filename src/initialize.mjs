@@ -57,6 +57,7 @@ export default async function initialize(sp) {
 
   await sp.declareServices({
     http: {
+      type: ServiceHTTP,
       autostart: true,
       endpoints: {
         "/state/uptime": {
@@ -208,17 +209,25 @@ export default async function initialize(sp) {
       }
     },
     authenticator: {
+      type: ServiceAuthenticator,
       autostart: true,
       endpoints: {
         "ldap.authenticate": "service(ldap).authenticate"
       }
     },
-    ldap: {},
-    health: {},
+    ldap: {
+      type: ServiceLDAP
+    },
+    health: {
+      type: ServiceHealth
+    },
     admin: {
+      type: ServiceAdmin,
       autostart: true
     },
-    smtp: {}
+    smtp: {
+      type: ServiceSMTP
+    }
   });
   await sp.start();
 }
