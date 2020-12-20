@@ -21,7 +21,8 @@ test.before(async t => {
   t.context.port = port;
 
   await initialize(sp);
-
+  await sp.start();
+  
   try {
     const response = await got.post(`http://localhost:${port}/authenticate`, {
       json: {

@@ -38,7 +38,7 @@ export default async function initialize(sp) {
     LiveProbeInterceptor
   ]);
 
-  const bodyParamInterceptors = [new CTXBodyParamInterceptor()];
+  const bodyParamInterceptor = new CTXBodyParamInterceptor();
   const GETInterceptors = [new CTXJWTVerifyInterceptor(), new CTXInterceptor()];
   const GET = {
     interceptors: GETInterceptors
@@ -46,7 +46,7 @@ export default async function initialize(sp) {
 
   const POST = {
     method: "POST",
-    interceptors: bodyParamInterceptors
+    interceptors: bodyParamInterceptor
   };
 
   const WS = {
@@ -121,7 +121,7 @@ export default async function initialize(sp) {
             new CTXJWTVerifyInterceptor({
               requiredEntitlements: ["entitlement-provider.user.add"]
             }),
-            ...bodyParamInterceptors,
+            bodyParamInterceptor,
             new TemplateInterceptor({
               request: {
                 dn: "uid={{user}},ou=accounts,dc=mf,dc=de",
@@ -143,7 +143,7 @@ export default async function initialize(sp) {
         },
         "PATCH:/user/password": {
           interceptors: [
-            ...bodyParamInterceptors,
+            bodyParamInterceptor,
             new TemplateInterceptor({
               request: {
                 bind: {
@@ -164,7 +164,7 @@ export default async function initialize(sp) {
             new CTXJWTVerifyInterceptor({
               requiredEntitlements: ["entitlement-provider.user.modify"]
             }),
-            ...bodyParamInterceptors,
+            bodyParamInterceptor,
             new TemplateInterceptor({
               request: {
                 bind: {
@@ -229,5 +229,4 @@ export default async function initialize(sp) {
       type: ServiceSMTP
     }
   });
-  await sp.start();
 }
