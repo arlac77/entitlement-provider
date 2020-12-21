@@ -75,8 +75,8 @@ export default async function initialize(sp) {
         "/admin/services": { ...WS, connected: "service(admin).services" },
         "/admin/requests": {
           ws: true,
-          interceptors: [new DecodeJSONInterceptor()],
-          receivingInterceptors: [new EncodeRequestInterceptor()],
+          interceptors: new DecodeJSONInterceptor(),
+          receivingInterceptors: new EncodeRequestInterceptor(),
           connected: "service(admin).requests"
         },
         "/admin/command": { ...POST, connected: "service(admin).command" },
@@ -209,16 +209,13 @@ export default async function initialize(sp) {
       }
     },
     authenticator: {
-      autostart: true,
       endpoints: {
         "ldap.authenticate": "service(ldap).authenticate"
       }
     },
     ldap: {},
     health: {},
-    admin: {
-      autostart: true
-    },
+    admin: {},
     smtp: {}
   });
 }
