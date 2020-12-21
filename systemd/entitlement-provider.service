@@ -42,8 +42,8 @@ RestrictSUIDSGID=true
 CPUWeight=10
 IOWeight=10
 MemoryAccounting=true
-MemoryHigh=40M
-MemoryMax=70M
+MemoryHigh=30M
+MemoryMax=60M
 SystemCallErrorNumber=EPERM
 
 [Install]
