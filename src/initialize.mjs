@@ -209,24 +209,16 @@ export default async function initialize(sp) {
       }
     },
     authenticator: {
-      type: ServiceAuthenticator,
       autostart: true,
       endpoints: {
         "ldap.authenticate": "service(ldap).authenticate"
       }
     },
-    ldap: {
-      type: ServiceLDAP
-    },
-    health: {
-      type: ServiceHealth
-    },
+    ldap: {},
+    health: {},
     admin: {
-      type: ServiceAdmin,
       autostart: true
     },
-    smtp: {
-      type: ServiceSMTP
-    }
+    smtp: {}
   });
 }
