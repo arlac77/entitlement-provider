@@ -79,7 +79,6 @@ export default async function initialize(sp) {
           receivingInterceptors: new EncodeRequestInterceptor(),
           connected: "service(admin).requests"
         },
-        "/admin/command": { ...POST, connected: "service(admin).command" },
 
         "/authenticate": {
           ...POST,
