@@ -110,8 +110,7 @@ export default async function initialize(sp) {
                 scope: "children",
                 filter: "(objectclass=posixAccount)"
               }
-            }),
-            new LiveProbeInterceptor()
+            })
           ],
           connected: "service(ldap).search"
         },
