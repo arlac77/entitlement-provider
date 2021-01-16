@@ -44,7 +44,7 @@
     "c8": "^7.1.0",
     "got": "11.8.1",
     "npm-pkgbuild": "^6.12.19",
-    "semantic-release": "^17.3.2"
+    "semantic-release": "^17.3.3"
   },
   "optionalDependencies": {
     "@kronos-integration/service-systemd": "^2.4.9"
