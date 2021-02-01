@@ -108,7 +108,7 @@ export default async function initialize(sp) {
               request: {
                 base: "ou=accounts,dc=mf,dc=de",
                 scope: "children",
-                filter: "(objectclass=posixAccount)"
+                filter: "(objectclass=person)"
               }
             })
           ],
