@@ -34,7 +34,7 @@
     "@kronos-integration/service-http": "^10.6.49",
     "@kronos-integration/service-ldap": "^4.0.36",
     "@kronos-integration/service-smtp": "^1.0.34",
-    "model-attributes": "^4.1.11"
+    "model-attributes": "^4.1.12"
   },
   "devDependencies": {
     "@semantic-release/commit-analyzer": "^8.0.1",
