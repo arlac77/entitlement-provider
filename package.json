@@ -43,7 +43,7 @@
     "ava": "^3.15.0",
     "c8": "^7.1.0",
     "got": "11.8.2",
-    "npm-pkgbuild": "^6.12.47",
+    "npm-pkgbuild": "^6.12.48",
     "semantic-release": "^17.4.7"
   },
   "optionalDependencies": {
@@ -92,7 +92,7 @@
       "/usr/lib/sysusers.d/${name}.conf": "pacman/sysusers.conf"
     },
     "depends": {
-      "systemd": ">=249.1",
+      "systemd": ">=249.4",
       "nginx-mainline": ">=1.21.1"
     },
     "groups": "user admin",
