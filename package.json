@@ -27,13 +27,13 @@
   },
   "dependencies": {
     "@kronos-integration/interceptor-decode-json": "^2.1.52",
-    "@kronos-integration/service": "^10.4.8",
-    "@kronos-integration/service-admin": "^3.4.40",
-    "@kronos-integration/service-authenticator": "^1.6.0",
-    "@kronos-integration/service-health": "^5.0.127",
-    "@kronos-integration/service-http": "^10.6.79",
-    "@kronos-integration/service-ldap": "^4.0.62",
-    "@kronos-integration/service-smtp": "^1.0.53",
+    "@kronos-integration/service": "^10.4.11",
+    "@kronos-integration/service-admin": "^3.4.41",
+    "@kronos-integration/service-authenticator": "^1.6.1",
+    "@kronos-integration/service-health": "^5.0.128",
+    "@kronos-integration/service-http": "^10.6.80",
+    "@kronos-integration/service-ldap": "^4.0.63",
+    "@kronos-integration/service-smtp": "^1.0.54",
     "model-attributes": "^4.1.12"
   },
   "devDependencies": {
@@ -43,11 +43,11 @@
     "ava": "^3.15.0",
     "c8": "^7.1.0",
     "got": "12.0.0",
-    "npm-pkgbuild": "^6.12.74",
+    "npm-pkgbuild": "^6.12.77",
     "semantic-release": "^18.0.1"
   },
   "optionalDependencies": {
-    "@kronos-integration/service-systemd": "^2.5.2"
+    "@kronos-integration/service-systemd": "^2.5.3"
   },
   "engines": {
     "node": ">=16.13.0"
