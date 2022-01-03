@@ -4,7 +4,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "description": "provide entitlements via OIDC",
+  "description": "provide entitlements",
   "keywords": [
     "OIDC",
     "kronos-integration",
@@ -18,7 +18,8 @@
   ],
   "license": "BSD-2-Clause",
   "bin": {
-    "entitlement-provider": "./src/entitlement-provider-cli.mjs"
+    "entitlement-provider": "./src/entitlement-provider-cli.mjs",
+    "{{name}}": "./src/{{name}}-cli.mjs"
   },
   "scripts": {
     "test": "npm run test:ava",
