@@ -90,7 +90,7 @@
     "groups": "user admin",
     "hooks": "pkg/hooks.sh",
     "installdir": "/services/${name}",
-    "group": "services",
+    "group": "services"
   },
   "release": {
     "plugins": [
