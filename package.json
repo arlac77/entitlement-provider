@@ -102,8 +102,7 @@
     },
     "groups": "user admin",
     "hooks": "pkg/hooks.sh",
-    "installdir": "/services/${name}",
-    "group": "services"
+    "installdir": "/services/${name}"
   },
   "release": {
     "plugins": [
