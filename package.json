@@ -51,7 +51,7 @@
     "@kronos-integration/service-systemd": "^2.5.3"
   },
   "engines": {
-    "node": ">=16.13.0"
+    "node": ">=16.13.2"
   },
   "os": [
     "linux"
@@ -122,7 +122,7 @@
   "template": {
     "inheritFrom": [
       "arlac77/template-arlac77-github",
-      "arlac77/template-kronos-app#next"
+      "arlac77/template-kronos-app"
     ]
   }
 }
