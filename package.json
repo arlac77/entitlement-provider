@@ -1,6 +1,6 @@
 {
   "name": "entitlement-provider",
-  "version": "2.9.85",
+  "version": "0.0.0-semantic-release",
   "publishConfig": {
     "access": "public"
   },
@@ -73,8 +73,18 @@
     "base": "/services/entitlements/api",
     "socket": "/run/${name}/http/socket"
   },
+  "pacman": {
+    "hooks": "pacman/hooks.sh",
+    "installdir": "/services/entitlement-provider/frontend",
+    "content": {
+      "/etc/nginx/sites/common/${name}.conf": "pacman/nginx.conf"
+    },
+    "depends": {
+      "nginx-mainline": ">=1.21.4",
+      "systemd": ">=250.3"
+    }
+  },
   "pkg": {
-    "backup": "etc/${name}/config.json",
     "content": {
       "/usr/lib/systemd/system/": {
         "base": "systemd"
@@ -96,12 +106,14 @@
     "output": {
       "arch": {}
     },
+    "hooks": "pkg/hooks.sh",
+    "backup": "etc/${name}/config.json",
+    "groups": "user admin",
     "depends": {
       "systemd": ">=250.3",
       "nginx-mainline": ">=1.21.4"
     },
-    "groups": "user admin",
-    "hooks": "pkg/hooks.sh",
+    "group": "services",
     "installdir": "/services/${name}"
   },
   "release": {
