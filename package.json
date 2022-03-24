@@ -33,7 +33,7 @@
     "@kronos-integration/service-authenticator": "^1.6.20",
     "@kronos-integration/service-health": "^5.0.147",
     "@kronos-integration/service-http": "^10.6.106",
-    "@kronos-integration/service-ldap": "^4.0.79",
+    "@kronos-integration/service-ldap": "^4.0.81",
     "@kronos-integration/service-smtp": "^1.0.68",
     "model-attributes": "^4.1.14"
   },
