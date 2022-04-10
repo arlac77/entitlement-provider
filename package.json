@@ -95,7 +95,11 @@
     },
     "hooks": "pkg/hooks.sh",
     "backup": "${config.dir}config.json",
-    "groups": "user admin"
+    "groups": "user admin",
+    "depends": {
+      "nginx-mainline": ">=1.21.4",
+      "systemd": ">=250.4"
+    }
   },
   "release": {
     "plugins": [
