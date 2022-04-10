@@ -24,7 +24,7 @@
     "test": "npm run test:ava",
     "test:ava": "ava --timeout 2m tests/*.mjs",
     "cover": "c8 -x 'tests/**/*' --temp-directory build/tmp ava --timeout 2m && c8 report -r lcov -o build/coverage --temp-directory build/tmp",
-    "pkg": "npm-pkgbuild --verbose -D version=0.0.0 --publish dist"
+    "pkg": "npm-pkgbuild --verbose"
   },
   "dependencies": {
     "@kronos-integration/interceptor-decode-json": "^2.1.63",
@@ -76,11 +76,11 @@
   },
   "pkg": {
     "content": {
-      "/etc/${name}/config.json": "config/config.json",
-      "/etc/nginx/sites/common/${name}.conf": "pkg/nginx.conf",
-      "/srv/http/.well-known/openid-configuration": "config/openid-configuration",
-      "/usr/lib/sysusers.d/${name}.conf": "pkg/sysusers.conf",
-      "${installdir}/": [
+      "${config.dir}config.json": "config/config.json",
+      "${nginx.sites.dir}${name}.conf": "pkg/nginx.conf",
+      "${well-known.content.dir}openid-configuration": "config/openid-configuration",
+      "${sysusers.config.dir}${name}.conf": "pkg/sysusers.conf",
+      "${install.dir}": [
         {
           "type": "npm-pack"
         },
@@ -94,12 +94,8 @@
       "${tmpfiles.config.dir}${name}.conf": "pkg/tmpfiles.conf"
     },
     "hooks": "pkg/hooks.sh",
-    "backup": "etc/${name}/config.json",
-    "groups": "user admin",
-    "depends": {
-      "systemd": ">=250.4",
-      "nginx-mainline": ">=1.21.4"
-    }
+    "backup": "${config.dir}config.json",
+    "groups": "user admin"
   },
   "release": {
     "plugins": [
