@@ -70,16 +70,8 @@
     "url": "https://github.com/arlac77/entitlement-provider/issues"
   },
   "homepage": "https://github.com/arlac77/entitlement-provider#readme",
-  "config": {
-    "base": "/services/entitlements/api",
-    "socket": "/run/${name}/http/socket"
-  },
   "pkg": {
     "content": {
-      "${config.dir}config.json": "config/config.json",
-      "${nginx.sites.dir}${name}.conf": "pkg/nginx.conf",
-      "${well-known.content.dir}openid-configuration": "config/openid-configuration",
-      "${sysusers.config.dir}${name}.conf": "pkg/sysusers.conf",
       "${install.dir}": [
         {
           "type": "npm-pack"
@@ -91,11 +83,16 @@
       "${systemd.unit.dir}": {
         "base": "systemd"
       },
+      "${config.dir}config.json": "config/config.json",
+      "${nginx.sites.dir}${name}.conf": "pkg/nginx.conf",
+      "${well-known.content.dir}openid-configuration": "config/openid-configuration",
+      "${sysusers.config.dir}${name}.conf": "pkg/sysusers.conf",
       "${tmpfiles.config.dir}${name}.conf": "pkg/tmpfiles.conf"
     },
     "hooks": "pkg/hooks.sh",
     "backup": "${config.dir}config.json",
     "groups": "user admin",
+    "http.base.path": "/services/entitlements/api",
     "depends": {
       "nginx-mainline": ">=1.21.4",
       "systemd": ">=250.4"
