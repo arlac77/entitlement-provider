@@ -91,11 +91,26 @@
       "${systemd.unit.dir}": {
         "base": "systemd"
       },
-      "${tmpfiles.config.dir}${name}.conf": "pkg/tmpfiles.conf"
+      "${tmpfiles.config.dir}${name}.conf": "pkg/tmpfiles.conf",
+      "/etc/${name}/config.json": "config/config.json",
+      "${installdir}/": [
+        {
+          "type": "npm-pack"
+        },
+        {
+          "type": "node-modules"
+        }
+      ],
+      "/etc/nginx/sites/common/${name}.conf": "pkg/nginx.conf"
     },
     "hooks": "pkg/hooks.sh",
     "backup": "${config.dir}config.json",
-    "groups": "user admin"
+    "groups": "user admin",
+    "depends": {
+      "nginx-mainline": ">=1.21.4",
+      "systemd": ">=250.4"
+    },
+    "installdir": "/services/${name}"
   },
   "release": {
     "plugins": [
