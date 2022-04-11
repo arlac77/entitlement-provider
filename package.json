@@ -79,8 +79,8 @@
           "type": "node-modules"
         }
       ],
-      "${systemd.config.dir}${name}.service": "pkg/${name}.service",
-      "${systemd.config.dir}${name}.socket": "pkg/${name}.socket",
+      "${systemd.unit.dir}${name}.service": "pkg/${name}.service",
+      "${systemd.unit.dir}${name}.socket": "pkg/${name}.socket",
       "${config.dir}config.json": "config/config.json",
       "${nginx.sites.dir}${name}.conf": "pkg/nginx.conf",
       "${well-known.content.dir}openid-configuration": "config/openid-configuration",
