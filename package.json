@@ -69,7 +69,7 @@
     "url": "https://github.com/arlac77/entitlement-provider/issues"
   },
   "homepage": "https://github.com/arlac77/entitlement-provider#readme",
-  "pkg": {
+  "pkgbuild": {
     "content": {
       "${install.dir}": [
         {
