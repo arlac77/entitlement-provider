@@ -94,7 +94,7 @@
       "nginx-mainline": ">=1.21.4",
       "systemd": ">=250.5"
     },
-    "http.base.path": "/services/entitlements/api"
+    "http.path": "${install.base.dir}entitlements/api"
   },
   "release": {
     "plugins": [
