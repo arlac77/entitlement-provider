@@ -21,7 +21,3 @@ pre_remove() {
 	systemctl stop {{name}}
 	systemctl disable {{name}}
 }
-
-post_remove() {
-	systemctl daemon-reload
-}
