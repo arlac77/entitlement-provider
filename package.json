@@ -89,7 +89,6 @@
     },
     "hooks": "pkg/hooks.sh",
     "backup": "${config.dir}config.json",
-    "groups": "user admin",
     "http.path": "${install.base.dir}entitlements/api"
   },
   "release": {
