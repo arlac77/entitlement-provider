@@ -8,5 +8,4 @@ doc
 .vscode
 .github
 pkg
-systemd
 config
