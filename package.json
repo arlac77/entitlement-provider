@@ -43,7 +43,7 @@
     "ava": "^4.3.3",
     "c8": "^7.1.0",
     "got": "^12.4.1",
-    "npm-pkgbuild": "^10.14.11",
+    "npm-pkgbuild": "^10.14.12",
     "semantic-release": "^19.0.5"
   },
   "optionalDependencies": {
