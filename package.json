@@ -99,12 +99,6 @@
       [
         "@semantic-release/exec",
         {
-          "publishCmd": "npx npm-pkgbuild --available --continue --publish dist --verbose"
-        }
-      ],
-      [
-        "@semantic-release/exec",
-        {
           "publishCmd": "npx npm-pkgbuild --available --continue --publish dist"
         }
       ],
