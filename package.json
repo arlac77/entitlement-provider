@@ -87,7 +87,8 @@
     },
     "hooks": "pkg/hooks.sh",
     "backup": "${config.dir}config.json",
-    "http.path": "${install.base.dir}entitlements/api"
+    "http.path": "${install.base.dir}entitlements/api",
+    "kronos": true
   },
   "release": {
     "plugins": [
