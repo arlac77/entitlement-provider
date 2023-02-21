@@ -1,6 +1,6 @@
 {
   "name": "entitlement-provider",
-  "version": "2.9.205",
+  "version": "0.0.0-semantic-release",
   "publishConfig": {
     "access": "public"
   },
