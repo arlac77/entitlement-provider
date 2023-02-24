@@ -85,6 +85,8 @@
       "${sysusers.config.dir}${name}.conf": "pkg/sysusers.conf",
       "${tmpfiles.config.dir}${name}.conf": "pkg/tmpfiles.conf"
     },
+    "hooks": "pkg/hooks.sh",
+    "backup": "${config.dir}config.json",
     "http.path": "${install.base.dir}entitlements/api",
     "kronos": true
   },
