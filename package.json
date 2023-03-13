@@ -82,7 +82,6 @@
       "${systemd.unit.dir}${name}.service": "pkg/${name}.service",
       "${config.dir}config.json": "config/config.json",
       "${well-known.content.dir}openid-configuration": "config/openid-configuration",
-      "${sysusers.config.dir}${name}.conf": "pkg/sysusers.conf",
       "${tmpfiles.config.dir}${name}.conf": "pkg/tmpfiles.conf"
     },
     "http.path": "${install.base.dir}entitlements/api",
