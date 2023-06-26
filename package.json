@@ -27,7 +27,7 @@
   },
   "dependencies": {
     "@kronos-integration/interceptor-decode-json": "^2.1.75",
-    "@kronos-integration/service": "^10.4.45",
+    "@kronos-integration/service": "^10.4.46",
     "@kronos-integration/service-admin": "^3.4.65",
     "@kronos-integration/service-authenticator": "^1.6.48",
     "@kronos-integration/service-health": "^5.0.176",
@@ -43,7 +43,7 @@
     "ava": "^5.3.1",
     "c8": "^8.0.0",
     "got": "^13.0.0",
-    "npm-pkgbuild": "^11.8.8",
+    "npm-pkgbuild": "^11.8.9",
     "semantic-release": "^21.0.5"
   },
   "optionalDependencies": {
@@ -51,7 +51,7 @@
     "mf-hosting": "^1.11.4"
   },
   "engines": {
-    "node": ">=20.1.0"
+    "node": ">=20.3.1"
   },
   "os": [
     "linux"
