@@ -49,6 +49,7 @@ jobs:
             ls -al
             git status
             grep url .git/config
+            export
             npx semantic-release
         env:
           CI: "true"
