@@ -45,13 +45,9 @@ jobs:
             chown -R root:root .
             yes|pacman -Syu nodejs npm make gcc git
             /usr/bin/npm ci
-            pwd
-            ls -al
-            git status
-            grep url .git/config
             export NPM_TOKEN=${{ secrets.NPM_TOKEN }}
             export GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }}
-            export
+            export PKGBUILD_PUBLISH: ${{ secrets.PKGBUILD_PUBLISH }}
             npx semantic-release
         env:
           CI: "true"
