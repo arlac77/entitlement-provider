@@ -42,6 +42,7 @@ jobs:
           arch: aarch64
           distro: archarm_latest
           run: |
+            chown -R root:root .
             yes|pacman -Syu nodejs npm make gcc git
             /usr/bin/npm ci
             pwd
