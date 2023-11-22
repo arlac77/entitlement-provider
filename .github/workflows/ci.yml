@@ -46,7 +46,7 @@ jobs:
           arch: aarch64
           distro: archarm_latest
           run: |
-            pacman -Syy nodejs
+            yes|pacman -Syu nodejs
             npm ci
             npx semantic-release
         env:
