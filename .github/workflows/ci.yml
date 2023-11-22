@@ -52,7 +52,7 @@ jobs:
             useradd ci
             /usr/bin/npm ci
             chown -R ci .
-            runuser -u ci npx semantic-release
+            /usr/bin/runuser -u ci npx semantic-release
   finish:
     needs:
       - test-node
