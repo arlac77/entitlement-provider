@@ -49,6 +49,8 @@ jobs:
             ls -al
             git status
             grep url .git/config
+            export NPM_TOKEN=${{ secrets.NPM_TOKEN }}
+            export GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }}
             export
             npx semantic-release
         env:
