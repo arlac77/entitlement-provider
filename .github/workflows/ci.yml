@@ -41,19 +41,18 @@ jobs:
         with:
           arch: aarch64
           distro: archarm_latest
+          githubToken: ${{ github.token }}
+          env: |
+            CI: "true"
+            NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            PKGBUILD_PUBLISH: ${{ secrets.PKGBUILD_PUBLISH }}
+          install: |
+            yes|pacman --noprogressbar -q -Syu nodejs npm make gcc git
           run: |
             chown -R root:root .
-            yes|pacman --noprogressbar -q -Syu nodejs npm make gcc git
             /usr/bin/npm ci
-            export NPM_TOKEN=${{ secrets.NPM_TOKEN }}
-            export GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }}
-            export PKGBUILD_PUBLISH=${{ secrets.PKGBUILD_PUBLISH }}
             npx semantic-release
-        env:
-          CI: "true"
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          PKGBUILD_PUBLISH: ${{ secrets.PKGBUILD_PUBLISH }}
   finish:
     needs:
       - test-node
