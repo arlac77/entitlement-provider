@@ -46,6 +46,8 @@ jobs:
           arch: aarch64
           distro: archarm_latest
           run: |
+            pwd
+            ls -al
             yes|pacman -Syu nodejs npm make gcc git
             /usr/bin/npm ci
             npx semantic-release
