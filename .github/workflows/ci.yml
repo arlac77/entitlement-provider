@@ -37,19 +37,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 20.9.0
-          cache: npm
       - uses: uraimo/run-on-arch-action@v2
         with:
           arch: aarch64
           distro: archarm_latest
           run: |
-            pwd
-            ls -al
             yes|pacman -Syu nodejs npm make gcc git
             /usr/bin/npm ci
+            pwd
+            ls -al
+            git status
+            grep url .git/config
             npx semantic-release
         env:
           CI: "true"
