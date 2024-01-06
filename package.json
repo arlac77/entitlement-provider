@@ -138,7 +138,10 @@
     "inheritFrom": [
       "arlac77/template-arlac77-github",
       "arlac77/template-kronos-app",
-      "arlac77/template-npm-pkgbuild"
+      "arlac77/template-nginx",
+      "arlac77/template-npm-pkgbuild",
+      "arlac77/template-root",
+      "arlac77/template-systemd"
     ]
   }
 }
