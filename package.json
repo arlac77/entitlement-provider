@@ -19,7 +19,7 @@
   ],
   "license": "BSD-2-Clause",
   "bin": {
-    "entitlement-provider": "./src/entitlement-provider-cli.mjs"
+    "entitlement-provider": "src/entitlement-provider-cli.mjs"
   },
   "scripts": {
     "test": "npm run test:ava",
