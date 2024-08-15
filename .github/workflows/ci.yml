@@ -16,8 +16,6 @@ jobs:
     strategy:
       matrix:
         node-version:
-          - 20.16.0
-          - 22.5.1
           - 22.6.0
     steps:
       - name: checkout
@@ -28,7 +26,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: npm
           cache-dependency-path: package-lock.json
-      - name: checkout
+      - name: install
         run: npm ci
       - name: test and coverage
         run: npm run cover --if-present
@@ -47,7 +45,6 @@ jobs:
       - self-hosted
       - linux
       - ARM64
-      - ubuntu-latest
     permissions:
       contents: write
       issues: write
@@ -78,7 +75,7 @@ jobs:
           node-version: 22.6.0
           cache: npm
           cache-dependency-path: package-lock.json
-      - name: checkout
+      - name: install
         run: npm ci
       - name: release
         run: npx semantic-release
@@ -86,8 +83,8 @@ jobs:
           CI: "true"
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          PKGEXT: .pkg.tar.xz
           PKGBUILD_PUBLISH: ${{ secrets.PKGBUILD_PUBLISH }}
+          PKGEXT: .pkg.tar.xz
   finish:
     needs:
       - test-node
