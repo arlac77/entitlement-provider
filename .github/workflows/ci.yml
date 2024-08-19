@@ -45,6 +45,7 @@ jobs:
       - self-hosted
       - linux
       - ARM64
+      - ubuntu-latest
     permissions:
       contents: write
       issues: write
