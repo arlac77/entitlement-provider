@@ -1,5 +1,4 @@
 import ServiceHealth from "@kronos-integration/service-health";
-import ServiceSMTP from "@kronos-integration/service-smtp";
 import ServiceLDAP from "@kronos-integration/service-ldap";
 import ServiceAuthenticator from "@kronos-integration/service-authenticator";
 import {
@@ -21,7 +20,7 @@ import {
 } from "@kronos-integration/service-http";
 
 export default async function initialize(sp) {
-  sp.registerFactories([
+  await sp.registerFactories([
     ServiceHTTP,
     ServiceLDAP,
     ServiceAuthenticator,
