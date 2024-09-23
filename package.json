@@ -84,7 +84,7 @@
       ],
       "${systemd.unit.dir}${name}.service": "pkg/${name}.service",
       "${config.dir}config.json": "config/config.json",
-      "${well-known.content.dir}openid-configuration": "config/openid-configuration"  
+      "${well-known.content.dir}openid-configuration": "config/openid-configuration"
     },
     "http.path": "${install.base.dir}entitlements/api",
     "kronos": true
