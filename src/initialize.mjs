@@ -24,7 +24,6 @@ export default async function initialize(sp) {
   sp.registerFactories([
     ServiceHTTP,
     ServiceLDAP,
-    ServiceSMTP,
     ServiceAuthenticator,
     ServiceHealth,
     ServiceAdmin,
@@ -213,7 +212,6 @@ export default async function initialize(sp) {
     },
     ldap: {},
     health: {},
-    admin: {},
-    smtp: {}
+    admin: {}
   });
 }
