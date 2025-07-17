@@ -28,13 +28,13 @@
   },
   "dependencies": {
     "@kronos-integration/interceptor-decode-json": "^2.1.79",
-    "@kronos-integration/service": "^11.2.8",
+    "@kronos-integration/service": "^11.2.11",
     "@kronos-integration/service-admin": "^3.4.73",
     "@kronos-integration/service-authenticator": "^1.6.64",
     "@kronos-integration/service-health": "^5.1.7",
     "@kronos-integration/service-http": "^10.9.28",
     "@kronos-integration/service-ldap": "^4.0.138",
-    "model-attributes": "^4.2.4"
+    "model-attributes": "^4.2.5"
   },
   "devDependencies": {
     "@semantic-release/commit-analyzer": "^13.0.0",
