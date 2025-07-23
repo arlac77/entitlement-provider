@@ -33,7 +33,7 @@
     "@kronos-integration/service-authenticator": "^3.0.1",
     "@kronos-integration/service-health": "^7.0.1",
     "@kronos-integration/service-http": "^13.0.1",
-    "@kronos-integration/service-ldap": "^5.0.0"
+    "@kronos-integration/service-ldap": "^5.0.1"
   },
   "devDependencies": {
     "@semantic-release/commit-analyzer": "^13.0.0",
