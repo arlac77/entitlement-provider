@@ -17,6 +17,7 @@ jobs:
       matrix:
         node-version:
           - 22.20.0
+          - 22.21.0
           - 24.9.0
           - 24.10.0
     steps:
