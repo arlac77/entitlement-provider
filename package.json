@@ -60,8 +60,7 @@
   ],
   "cpu": [
     "arm",
-    "arm64",
-    "x64"
+    "arm64"
   ],
   "repository": {
     "type": "git",
