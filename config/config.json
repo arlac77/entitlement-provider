@@ -1,6 +1,4 @@
 {
-  "auth": {
-  },
   "http": {
     "listen": {
       "socket" : 9567
