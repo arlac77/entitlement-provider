@@ -6,9 +6,6 @@ StopWhenUnneeded=true
 
 [Service]
 Type=notify
-LoadCredentialEncrypted=http.jwt.public:{{credentials.dir}}mf-jwt.rsa.pub
-LoadCredentialEncrypted=authenticator.jwt.private:{{credentials.dir}}mf-jwt.rsa
-LoadCredentialEncrypted=authenticator.jwt.public:{{credentials.dir}}mf-jwt.rsa.pub
 ExecStart=/usr/bin/node --unhandled-rejections=strict --trace-uncaught --trace-warnings --title {{name}} {{install.dir}}src/{{name}}-cli.mjs
 ExecReload=/bin/kill -HUP $MAINPID
 ExecStop=sleep 20
@@ -50,6 +47,7 @@ RestrictRealtime=true
 RestrictSUIDSGID=true
 CPUWeight=10
 IOWeight=10
+LoadCredentialEncrypted=authenticator.jwt.public:{{credentials.dir}}mf-jwt.rsa.pub
 MemoryAccounting=true
 MemoryHigh=30M
 MemoryMax=60M
