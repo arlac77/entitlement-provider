@@ -1,6 +1,5 @@
 [![npm](https://img.shields.io/npm/v/entitlement-provider.svg)](https://www.npmjs.com/package/entitlement-provider)
 [![License](https://img.shields.io/badge/License-0BSD-blue.svg)](https://spdx.org/licenses/0BSD.html)
-[![install size](https://packagephobia.now.sh/badge?p=entitlement-provider/@2.10.47)](https://packagephobia.now.sh/result?p=entitlement-provider@2.10.47)
 [![bundlejs](https://deno.bundlejs.com/?q=entitlement-provider\&badge=detailed)](https://bundlejs.com/?q=entitlement-provider)
 [![downloads](http://img.shields.io/npm/dm/entitlement-provider.svg?style=flat-square)](https://npmjs.org/package/entitlement-provider)
 [![GitHub Issues](https://img.shields.io/github/issues/arlac77/entitlement-provider.svg?style=flat-square)](https://github.com/arlac77/entitlement-provider/issues)
