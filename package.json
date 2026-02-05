@@ -82,7 +82,7 @@
       "${config_dir}config.json": "config/config.json",
       "${well_known_content_dir}openid-configuration": "config/openid-configuration"
     },
-    "http.path": "${install.base.dir}entitlements/api",
+    "http.path": "${install_base_dir}entitlements/api",
     "kronos": true
   },
   "release": {
