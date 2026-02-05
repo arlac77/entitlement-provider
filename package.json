@@ -72,15 +72,15 @@
   "homepage": "https://github.com/arlac77/entitlement-provider#readme",
   "pkgbuild": {
     "content": {
-      "${install.dir}": {
+      "${install_dir}": {
         "type": "npm-pack"
       },
-      "${install.dir}/node_modules": {
+      "${install_dir}/node_modules": {
         "type": "node-modules"
       },
-      "${systemd.unit.dir}${name}.service": "pkg/${name}.service",
-      "${config.dir}config.json": "config/config.json",
-      "${well-known.content.dir}openid-configuration": "config/openid-configuration"
+      "${systemd_unit_dir}${name}.service": "pkg/${name}.service",
+      "${config_dir}config.json": "config/config.json",
+      "${well_known_content_dir}openid-configuration": "config/openid-configuration"
     },
     "http.path": "${install.base.dir}entitlements/api",
     "kronos": true
