@@ -29,10 +29,10 @@
   },
   "dependencies": {
     "@kronos-integration/interceptor-decode-json": "^4.0.21",
-    "@kronos-integration/service": "^15.7.0",
+    "@kronos-integration/service": "^15.7.2",
     "@kronos-integration/service-admin": "^4.0.13",
     "@kronos-integration/service-authenticator": "^4.1.33",
-    "@kronos-integration/service-health": "^8.0.58",
+    "@kronos-integration/service-health": "^8.0.61",
     "@kronos-integration/service-http": "^14.0.33",
     "@kronos-integration/service-ldap": "^6.1.1"
   },
@@ -43,7 +43,7 @@
     "@semantic-release/release-notes-generator": "^14.1.1",
     "ava": "^8.0.1",
     "c8": "^11.0.0",
-    "got": "^15.0.5",
+    "got": "^15.0.6",
     "mf-hosting": "^3.0.12",
     "npm-pkgbuild": "^20.7.6",
     "semantic-release": "^25.0.5"
